@@ -1,1 +1,17 @@
-place
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
+credentials.json
+service-account*.json
+*.pem
+*.key
+
+# Local data and exports (keep schemas, documentation, and small approved samples in Git)
+data/raw/
+data/processed/
+*.parquet
+*.xlsx
+*.xls
