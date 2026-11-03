@@ -33,3 +33,13 @@ The screenshot below shows the project IAM setup with our partner and instructor
 ## Assignment approach
 
 Research bike-share KPIs, compare measures that the available data can support, then select one KPI and one business problem with the team. Analyze in SQL. Excel or Looker may be used for visuals. Keep conclusions tied to evidence and explain limitations.
+
+## Saved analysis — November 3, 2026
+
+- [Current findings](findings.md) and [progress / next action](progress.md)
+- [Ten-KPI scorecard](analysis/kpi_scorecard.md)
+- [Time comparisons and duration investigation](analysis/time_series_investigation.md)
+- [Original exported evidence](evidence/README.md)
+- [Saved queries and execution notes](sql/notes.md)
+
+The leading candidate finding concerns Customer records exceeding 24 hours in May 2018. The timestamp check remains a draft, and team KPI/problem selection, charting and an operating recommendation remain open.
