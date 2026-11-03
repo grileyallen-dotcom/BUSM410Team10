@@ -31,3 +31,7 @@ Review the draft timestamp-check query, check its estimated bytes in BigQuery, a
 ## Save and review status
 
 This package was uploaded by the agent on a review branch. The team has not been recorded as verifying the findings or approving an audit entry. `audit_log.md`, `audit_protocol.md`, `AGENTS.md` and the charter are preserved.
+
+## Evidence files saved individually
+
+All 18 user attachments are now individually titled under `evidence/`: 13 CSVs, one exploratory JSON result, and four schema/data-preview screenshots. The evidence README links every file, and its manifest maps original filenames to descriptive paths and preservation hashes. Each uploaded source matches its original Git blob hash. The earlier ZIP remains as a backup of the 14 result exports. No new query was run and no human audit check was added.
