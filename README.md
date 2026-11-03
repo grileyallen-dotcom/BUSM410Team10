@@ -21,9 +21,14 @@ The screenshot below shows the project IAM setup with our partner and instructor
 
 ## Repository layout
 
-- `charter.md` — CP1 gap write-up
-- `audit_protocol.md` — project checking plan
-- `audit_log.md` — running list of checks
-- `sql/` — BigQuery queries
-- `model/` — model results
-- `visuals/` — charts and other visuals
+- [AGENTS.md](AGENTS.md) — project onboarding and working instructions for AI agents
+- [charter.md](charter.md) — CP1 gap write-up
+- [findings.md](findings.md) — evidence-backed analysis results and recommendations
+- [audit_protocol.md](audit_protocol.md) — team process for checking AI-assisted work
+- [audit_log.md](audit_log.md) — approved examples of human checks
+- [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — instructions for maintaining audit records
+- [sql/](sql/) — BigQuery queries and their notes
+- [model/](model/) — model notes and results
+- [visuals/](visuals/) — charts and other visuals
+
+The team will research bike-share KPIs, compare feasible measures with the available data, then agree on one KPI and one business problem. Analysis uses SQL only. Excel or Looker may be used for visuals.
