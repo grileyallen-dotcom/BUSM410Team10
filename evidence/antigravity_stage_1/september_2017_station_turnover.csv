@@ -1,0 +1,542 @@
+start_station_name,avg_daily_turnover,avg_daily_starts,dock_capacity
+Gold St & Frankfort St,1.13,45.1,40
+E 53 St & 3 Ave,2.41,99.0,41
+E 44 St & 2 Ave,2.09,81.7,39
+Nassau Ave & Newell St,1.01,51.6,51
+W 55 St & 6 Ave,3.61,155.3,43
+W 52 St & 6 Ave,3.4,200.3,59
+7 St & 3 Ave,0.83,19.9,24
+Picnic Point,0.77,34.8,45
+W 42 St & Dyer Ave,5.29,174.7,33
+E 88 St & Park Ave,1.09,41.3,38
+Riverside Dr & W 72 St,2.8,114.7,41
+Jackson St & Leonard St,0.52,11.5,22
+Madison Ave & E 99 St,0.9,31.6,35
+Richardson St & N Henry St,1.69,42.3,25
+Lafayette St & Jersey St,4.06,243.7,60
+5 Ave & E 78 St,2.7,126.9,47
+W 90 St & Amsterdam Ave,1.3,44.0,34
+Murray St & Greenwich St,2.41,118.0,49
+Prospect Park West & 8 St,2.33,58.3,25
+E 16 St & Irving Pl,1.88,148.5,79
+E 65 St & 2 Ave,1.14,54.6,48
+E 82 St & East End Ave,1.25,41.2,33
+E 72 St & Park Ave,1.36,58.3,43
+Union St & Nevins St,1.12,40.4,36
+Verona Pl & Fulton St,1.28,24.3,19
+E 80 St & 2 Ave,1.98,69.3,35
+Dwight St & Van Dyke St,0.44,10.0,23
+E 93 St & 2 Ave,0.39,28.3,73
+University Pl & E 8 St,2.26,178.6,79
+E 48 St & 5 Ave,2.67,165.3,62
+E 66 St & Madison Ave,0.96,35.4,37
+E 91 St & 2 Ave,1.0,72.8,73
+Riverside Dr & W 91 St,0.82,48.4,59
+1 Ave & E 18 St,3.11,167.8,54
+W 15 St & 10 Ave,2.24,127.8,57
+Lexington Ave & E 29 St,3.43,171.7,50
+Leonard St & Maujer St,1.52,36.5,24
+E 67 St & Park Ave,1.13,49.5,44
+Kent Ave & N 7 St,2.11,166.5,79
+W 36 St & 9 Ave,1.73,74.4,43
+8 Ave & W 31 St,3.9,378.4,97
+Norman Ave & Leonard St,1.27,39.3,31
+Cleveland Pl & Spring St,9.03,298.1,33
+Broadway & Roebling St,2.13,57.6,27
+Bayard St & Leonard St,0.61,26.1,43
+Pier 40 - Hudson River Park,10.63,244.5,23
+Schermerhorn St & Court St,0.99,58.3,59
+West Drive & Prospect Park West,2.73,79.0,29
+W 76 St & Columbus Ave,2.19,111.8,51
+Fulton St & Adams St,1.46,100.6,69
+Bond St & Fulton St,1.49,69.9,47
+Berkeley Pl & 7 Ave,1.95,56.5,29
+Sigourney St & Columbia St,0.58,12.1,21
+Myrtle Ave & Marcy Ave,1.22,28.1,23
+Brooklyn Bridge Park - Pier 2,1.84,57.0,31
+Forsyth St & Canal St,5.34,155.0,29
+3 St & 3 Ave,0.62,49.2,79
+Mt Morris Park W & W 120 St,0.58,15.7,27
+Bayard St & Baxter St,3.36,144.4,43
+St James Pl & Oliver St,1.75,83.9,48
+S 4 St & Rodney St,1.3,40.4,31
+10 St & 5 Ave,0.99,23.8,24
+Carlton Ave & Flushing Ave,1.09,50.4,46
+Broadway & W 51 St,1.55,120.7,78
+Marcus Garvey Blvd & Macon St,1.0,19.1,19
+3 Ave & E 62 St,2.51,127.9,51
+W 26 St & 8 Ave,2.99,197.5,66
+E 11 St & Broadway,1.04,103.4,99
+N 15 St & Wythe Ave,0.56,30.4,54
+Liberty St & Broadway,2.24,150.0,67
+Pacific St & Nevins St,1.79,32.2,18
+W 20 St & 7 Ave,6.41,205.1,32
+Clermont Ave & Park Ave,1.28,24.4,19
+Division Ave & Hooper St,0.4,24.3,61
+Clinton St & 4 Place,1.74,43.6,25
+E 55 St & 2 Ave,4.41,128.0,29
+E 102 St & Park Ave,0.61,20.1,33
+Allen St & Hester St,1.34,157.2,117
+Putnam Ave & Throop Ave,1.13,23.8,21
+Carroll St & 6 Ave,1.74,40.1,23
+Amsterdam Ave & W 82 St,2.74,107.0,39
+Monroe St & Classon Ave,1.56,29.6,19
+Allen St & Rivington St,4.56,191.6,42
+Broadway & W 122 St,0.75,24.8,33
+Clinton St & Union St,1.06,40.4,38
+Division Ave & Marcy Ave,0.34,11.1,33
+E 91 St & Park Ave,1.24,43.3,35
+Columbus Ave & W 72 St,3.17,212.3,67
+Atlantic Ave & Fort Greene Pl,1.06,56.2,53
+3 Ave & E 72 St,1.08,37.7,35
+N 12 St & Bedford Ave,1.21,56.8,47
+W 100 St & Broadway,1.83,71.5,39
+Little West St & 1 Pl,6.41,224.5,35
+Sullivan St & Washington Sq,3.54,202.0,57
+46 Ave & 5 St,1.14,49.0,43
+Roebling St & N 4 St,2.17,54.3,25
+W 22 St & 8 Ave,2.89,190.8,66
+Lawrence St & Willoughby St,2.39,93.1,39
+Henry St & Degraw St,2.12,48.9,23
+E 97 St & 3 Ave,0.62,18.5,30
+Lenox Ave & W 115 St,1.05,32.6,31
+Lexington Ave & Classon Ave,1.8,34.2,19
+1 Ave & E 68 St,3.1,195.4,63
+W 25 St & 6 Ave,3.84,195.8,51
+Barclay St & Church St,4.79,177.3,37
+5 Ave & 3 St,1.91,57.3,30
+Clinton St & Joralemon St,1.62,80.8,50
+W 59 St & 10 Ave,1.0,116.6,117
+E 85 St & 3 Ave,3.63,141.6,39
+Huron St & Franklin St,1.65,57.7,35
+Halsey St & Tompkins Ave,1.23,25.8,21
+Catherine St & Monroe St,2.26,78.9,35
+Greenpoint Ave & Manhattan Ave,2.65,71.5,27
+Van Brunt St & Wolcott St,0.98,35.3,36
+Bank St & Hudson St,5.14,138.8,27
+Prospect Pl & 6 Ave,1.46,36.5,25
+Suffolk St & Stanton St,2.26,178.2,79
+Kane St & Clinton St,1.67,43.4,26
+Stagg St & Union Ave,1.56,51.4,33
+Clermont Ave & Lafayette Ave,0.57,29.1,51
+E 45 St & 3 Ave,2.56,117.6,46
+Pitt St & Stanton St,1.9,28.5,15
+DeKalb Ave & S Portland Ave,2.33,53.6,23
+MacDougal St & Prince St,4.17,233.5,56
+Berry St & N 8 St,3.64,98.4,27
+Amsterdam Ave & W 79 St,2.13,102.4,48
+Rivington St & Ridge St,1.29,78.4,61
+10 St & 7 Ave,1.58,36.2,23
+W 78 St & Broadway,2.09,79.3,38
+Bushwick Ave & Powers St,1.38,44.2,32
+Putnam Ave & Nostrand Ave,1.12,21.3,19
+E 89 St & York Ave,1.47,51.5,35
+W 56 St & 10 Ave,2.54,109.3,43
+Yankee Ferry Terminal,1.17,49.1,42
+Franklin St & W Broadway,3.09,102.0,33
+11 Ave & W 59 St,5.92,189.4,32
+Washington Ave & Park Ave,1.27,49.4,39
+Division St & Bowery,1.44,106.4,74
+E 76 St & Park Ave,2.17,60.7,28
+Clinton St & Tillary St,1.66,56.3,34
+W 15 St & 7 Ave,2.41,190.8,79
+Graham Ave & Withers St,1.93,34.8,18
+Front St & Gold St,1.06,39.4,37
+Berkeley Pl & 6 Ave,0.77,31.7,41
+Commerce St & Van Brunt St,0.75,14.2,19
+Washington Pl & Broadway,6.07,163.8,27
+Broadway & W 53 St,1.48,125.4,85
+Mott St & Prince St,5.06,197.2,39
+W 54 St & 9 Ave,2.41,106.0,44
+Lexington Ave & E 24 St,3.08,243.4,79
+W 26 St & 10 Ave,2.74,139.8,51
+W 27 St & 7 Ave,3.34,250.6,75
+E 3 St & 1 Ave,2.82,166.2,59
+Railroad Ave & Kay Ave,0.25,7.4,30
+Front St & Washington St,2.05,116.8,57
+Norfolk St & Broome St,1.75,103.3,59
+S 4 St & Wythe Ave,3.11,115.1,37
+Clinton St & Centre St,0.34,7.1,21
+Union St & 4 Ave,1.73,48.5,28
+W 43 St & 6 Ave,2.73,171.9,63
+Metropolitan Ave & Bedford Ave,2.72,146.6,54
+Coffey St & Conover St,0.96,30.8,32
+Carroll St & Smith St,1.81,74.4,41
+Smith St & 3 St,1.5,37.5,25
+E 84 St & Park Ave,1.4,63.0,45
+Jackson Ave & 46 Rd,1.02,27.6,27
+Allen St & Stanton St,3.79,185.7,49
+Broadway & W 58 St,3.24,255.8,79
+E 30 St & Park Ave S,2.39,155.4,65
+3 St & Prospect Park West,1.88,58.3,31
+E 11 St & 1 Ave,2.66,162.2,61
+Kosciuszko St & Nostrand Ave,0.93,21.5,23
+Maiden Ln & Pearl St,2.73,79.1,29
+W 37 St & 5 Ave,2.73,164.1,60
+E 106 St & Madison Ave,0.76,18.9,25
+Lewis Ave & Kosciuszko St,0.95,22.8,24
+Grand Army Plaza & Plaza St West,2.73,106.3,39
+W 43 St & 10 Ave,1.2,141.0,117
+Broadway & E 14 St,3.11,354.5,114
+Adelphi St & Myrtle Ave,1.7,47.6,28
+Pearl St & Hanover Square,1.27,86.1,68
+E 27 St & 1 Ave,1.46,127.2,87
+E 58 St & 3 Ave,3.07,150.2,49
+Canal St & Rutgers St,3.76,169.3,45
+Driggs Ave & Lorimer St,0.85,43.4,51
+Central Park S & 6 Ave,4.23,309.1,73
+Graham Ave & Herbert St,0.83,21.5,26
+Cambridge Pl & Gates Ave,1.46,26.2,18
+W 42 St & 8 Ave,4.11,168.5,41
+W 22 St & 10 Ave,3.19,245.3,77
+Great Jones St,12.59,289.5,23
+Madison St & Montgomery St,2.91,58.2,20
+1 Ave & E 78 St,2.37,135.2,57
+Clinton Ave & Flushing Ave,2.04,46.9,23
+N 6 St & Bedford Ave,3.22,154.6,48
+South St & Gouverneur Ln,4.07,175.2,43
+Willoughby St & Fleet St,1.29,80.1,62
+Lefferts Pl & Franklin Ave,2.04,50.9,25
+Leonard St & Boerum St,0.73,17.6,24
+Columbia St & Degraw St,1.93,40.6,21
+E 20 St & 2 Ave,2.31,194.2,84
+Greenwich St & Hubert St,3.85,134.8,35
+Smith St & 9 St,1.79,41.1,23
+Kosciuszko St & Tompkins Ave,1.2,21.6,18
+Forsyth St & Broome St,2.72,179.8,66
+Myrtle Ave & St Edwards St,0.52,29.2,56
+31 Ave & Crescent St,0.26,5.5,21
+Market St & Cherry St,1.3,58.4,45
+E 20 St & Park Ave,4.14,186.2,45
+Clinton Ave & Myrtle Ave,2.55,84.2,33
+W 47 St & 10 Ave,3.79,147.9,39
+Wyckoff St & 3 Ave,1.36,29.9,22
+E 12 St & 3 Ave,3.21,224.9,70
+S Portland Ave & Hanson Pl,1.41,38.0,27
+Grand St & Greene St,2.81,126.3,45
+E 2 St & 2 Ave,1.63,136.8,84
+5 Ave & E 63 St,1.9,96.7,51
+St Marks Pl & 2 Ave,2.66,194.0,73
+E 88 St & 1 Ave,1.8,70.3,39
+Butler St & Court St,1.26,44.0,35
+W 20 St & 8 Ave,1.87,156.8,84
+Willoughby Ave & Walworth St,0.96,18.2,19
+Perry St & Bleecker St,3.14,109.8,35
+MacDougal St & Washington Sq,4.38,144.6,33
+Lafayette Ave & St James Pl,1.62,63.1,39
+Laight St & Hudson St,0.46,40.2,87
+E 32 St & Park Ave,3.73,205.0,55
+E 16 St & 5 Ave,3.38,219.7,65
+Emerson Pl & Myrtle Ave,0.85,53.3,63
+Willoughby Ave & Hall St,1.23,62.6,51
+Richards St & Delavan St,0.62,11.8,19
+Garfield Pl & 8 Ave,1.37,34.4,25
+Pike St & Monroe St,2.28,61.5,27
+Cadman Plaza E & Tillary St,1.15,59.6,52
+Monroe St & Bedford Ave,1.68,38.6,23
+W 34 St & 11 Ave,1.84,147.1,80
+Nostrand Ave & Myrtle Ave,0.65,14.9,23
+Boerum St & Broadway,1.27,24.1,19
+Madison Ave & E 120 St,0.32,9.7,30
+8 Ave & W 33 St,3.55,340.9,96
+6 Ave & 12 St,0.78,22.7,29
+Barrow St & Hudson St,5.3,238.4,45
+Washington St & Gansevoort St,4.62,235.6,51
+Park Ave & Marcus Garvey Blvd,0.53,12.2,23
+Adam Clayton Powell Blvd & W 115 St,1.26,27.7,22
+Amsterdam Ave & W 66 St,2.1,58.8,28
+W 100 St & Manhattan Ave,1.25,48.9,39
+Old Fulton St,3.39,132.1,39
+E 47 St & Park Ave,3.43,278.0,81
+Nassau Ave & Russell St,1.28,65.2,51
+Union Ave & Wallabout St,0.54,16.8,31
+St Marks Pl & 1 Ave,2.28,157.5,69
+45 Rd & 11 St,1.52,35.1,23
+Washington Ave & Greene Ave,1.86,35.4,19
+DeKalb Ave & Vanderbilt Ave,2.85,65.6,23
+E 31 St & 3 Ave,2.61,169.6,65
+E 85 St & York Ave,1.49,70.2,47
+1 Ave & E 16 St,3.51,253.0,72
+McGuinness Blvd & Eagle St,1.38,58.0,42
+Lewis Ave & Madison St,1.21,27.7,23
+Columbia St & Kane St,2.04,40.9,20
+South St & Whitehall St,2.38,130.6,55
+W 17 St & 8 Ave,2.12,156.7,74
+E 48 St & 3 Ave,1.17,91.0,78
+Broadway & Battery Pl,3.63,188.8,52
+W 37 St & 10 Ave,4.27,166.6,39
+W 21 St & 6 Ave,5.19,383.9,74
+S 3 St & Bedford Ave,3.13,78.4,25
+W 67 St & Broadway,5.43,168.5,31
+W 11 St & 6 Ave,1.31,103.2,79
+E 103 St & Lexington Ave,0.93,32.6,35
+E 60 St & York Ave,0.95,31.5,33
+9 Ave & W 18 St,2.35,197.1,84
+William St & Pine St,1.4,79.9,57
+W 49 St & 8 Ave,3.38,226.2,67
+W 44 St & 5 Ave,2.21,150.1,68
+W 13 St & 7 Ave,2.87,134.8,47
+Greenwich St & W Houston St,2.62,209.4,80
+Monroe St & Tompkins Ave,1.23,23.4,19
+E 81 St & York Ave,1.35,63.5,47
+7 St & 5 Ave,1.22,31.6,26
+Riverside Dr & W 78 St,0.86,68.1,79
+14 St & 5 Ave,1.68,35.4,21
+Greene Ave & Nostrand Ave,0.98,22.6,23
+E 102 St & 1 Ave,1.55,58.8,38
+Greene Ave & Throop Ave,1.26,24.0,19
+E 72 St & York Ave,3.32,96.2,29
+31 St & Thomson Ave,0.25,11.8,47
+Douglass St & 3 Ave,1.11,38.9,35
+Stanton St & Chrystie St,3.8,178.5,47
+W 13 St & 5 Ave,4.32,185.7,43
+Warren St & Court St,1.46,45.1,31
+Columbia Heights & Cranberry St,0.93,34.3,37
+E 23 St & 1 Ave,7.09,191.3,27
+Carmine St & 6 Ave,4.99,314.2,63
+1 Ave & E 44 St,1.09,95.2,87
+W 89 St & Columbus Ave,1.59,76.2,48
+W 4 St & 7 Ave S,3.5,210.3,60
+E 39 St & 2 Ave,5.9,236.1,40
+Rivington St & Chrystie St,1.85,118.7,64
+3 St & 7 Ave,1.82,49.2,27
+W 52 St & 11 Ave,2.72,149.4,55
+Greenwich Ave & 8 Ave,3.77,282.6,75
+1 Ave & E 94 St,1.14,44.6,39
+Bond St & Bergen St,1.43,38.7,27
+Columbia St & Rivington St,1.47,61.6,42
+Bus Slip & State St,1.51,104.2,69
+Harrison St & Hudson St,2.2,85.6,39
+E 97 St & Madison Ave,1.66,68.2,41
+Carroll St & Bond St,1.59,39.7,25
+8 Ave & W 16 St,6.28,225.9,36
+Carlton Ave & Park Ave,1.37,31.6,23
+Concord St & Bridge St,1.91,36.2,19
+Leonard St & Church St,2.48,114.0,46
+Broadway & Whipple St,1.35,36.3,27
+Congress St & Clinton St,1.16,51.1,44
+Duffield St & Willoughby St,1.3,62.5,48
+Pike St & E Broadway,2.67,90.9,34
+West Thames St,2.12,154.6,73
+Madison St & Clinton St,1.74,67.9,39
+E 84 St & 1 Ave,1.66,51.6,31
+Cumberland St & Lafayette Ave,1.68,52.2,31
+12 Ave & W 40 St,4.98,378.5,76
+Pioneer St & Van Brunt St,0.65,25.2,39
+7 Ave & Park Pl,3.16,79.1,25
+Lenox Ave & W 130 St,1.01,25.3,25
+3 St & Hoyt St,0.41,21.6,53
+W 113 St & Broadway,1.13,43.9,39
+Hope St & Union Ave,1.51,55.8,37
+Centre St & Chambers St,4.84,275.8,57
+Carroll St & Columbia St,0.97,37.9,39
+Lewis Ave & Decatur St,0.65,12.3,19
+44 Dr & Jackson Ave,1.45,49.5,34
+John St & William St,1.82,114.6,63
+E 25 St & 1 Ave,3.95,138.2,35
+Amsterdam Ave & W 119 St,1.46,42.4,29
+W 31 St & 7 Ave,3.0,252.4,84
+E 106 St & Lexington Ave,0.62,16.7,27
+W 52 St & 5 Ave,2.99,182.6,61
+Willoughby Ave & Tompkins Ave,1.06,20.1,19
+Mercer St & Spring St,1.92,128.3,67
+E 47 St & 2 Ave,1.11,113.0,102
+Broadway & W 36 St,2.3,137.9,60
+6 Ave & 9 St,1.4,37.7,27
+W 63 St & Broadway,5.77,178.8,31
+11 Ave & W 27 St,4.62,208.0,45
+Montrose Ave & Bushwick Ave,1.53,64.4,42
+Columbus Ave & W 95 St,2.02,78.6,39
+4 Ave & 9 St,1.27,39.3,31
+St James Pl & Pearl St,1.69,45.6,27
+Lorimer St & Broadway,0.62,17.9,29
+W 116 St & Broadway,1.18,50.9,43
+Reade St & Broadway,1.46,90.6,62
+14 St & 7 Ave,1.81,43.3,24
+Meserole Ave & Manhattan Ave,2.5,69.9,28
+Hoyt St & Warren St,0.58,20.5,35
+W 74 St & Columbus Ave,2.6,70.3,27
+3 Ave & E 71 St,0.85,39.9,47
+W 41 St & 8 Ave,2.85,299.1,105
+Bialystoker Pl & Delancey St,2.02,66.5,33
+President St & Henry St,1.37,34.3,25
+E 114 St & 1 Ave,0.35,9.1,26
+6 Ave & W 33 St,3.45,269.3,78
+Broadway & W 41 St,4.85,266.6,55
+Johnson St & Gold St,1.42,58.1,41
+W 18 St & 6 Ave,4.06,280.3,69
+Driggs Ave & N Henry St,1.03,52.5,51
+Broadway & W 29 St,2.07,208.9,101
+Washington Pl & 6 Ave,1.64,124.7,76
+1 Pl & Clinton St,0.96,32.7,34
+Centre St & Worth St,0.82,98.2,120
+W 92 St & Broadway,2.74,65.9,24
+Hancock St & Bedford Ave,0.87,23.5,27
+Cadman Plaza E & Red Cross Pl,2.02,78.9,39
+St Nicholas Ave & Manhattan Ave,0.91,28.3,31
+Metropolitan Ave & Meeker Ave,1.83,54.8,30
+W 24 St & 7 Ave,3.12,246.6,79
+LaGuardia Pl & W 3 St,4.51,230.2,51
+2 Ave & E 99 St,0.67,20.8,31
+West End Ave & W 107 St,1.36,42.2,31
+Broadway & Berry St,2.45,83.3,34
+E 89 St & 3 Ave,1.66,64.8,39
+W 107 St & Columbus Ave,1.6,36.8,23
+Macon St & Nostrand Ave,2.56,61.3,24
+Greenwich Ave & Charles St,3.22,183.8,57
+W 46 St & 11 Ave,6.18,154.5,25
+1 Ave & E 30 St,4.11,156.1,38
+E 17 St & Broadway,5.3,413.0,78
+Washington Park,2.01,48.2,24
+Pleasant Ave & E 116 St,1.31,30.2,23
+E 75 St & 3 Ave,1.24,51.0,41
+Atlantic Ave & Furman St,1.58,86.7,55
+Cathedral Pkwy & Broadway,4.27,106.9,25
+2 Ave & E 96 St,1.7,76.6,45
+Pulaski St & Marcus Garvey Blvd,0.81,15.4,19
+Riverside Dr & W 104 St,1.06,61.4,58
+E 25 St & 2 Ave,2.43,192.2,79
+FDR Drive & E 35 St,1.38,169.5,123
+Watts St & Greenwich St,2.69,145.4,54
+Columbus Ave & W 103 St,0.47,18.9,40
+E 10 St & 5 Ave,2.88,123.9,43
+Cherry St,1.78,64.1,36
+8 Ave & W 52 St,5.6,173.7,31
+Bedford Ave & S 9 St,0.8,18.5,23
+Marcy Ave & Lafayette Ave,0.58,13.3,23
+Bergen St & Smith St,2.48,118.9,48
+Myrtle Ave & Lewis Ave,2.39,55.1,23
+Stanton St & Mangin St,3.26,61.9,19
+Hudson St & Reade St,1.91,105.2,55
+E 47 St & 1 Ave,0.78,54.8,70
+Dean St & Hoyt St,0.45,34.9,77
+Fulton St & Utica Ave,1.43,27.1,19
+DeKalb Ave & Hudson Ave,1.1,81.0,74
+Vernon Blvd & 50 Ave,2.13,96.1,45
+Broadway & W 37 St,2.46,140.0,57
+E 24 St & Park Ave S,3.06,241.8,79
+Henry St & Grand St,3.1,111.6,36
+W 84 St & Broadway,1.44,90.9,63
+Lispenard St & Broadway,1.91,151.3,79
+Scholes St & Manhattan Ave,1.01,36.5,36
+47 Ave & 31 St,0.64,17.4,27
+Madison Ave & E 82 St,2.01,68.3,34
+Cliff St & Fulton St,1.57,102.1,65
+Kingston Ave & Herkimer St,0.91,21.8,24
+Plaza St West & Flatbush Ave,1.83,89.4,49
+E 53 St & Madison Ave,2.11,107.6,51
+2 Ave & E 31 St,1.79,145.1,81
+E 15 St & 3 Ave,2.81,219.3,78
+Milton St & Franklin St,3.56,117.6,33
+Fulton St & Broadway,3.18,155.7,49
+11 Ave & W 41 St,3.15,173.3,55
+State St & Smith St,0.91,60.3,66
+Graham Ave & Grand St,1.3,37.7,29
+E 78 St & 2 Ave,1.59,39.8,25
+1 Ave & E 62 St,3.19,143.6,45
+Nassau St & Navy St,0.51,29.4,58
+Frederick Douglass Blvd & W 112 St,1.53,56.5,37
+West End Ave & W 94 St,1.88,58.3,31
+Bank St & Washington St,3.76,116.7,31
+21 St & 43 Ave,0.4,10.7,27
+Vesey Pl & River Terrace,4.41,251.6,57
+Banker St & Meserole Ave,1.89,58.5,31
+Broadway & Moylan Pl,0.82,33.5,41
+Douglass St & 4 Ave,0.71,36.0,51
+Franklin St & Dupont St,1.67,45.0,27
+India St & Manhattan Ave,1.21,60.4,50
+Bedford Ave & Nassau Ave,2.13,104.3,49
+W 106 St & Amsterdam Ave,1.4,49.1,35
+W 45 St & 8 Ave,2.9,188.3,65
+Grand St & Elizabeth St,5.44,244.8,45
+Clark St & Henry St,2.21,95.1,43
+E 106 St & 1 Ave,0.75,19.4,26
+Riverside Dr & W 82 St,1.02,76.6,75
+E 33 St & 5 Ave,2.96,177.8,60
+Fulton St & Clermont Ave,0.49,36.9,75
+Henry St & Atlantic Ave,2.99,68.7,23
+E 19 St & 3 Ave,3.92,137.2,35
+Broad St & Bridge St,1.1,54.1,49
+W 53 St & 10 Ave,4.76,138.1,29
+E 74 St & 1 Ave,1.11,87.5,79
+Graham Ave & Conselyea St,2.75,82.6,30
+5 Ave & E 103 St,1.68,65.5,39
+9 Ave & W 22 St,2.68,225.5,84
+E 4 St & 2 Ave,2.13,166.4,78
+Grand St & Havemeyer St,2.19,67.8,31
+McKibbin St & Manhattan Ave,0.72,16.5,23
+Clinton St & Grand St,4.45,104.4,54
+Union Ave & Jackson St,1.45,27.5,19
+E 81 St & Park Ave,0.54,24.9,46
+W 95 St & Broadway,2.52,80.7,32
+E 95 St & 3 Ave,0.99,30.7,31
+University Pl & E 14 St,8.59,283.6,33
+Bergen St & Flatbush Ave,1.53,50.5,33
+Amsterdam Ave & W 73 St,3.91,210.9,54
+Hanson Pl & Ashland Pl,3.47,135.4,39
+Devoe St & Lorimer St,1.54,49.3,32
+Mercer St & Bleecker St,2.8,187.8,67
+Riverside Blvd & W 67 St,1.4,110.7,79
+E 68 St & 3 Ave,1.22,43.8,36
+Franklin Ave & Myrtle Ave,0.82,22.1,27
+Henry St & W 9 St,0.32,6.1,19
+Adam Clayton Powell Blvd & W 123 St,0.72,22.4,31
+Albany Ave & Fulton St,0.44,11.8,27
+Lexington Ave & E 111 St,0.3,8.8,29
+Throop Ave & Myrtle Ave,0.69,14.5,21
+3 Ave & 14 St,0.92,23.0,25
+East End Ave & E 86 St,0.95,25.6,27
+E 118 St & Madison Ave,0.34,9.9,29
+1 Ave & E 110 St,0.72,18.0,25
+W 104 St & Amsterdam Ave,0.89,41.9,47
+Carroll St & 5 Ave,1.53,41.4,27
+W 110 St & Amsterdam Ave,0.49,22.1,45
+Henry St & Bay St,0.33,6.2,19
+3 Ave & E 100 St,0.41,11.2,27
+3 Ave & E 112 St,0.39,8.9,23
+Pioneer St & Richards St,0.44,10.2,23
+Frederick Douglass Blvd & W 129 St,0.5,13.4,27
+Park Ave & St Edwards St,0.25,13.4,53
+5 St & 6 Ave,0.9,20.7,23
+48 Ave & 5 St,0.36,28.1,79
+36 Ave & 10 St,0.35,6.6,19
+12 St & 4 Ave,0.61,15.2,25
+Soissons Landing,1.87,54.2,29
+Tompkins Ave & Hopkins St,1.1,20.9,19
+6 St & 7 Ave,1.45,30.5,21
+E 118 St & Park Ave,0.2,5.5,27
+9 St & 44 Rd,0.32,10.9,34
+Morningside Ave & W 123 St,0.46,16.0,35
+Park Ave & E 124 St,0.51,18.3,36
+E 118 St & 3 Ave,0.33,10.2,31
+37 Ave & 35 St,0.37,9.7,26
+E 115 St & Lexington Ave,0.43,10.7,25
+Columbia St & Lorraine St,0.12,4.5,37
+Lexington Ave & E 120 St,0.11,3.3,29
+Crescent St & 35 Ave,0.22,5.4,25
+Columbia St & W 9 St,0.21,4.4,21
+34 Ave & 21 St,0.17,4.0,23
+E 123 St & Lexington Ave,0.54,14.5,27
+Vernon Blvd & 41 Rd,0.26,7.0,27
+35 Ave & 37 St,0.17,5.2,31
+21 St & 36 Ave,0.11,2.0,19
+Vernon Blvd & 31 Ave,0.22,5.0,23
+E 115 St & Madison Ave,0.28,8.5,31
+Vernon Blvd & 10 St,0.24,9.8,41
+2 Ave & E 122 St,0.28,7.0,25
+35 St & 34 Ave,0.33,8.2,25
+21 St & 31 Dr,0.1,2.0,21
+Fulton St & Waverly Ave,1.26,39.0,31
+Lenox Ave & W 126 St,0.59,29.5,50
+W 70 St & Amsterdam Ave,2.25,96.9,43
+34 St & 35 Ave,0.28,5.8,21
+34 Ave & 38 St,0.3,10.0,33
+28 St & 36 Ave,0.25,7.2,29
+Amsterdam Ave & W 125 St,0.35,13.5,39
+24 St & 41 Ave,0.48,9.2,19
+34 Ave & 13 St,0.07,1.3,19
+31 Ave & 34 St,0.74,17.0,23
+31 Ave & 30 St,0.36,7.5,21
+Broadway & 12 St,0.2,6.3,31
+Crescent St & Broadway,0.44,8.3,19
+Newton Rd & 44 St,0.68,13.0,19
