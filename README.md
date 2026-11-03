@@ -19,16 +19,17 @@ The screenshot below shows the project IAM setup with our partner and instructor
 
 <img width="1512" height="982" alt="BigQuery IAM page showing project access" src="https://github.com/user-attachments/assets/8afd644b-be6b-4b00-8092-31f59899099d" />
 
-## Repository layout
+## Repository guide
 
-- [AGENTS.md](AGENTS.md) — project onboarding and working instructions for AI agents
-- [charter.md](charter.md) — CP1 gap write-up
-- [findings.md](findings.md) — evidence-backed analysis results and recommendations
-- [audit_protocol.md](audit_protocol.md) — team process for checking AI-assisted work
-- [audit_log.md](audit_log.md) — approved examples of human checks
-- [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — instructions for maintaining audit records
-- [sql/](sql/) — BigQuery queries and their notes
-- [model/](model/) — model notes and results
-- [visuals/](visuals/) — charts and other visuals
+- [charter.md](charter.md) — analysis question, scope, and success criteria
+- [findings.md](findings.md) — supported KPI benchmark, trends, chart, and recommendation
+- [AGENTS.md](AGENTS.md) — project onboarding and AI working instructions
+- [audit_protocol.md](audit_protocol.md) and [audit_log.md](audit_log.md) — team review process and approved human checks
+- [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — audit record workflow
+- [sql/](sql/) — BigQuery queries and [query notes](sql/notes.md)
+- [model/](model/) — optional modeling notes and results
+- [visuals/](visuals/) — charts and visual notes
 
-The team will research bike-share KPIs, compare feasible measures with the available data, then agree on one KPI and one business problem. Analysis uses SQL only. Excel or Looker may be used for visuals.
+## Assignment approach
+
+Research bike-share KPIs, compare measures that the available data can support, then select one KPI and one business problem with the team. Analyze in SQL. Excel or Looker may be used for visuals. Keep conclusions tied to evidence and explain limitations.

@@ -9,9 +9,7 @@ service-account*.json
 *.pem
 *.key
 
-# Local data and exports (keep schemas, documentation, and small approved samples in Git)
+# Raw or generated data files that should stay out of the public repository
 data/raw/
 data/processed/
 *.parquet
-*.xlsx
-*.xls
