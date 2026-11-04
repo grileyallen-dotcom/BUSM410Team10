@@ -26,7 +26,7 @@ The screenshot below shows the project IAM setup with our partner and instructor
 - [AGENTS.md](AGENTS.md) — learning agreement, project onboarding, and AI working instructions
 - [CLAUDE.md](CLAUDE.md) — directs Claude to the shared instructions
 - [decisions.md](decisions.md) — important choices, student reasoning, alternatives, and open questions
-- [audit_protocol.md](audit_protocol.md) and [audit_log.md](audit_log.md) — team review process and approved human checks
+- [Other/audit_protocol.md](Other/audit_protocol.md) and [Other/audit_log.md](Other/audit_log.md) — team review process and approved human checks
 - [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — audit record workflow
 - [sql/](sql/) — BigQuery queries and [query notes](sql/notes.md)
 - [model/](model/) — optional modeling notes and results

@@ -5,7 +5,7 @@ description: Maintain the BUSM 410 team's audit protocol and log when students v
 
 # Project Audit
 
-At session start, read [AGENTS.md](../../../AGENTS.md), [audit_protocol.md](../../../audit_protocol.md), [decisions.md](../../../decisions.md), and the latest entries in [audit_log.md](../../../audit_log.md).
+At session start, read [AGENTS.md](../../../AGENTS.md), [Other/audit_protocol.md](../../../Other/audit_protocol.md), [decisions.md](../../../decisions.md), and the latest entries in [Other/audit_log.md](../../../Other/audit_log.md).
 
 ## Support student verification
 
