@@ -1,33 +1,30 @@
 # Project Charter
 
+*Working framework. The future business problem has not been selected.*
+
 ## The question
 
-Where is expensive docking hardware sitting idle, what factors drive this underperformance, and how can management right-size or redeploy those physical docks to relieve bottlenecks in high-demand areas?
-
-Idle hardware, explanations of underperformance, and benefits of redeployment are hypotheses requiring evidence.
+TBD. The project lead will select one business question after descriptive analytics have established the setting and relevant patterns. The repo does not currently prescribe a business problem, KPI, benchmark, or analysis output row.
 
 ## The decision this supports
 
-A Citi Bike operations manager considering where to retain, reduce, expand, or relocate docking capacity during 2013-2018. The analysis will identify historical station patterns and candidates for management review. Specific dock quantities and expected benefits will depend on what the evidence can support.
+TBD. After selecting the problem, identify the manager, the decision to be made, and the alternatives the evidence can help assess. Riley Allen is the project lead; the agent acts as a consultant.
 
 ## Scope
 
-- **Dataset:** `bigquery-public-data.new_york_citibike`, using the existing data only. No additional datasets are included.
-- **Period:** operations during 2013-2018. The [supplied documentation](Other/metadata.pdf) reports trip coverage from 2013-07-01 through 2018-05-31 in NYC local time. Verify coverage and account for the partial first and last years.
-- **Historical source:** `citibike_trips`, including the station identifiers, names, coordinates, timing, and rider categories recorded on trips. Confirm the fields and definitions before analytical use.
-- **Station snapshot:** the supplied documentation describes `citibike_stations` as a 2026 snapshot. Its capacity, availability, and status will be excluded from historical performance calculations.
-- **Row meaning:** source records represent trips, subject to missing-row and duplicate checks. Proposed analysis output: one historical station per calendar month, so seasonal patterns and observation periods can be examined. Final station identity, eligibility, and aggregation rules require query review.
-- **Comparison:** investigate comparable historical stations and calendar periods. The metric, peer definition, benchmark, and underperformance threshold will be selected after exploration and approval.
-- **Factors:** examine associations supported by the historical records, such as time patterns, location, rider mix, and recorded trip duration. These comparisons do not establish causal drivers.
-- **Evidence limits:** trip counts and observed trip flows do not directly measure historical dock occupancy, unused capacity, unmet demand, or stockouts. The supplied tables do not establish how many physical docks should move or the effect of moving them. Report any recommendation at the level supported by the evidence.
-- **Value:** monetary valuation remains unresolved because the documented trip fields contain neither hardware costs nor fares. Any proposed cost source or valuation assumption must be reviewed and approved; numerical values and savings will not be invented.
+- **Dataset:** `bigquery-public-data.new_york_citibike`, using the existing dataset only.
+- **Existing period boundary:** operations during 2013-2018. Supplied documentation reports historical trip coverage from 2013-07-01 through 2018-05-31; confirm coverage and account for partial periods.
+- **First analytical stage:** descriptive analytics to understand table meanings, source-row definitions, date coverage, data quality, distributions, and relevant group or time patterns.
+- **Later selection:** the project lead will approve the business problem, KPI definition, output row, comparisons, benchmark, valuation approach, and recommendation scope after reviewing descriptive evidence.
+- **Evidence:** table selection and any joins must suit the approved question and time period. The supplied station snapshot comes from a different period than the historical trips; explain the applicability of every source.
+- **Current activity:** consult [progress](progress.md) and the project lead's latest direction. Updates to the stage, scope, or charter require the applicable approval; a recorded stage does not prevent Riley from directing a different task.
 
-The [documentation notes](Other/dataset_documentation.md) distinguish reported source claims from verified results. The [supplied ERD](Other/ERD.pdf) proposes a crosswalk; no crosswalk is adopted or created by this charter.
+Source material is in the [dataset documentation](Other/metadata.pdf), [ERD](Other/ERD.pdf), and [source notes](Other/dataset_documentation.md). Source-document suggestions are background evidence to assess.
 
 ## What success looks like
 
-- Define and measure one historical performance gap with a clear output row, comparable benchmark, difference, and source.
-- Investigate supported associations and explain the limits on claims about idle hardware, causes, bottlenecks, and redeployment.
-- Show the gap and benchmark in one chart, with every number traceable to approved numbered SQL, results, and documented cleaning choices.
-- Quantify the gap's value with transparent math and a defensible price or cost source. Keep the CP1 monetary-value requirement explicitly unresolved until supported inputs are available.
-- Give the operations manager an evidence-supported recommendation, explain uncertainty, and record real human checks of agent work in the audit log.
+- Describe the dataset and setting clearly, with traceable evidence and data-quality limits.
+- Select one business question and define its measure and analysis row with the project lead's approval.
+- Measure a gap against a justified benchmark and show the comparison in a chart.
+- Explain the gap's value with transparent math, units, assumptions, and a source for any price or cost; identify unresolved evidence requirements.
+- Support a management decision with reproducible SQL, proportionate conclusions, stated uncertainty, and records of real human checks.

@@ -5,8 +5,14 @@
 
 ## Team
 
-- Riley Allen
-- Rainy Villame
+- Riley Allen — project lead
+- Rainy Villame — project partner
+
+The AI agent serves as a consultant: it explains evidence, challenges assumptions, presents options, and recommends next steps. Riley directs the project and approves actions and conclusions.
+
+## Current stage
+
+See [progress](progress.md) for the current stage and [decisions](decisions.md) for the latest project-lead direction. Riley determines when to move between organization, exploration, and problem-focused analysis. Stage records provide context and can be changed by Riley's explicit direction.
 
 ## Project setup
 
@@ -22,13 +28,14 @@ The screenshot below shows the project IAM setup with our partner and instructor
 ## Repository guide
 
 - [charter.md](charter.md) — analysis question, scope, and success criteria
-- [findings.md](findings.md) — supported KPI benchmark, trends, chart, and recommendation
-- [AGENTS.md](AGENTS.md) — learning agreement, project onboarding, and AI working instructions
+- [findings.md](findings.md) — descriptive context and, later, findings for the selected business problem
+- [AGENTS.md](AGENTS.md) — project lead and consultant roles, approvals, and working instructions
 - [Dataset documentation](Other/metadata.pdf) — supplied dataset overview and table descriptions
 - [Table diagram](Other/ERD.pdf) — supplied ERD and proposed station crosswalk
 - [Documentation notes](Other/dataset_documentation.md) — schema transcription, source status, and verification limits
 - [CLAUDE.md](CLAUDE.md) — directs Claude to the shared instructions
-- [decisions.md](decisions.md) — important choices, student reasoning, alternatives, and open questions
+- [decisions.md](decisions.md) — project-lead direction, approved choices, and open questions
+- [progress.md](progress.md) — current stage and resuming work
 - [Other/audit_protocol.md](Other/audit_protocol.md) and [Other/audit_log.md](Other/audit_log.md) — team review process and approved human checks
 - [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — audit record workflow
 - [sql/](sql/) — BigQuery queries and [query guide](sql/README.md)
@@ -37,6 +44,6 @@ The screenshot below shows the project IAM setup with our partner and instructor
 
 ## Assignment approach
 
-Research bike-share KPIs, compare measures that the available data can support, then select one KPI and one business problem with the team. Analyze in SQL. Excel or Looker may be used for visuals. Keep conclusions tied to evidence and explain limitations.
+Describe the dataset and its setting first. After reviewing that evidence, the project lead will select the future business problem and approve its question, KPI, benchmark, and scope. Analyze in SQL when requested; Excel or Looker may be used for visuals. Later, complete CP1's measured gap, sourced value calculation, and chart. Keep conclusions tied to evidence and explain limitations.
 
 
