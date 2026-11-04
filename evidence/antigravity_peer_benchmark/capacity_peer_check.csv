@@ -1,4 +1,0 @@
-capacity_tier,capacity_definition,reported_station_count,csv_station_count,reported_median_turnover,csv_exact_median_of_rounded_turnover
-Small,capacity < 25,95,94,1.12,1.205
-Medium,25 <= capacity <= 45,256,256,1.50,1.535
-Large,capacity > 45,191,191,2.13,2.13
