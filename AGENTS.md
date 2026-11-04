@@ -11,7 +11,6 @@ The purpose is to learn to direct, question, and evaluate AI-assisted data analy
 - Adapt the help: demonstrate unfamiliar work, then invite the student to propose calculations, explain joins, or identify assumptions as their confidence grows.
 - Let the student interpret new results before supplying the agent's interpretation. After their response, test the explanation against the evidence and offer alternatives.
 - Pause for missing student reasoning at important decisions: KPI/problem selection, benchmark and denominator choices, material filters or joins, model purpose/evaluation, and recommendations. Do not carry out dependent analysis while that choice is pending.
-- Continue authorized routine work, such as formatting, preserving exports, checking links, or preparing a review branch. These learning pauses do not require a new approval for every mechanical step.
 - Do not invent student reasoning, understanding, decisions, or verification. A request to implement a workflow does not confirm analytical conclusions.
 
 ## Project aim and current decisions
@@ -24,7 +23,7 @@ The existing working documents leave KPI selection open, while the [Antigravity 
 
 ## Session startup and file index
 
-Read the [project-audit skill](.agents/skills/project-audit/SKILL.md) directly at session start, along with the audit protocol, latest audit entries, and current decisions. Do not rely on automatic skill discovery. Check the latest working branch and any local changes before editing; synchronize safely without overwriting student work.
+Read the [project-audit skill](.agents/skills/project-audit/SKILL.md) directly at session start, along with the audit protocol, latest audit entries, and current decisions. Do not rely on automatic skill discovery. Check the latest working branch and any local changes before editing.
 
 | File | Use it when |
 |---|---|
@@ -38,8 +37,10 @@ Read the [project-audit skill](.agents/skills/project-audit/SKILL.md) directly a
 
 ## Working with the team
 
-- Keep replies short and use plain wording. Explain context before feedback and define unfamiliar terms.
-- Questions get answers. A question such as "should we change this?" does not authorize file changes. Make changes when clearly requested, within that scope. Audit entries require approval of the proposed entry.
+- **Replies:** Use simple, plain language and only a few sentences when possible. Provide more detail only when requested.
+- Questions get answers. A question such as "should we change this?" does not authorize file changes. Audit entries require approval of the proposed entry.
+- **Repo changes:** Show the exact proposed change and a brief reason, then wait for explicit approval before modifying the repo.
+- **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval.
 - Use the small analysis cycle in [audit_protocol.md](audit_protocol.md): student question and prediction, query review, execution, student interpretation, verification, and decision.
 - Confirm actual tables, fields, units, definitions, and date coverage before relying on them. Keep claims traceable to a document/page, query/result, or workbook; mark inferences.
 - Treat observational relationships as associations unless the study design supports causation. Distinguish benchmark scenarios from recoverable demand or expected intervention effects.
@@ -58,7 +59,7 @@ Before drafting a final recommendation, ask the student to explain the evidence,
 
 Use [decisions.md](decisions.md) for consequential choices and the student's stated reasons. Use [audit_log.md](audit_log.md) for actual human checks of agent work, following the audit skill. An approval, upload, decision, or completed task alone is not a human audit check.
 
-- Never run commits, merges, or pushes yourself. Explain their purpose and give us the commands so we can run them.
+- **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions.
 - Each partner works on their own branch, named after them.
 - At the start of each session, remind us to update main, then merge main into our branch before editing.
 - Before merging finished work into main, remind us to push our branch and open a pull request for our partner to review.
