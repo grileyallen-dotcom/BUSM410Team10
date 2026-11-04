@@ -24,15 +24,19 @@ The screenshot below shows the project IAM setup with our partner and instructor
 - [charter.md](charter.md) — analysis question, scope, and success criteria
 - [findings.md](findings.md) — supported KPI benchmark, trends, chart, and recommendation
 - [AGENTS.md](AGENTS.md) — learning agreement, project onboarding, and AI working instructions
+- [Dataset documentation](Other/metadata.pdf) — supplied dataset overview and table descriptions
+- [Table diagram](Other/ERD.pdf) — supplied ERD and proposed station crosswalk
+- [Documentation notes](Other/dataset_documentation.md) — schema transcription, source status, and verification limits
 - [CLAUDE.md](CLAUDE.md) — directs Claude to the shared instructions
 - [decisions.md](decisions.md) — important choices, student reasoning, alternatives, and open questions
-- [audit_protocol.md](audit_protocol.md) and [audit_log.md](audit_log.md) — team review process and approved human checks
+- [Other/audit_protocol.md](Other/audit_protocol.md) and [Other/audit_log.md](Other/audit_log.md) — team review process and approved human checks
 - [.agents/skills/project-audit/SKILL.md](.agents/skills/project-audit/SKILL.md) — audit record workflow
-- [sql/](sql/) — BigQuery queries and [query notes](sql/notes.md)
+- [sql/](sql/) — BigQuery queries and [query guide](sql/README.md)
 - [model/](model/) — optional modeling notes and results
 - [visuals/](visuals/) — charts and visual notes
 
 ## Assignment approach
 
 Research bike-share KPIs, compare measures that the available data can support, then select one KPI and one business problem with the team. Analyze in SQL. Excel or Looker may be used for visuals. Keep conclusions tied to evidence and explain limitations.
+
 

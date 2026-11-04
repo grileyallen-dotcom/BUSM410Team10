@@ -1,61 +1,73 @@
 # AGENTS.md
 
-Read this first. This is the BUSM 410 Team 10 Citi Bike analysis, using BigQuery SQL and an AI agent.
+Read this before helping with the BUSM 410 Team 10 Citi Bike project. These instructions describe how to work with us.
 
-## Learning agreement
+## Approval and authority
 
-The purpose is to learn to direct, question, and evaluate AI-assisted data analysis and make defensible recommendations. The agent helps the students reach and test judgments; the students explain and own the judgments before they become project conclusions.
+- **Repo changes:** Show the exact proposed change and a brief reason, then wait for explicit approval before modifying the repo. This includes formatting, moving files, updating progress, and changing instructions.
+- Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
+- **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
+- **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions. State the target branch when requesting approval.
+- Preserve existing work. Explain any conflict and ask what to keep before resolving it.
+- Apply these approval rules to every project workflow, including the audit skill. Flag conflicting project instructions and follow our latest explicit direction; propose corrections for approval.
 
-- Before a meaningful analytical choice, ask for the student's initial thinking. Use what they have already explained; do not ask them to repeat it.
-- Ask one focused question at a time. Offer a hint when useful, then a small worked example or full explanation when requested or when the student is stuck. Teach without turning the project into a quiz.
-- Adapt the help: demonstrate unfamiliar work, then invite the student to propose calculations, explain joins, or identify assumptions as their confidence grows.
-- Let the student interpret new results before supplying the agent's interpretation. After their response, test the explanation against the evidence and offer alternatives.
-- Pause for missing student reasoning at important decisions: KPI/problem selection, benchmark and denominator choices, material filters or joins, model purpose/evaluation, and recommendations. Do not carry out dependent analysis while that choice is pending.
-- Continue authorized routine work, such as formatting, preserving exports, checking links, or preparing a review branch. These learning pauses do not require a new approval for every mechanical step.
-- Do not invent student reasoning, understanding, decisions, or verification. A request to implement a workflow does not confirm analytical conclusions.
+## Communication and analysis
 
-## Project aim and current decisions
+- **Replies:** Use simple, plain language and only a few sentences when possible. Provide more detail only when requested.
+- Work one small step at a time. Explain unfamiliar terms when needed.
+- Analyze results, explain the reasoning, and discuss the interpretation with us. Do not require us to predict results or interpret them before you help.
+- Challenge mistaken ideas directly, with evidence and a clear explanation. Revise your own position when the evidence warrants it.
+- Distinguish your proposed interpretation from an approved project conclusion. Ask whether we agree before recording it as our conclusion.
+- Never invent our reasoning, understanding, decisions, checks, results, or approval.
 
-Research standard bike-share or ride-share KPIs, compare feasible measures and benchmarks, select one KPI and one business problem with the team, chart the problem, investigate associated variables, and recommend an evidence-supported action. Consider clustering or regression only when it answers a useful question.
+## Starting a conversation
 
-Read accepted analytical decisions in [decisions.md](decisions.md), then the [charter](charter.md), [findings](findings.md), and [progress](progress.md). An accepted decision records the actual decision-maker, reasoning, and evidence; bring affected working documents into agreement when authorized. Imported handoffs retain their reported status and do not establish team approval.
+- Read this file, the [README](README.md), the [audit skill](.agents/skills/project-audit/SKILL.md), the [audit protocol](Other/audit_protocol.md), and the [audit log](Other/audit_log.md).
+- Read the [decisions](decisions.md), [progress](progress.md), [charter](charter.md), [findings](findings.md), and relevant saved work for context. Inspect the current branch and local changes when accessible.
+- The repo holds the information needed for future conversations. Treat missing or conflicting information as unresolved; ask when it is needed rather than filling gaps with assumptions.
+- After reading, wait for our direction. Do not automatically synchronize branches, change files, run queries, or advance the project.
 
-The existing working documents leave KPI selection open, while the [Antigravity handoff](analysis/antigravity_stage_1_handoff.md) reports station dock turnover as its focus. Ask the team which direction to adopt before continuing analysis that depends on this choice. Do not silently select a path or declare Stage 1 validated.
+## SQL and cost estimates
 
-## Session startup and file index
+- When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). Uploading a query permits review; saving repo changes and publishing still require their respective explicit approvals.
+- Prepare one short, understandable query at a time. Explain its purpose, what one output row represents, the columns used, and important filters or assumptions.
+- Ask us to confirm the tables and columns exist before using them in an analytical query. Use documentation and supplied schema evidence to support that confirmation.
+- Provide an estimated scan and cost with the source and pricing assumptions. Use BigQuery's estimate when available; label calculations and distinguish estimated cost from actual charges.
+- If a reliable estimate is unavailable, say so and request the estimate shown by the BigQuery editor. Never invent a cost or treat an unknown cost as zero.
+- We run the BigQuery queries. Prepare queries for us; do not execute them yourself.
+- Select only needed columns. LIMIT does not normally reduce scanned bytes.
+- With approval, save accepted queries as numbered files such as `sql/01_exploration.sql`. Begin each with a short `--` note pointing to `sql/README.md`; keep explanations, estimates, results, and cleaning choices there.
+- Check relevant fields for missing values, duplicates, impossible values, date-boundary effects, and unequal observation periods before drawing conclusions. Propose material cleaning choices for our approval.
+- Use SQL for analysis. Do not add Python files or Python setup. Excel or Looker may be used for visuals; keep CSV and Excel data files out of the repo.
 
-Read the [project-audit skill](.agents/skills/project-audit/SKILL.md) directly at session start, along with the audit protocol, latest audit entries, and current decisions. Do not rely on automatic skill discovery. Check the latest working branch and any local changes before editing; synchronize safely without overwriting student work.
+## Evidence and project memory
 
-| File | Use it when |
-|---|---|
-| [Audit protocol](audit_protocol.md) | Following the analysis and human verification cycle |
-| [Audit log](audit_log.md) | Proposing or reading approved human checks of agent work |
-| [Decisions](decisions.md) | Recording important choices, reasons, alternatives, and open questions |
-| [Charter](charter.md) | Checking the agreed question, scope, and decision |
-| [Findings](findings.md) | Presenting supported results, charts, and limits |
-| [SQL notes](sql/notes.md) | Recording query purpose, cost, execution status, results, and decision |
-| [Model notes](model/notes.md) | Recording model purpose, inputs, evaluation, and limits |
+- Support factual claims with a source: documentation and page or section, query and result, or a clearly identified research source. Label assumptions, calculations, and interpretations.
+- Treat observational relationships as associations unless the design supports causation. A benchmark-based value calculation does not establish recoverable demand or guaranteed savings.
+- Propose updates to decisions and progress when useful, and wait for approval before saving them. Separate approved decisions from proposals and unresolved questions.
+- Read the audit skill when reviewing human checks. The [audit protocol](Other/audit_protocol.md) describes the process; the [audit log](Other/audit_log.md) records real human checks of agent work.
+- Propose each audit entry or protocol addition before saving it. Routine approvals and the agent's own checks do not count as human audits.
+- Use the instructor example for structure and process. Build this project's conclusions from our Citi Bike evidence.
 
-## Working with the team
+## Project facts and verification status
 
-- Keep replies short and use plain wording. Explain context before feedback and define unfamiliar terms.
-- Questions get answers. A question such as "should we change this?" does not authorize file changes. Make changes when clearly requested, within that scope. Audit entries require approval of the proposed entry.
-- Use the small analysis cycle in [audit_protocol.md](audit_protocol.md): student question and prediction, query review, execution, student interpretation, verification, and decision.
-- Confirm actual tables, fields, units, definitions, and date coverage before relying on them. Keep claims traceable to a document/page, query/result, or workbook; mark inferences.
-- Treat observational relationships as associations unless the study design supports causation. Distinguish benchmark scenarios from recoverable demand or expected intervention effects.
-- Use SQL for analysis. Do not add Python files or Python setup. Visuals may be prepared in Excel or Looker.
-- Keep findings grounded in verified Citi Bike evidence. Use the instructor example for structure and process; preserve this project's data, assumptions, and conclusions.
+- **Canvas team:** Team 10. **Partners:** Riley Allen and Rainy Villame. A separate fun team name is not yet recorded. Source: [README](README.md).
+- **Dataset name recorded by the team:** Citi NY Bikes. **Google Cloud project ID recorded by the team:** `busm410-project`. Source: [README](README.md).
+- **Dataset path proposed in an existing draft:** `bigquery-public-data.new_york_citibike`. Its use in the current analysis still needs confirmation. Source: [saved draft](sql/drafts/extreme_duration_timestamp_check.sql).
+- **Candidate tables:** `citibike_trips` and `citibike_stations`. Schema and preview screenshots are in [schema evidence](evidence/schema_screenshots/); confirm definitions before analytical use.
+- **Candidate trip fields:** `starttime`, `stoptime`, `tripduration`, and `usertype` appear in the saved draft. Their definitions, units, coverage, and suitability still need confirmation.
+- **Approved cleaning rules, gap, benchmark, and numerical findings:** not yet established in the current project records. Add them with their sources after verification and approval.
+- Earlier drafts and imported work are background material. Their presence does not establish execution, verification, or team approval.
 
-## Queries and recommendations
+## Current assignment
 
-Before a new query, have the student explain what one output row represents, the needed columns, their expected result, and what would surprise them. Qualitative predictions are enough. Explain SQL in small pieces, invite the student to explain key logic, and review assumptions together. Request the BigQuery editor's estimated scan before execution and record the estimate and its source in [SQL notes](sql/notes.md); distinguish estimated bytes from actual billed bytes.
+CP1 requires one measured gap, a justified benchmark, a value calculation with sources, and a chart. Explore the documentation and data before proposing the gap.
 
-Save accepted useful queries in `sql/` with clear names; unaccepted drafts belong in `sql/drafts/` when saving a draft is authorized. Select only needed columns. LIMIT does not normally reduce scanned bytes. The student runs BigQuery by default. Agent execution requires an explicit request after query and estimated-scan review; permission to edit the repository does not authorize cloud queries or spending.
+- `charter.md`: question, manager and decision supported, scope, and three to five success criteria.
+- `findings.md`: gap, what one row represents, benchmark and rationale, difference, value calculation, and embedded chart.
+- `README.md`: team information table, problem-framing paragraph, and a table linking to the work.
+- `sql/`: numbered queries and `sql/README.md` explaining querying and cleaning choices.
+- `visuals/`: the gap and benchmark chart.
+- `Other/`: dataset documentation or a README documentation link, table diagram, audit protocol, and audit log.
 
-Before drafting a final recommendation, ask the student to explain the evidence, assumptions, alternatives, practical action, uncertainty, and what could change their mind. Help test and refine that judgment. "More evidence is needed" is a valid conclusion. Never fill missing reasoning with an invented student position.
-
-## Decisions, audits, and Git
-
-Use [decisions.md](decisions.md) for consequential choices and the student's stated reasons. Use [audit_log.md](audit_log.md) for actual human checks of agent work, following the audit skill. An approval, upload, decision, or completed task alone is not a human audit check.
-
-The agent may perform authorized mechanical Git work on a review branch, including commits, pushes, and preparing a pull request. Explain the purpose and identify AI assistance in commit or pull-request descriptions. The team reviews the changes and controls merges. Do not merge or claim unverified work was checked by the team.
+Prepare work on the agreed branch. Keep both partners' contributions attributable to them. Partner review precedes merging finished work into `main`, which the instructor grades. Request explicit approval for every Git action; use GitHub directly when access is available.
