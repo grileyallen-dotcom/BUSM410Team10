@@ -16,6 +16,18 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 
 This draft does not establish the project's selected gap, cleaning policy, or accepted analysis.
 
+## Uploaded-query SOP
+
+Whenever we upload a query:
+
+1. **Read and explain it.** Briefly describe its purpose, tables and fields, and what one output row represents. Identify the supplied filename and any reported author or execution status without inventing missing details.
+2. **Review the logic.** Check for unnecessary columns, important filters and joins, and assumptions about missing values, duplicates, impossible values, and incomplete observation periods. Flag missing data checks and propose a small follow-up query when needed. Static SQL review does not establish that the data passed those checks.
+3. **Propose its saved form.** Check existing filenames and suggest the next unused `sql/NN_short_name.sql`. Use one short query per numbered step and a one-line `--` header pointing to `sql/README.md`. If splitting or correcting the upload would help, show the proposed changes and preserve its intended meaning until changes are approved.
+4. **Draft its notes.** Propose a query-register entry and the relevant explanation here: purpose, output row meaning, cleaning and join choices, approval and execution status, estimates and their sources, supplied results, and open questions. Keep proposed choices distinct from approved rules. If an estimate or result is missing, mark it unavailable and request what is needed.
+5. **Wait for file approval.** Show the exact proposed SQL and documentation changes with a brief reason. Uploading a query authorizes reading, review, and discussion; it does not itself authorize saving or changing repo files.
+6. **Follow the approval and execution workflow below.** Students run queries. The agent explains supplied results and discusses their interpretation. A reported run is labeled as reported unless supporting execution evidence is available. Propose any resulting changes to findings, charts, or the main README separately.
+7. **Ask before publishing.** After file changes are approved, request separate explicit approval for commits, pushes, pull requests, or merges, identifying the target branch. Uploading SQL or approving its file changes does not authorize publishing.
+
 ## How we develop queries
 
 1. The agent proposes one short query and explains its purpose, what one output row represents, the required fields, and important filters or joins.

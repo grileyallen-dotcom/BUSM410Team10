@@ -29,6 +29,7 @@ Read this before helping with the BUSM 410 Team 10 Citi Bike project. These inst
 
 ## SQL and cost estimates
 
+- When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). Uploading a query permits review; saving repo changes and publishing still require their respective explicit approvals.
 - Prepare one short, understandable query at a time. Explain its purpose, what one output row represents, the columns used, and important filters or assumptions.
 - Ask us to confirm the tables and columns exist before using them in an analytical query. Use documentation and supplied schema evidence to support that confirmation.
 - Provide an estimated scan and cost with the source and pricing assumptions. Use BigQuery's estimate when available; label calculations and distinguish estimated cost from actual charges.
