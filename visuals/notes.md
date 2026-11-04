@@ -1,12 +1,13 @@
 # Visuals
 
-Use this folder for charts that make the selected KPI and business problem clear. Excel or Looker may be used for visuals.
+Use this folder for approved descriptive charts and, later, charts addressing the selected business problem. Excel or Looker may be used for visuals.
 
 For each chart, record:
+- Purpose: descriptive context or the future selected problem
 - Chart file or workbook link
-- KPI, unit, and calculation
-- Date range and comparison groups
+- Measure, units, and calculation
+- Date range, population, and comparison groups
 - Source query or workbook
-- What the chart shows and any important limits
+- What the chart shows and its limits
 
-No verified project charts have been added yet.
+The final CP1 findings must display a chart of the selected gap and benchmark. No verified project charts have been added yet. File changes and publishing require their respective explicit approvals.

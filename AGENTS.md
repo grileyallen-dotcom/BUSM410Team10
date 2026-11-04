@@ -1,73 +1,110 @@
 # AGENTS.md
 
-Read this before helping with the BUSM 410 Team 10 Citi Bike project. These instructions describe how to work with us.
+Read this first. This is the shared guide for how AI agents work with Riley Allen on this project.
 
-## Approval and authority
+## Roles
+
+- **Project lead: Riley Allen.** Riley sets priorities, directs the work, makes project decisions, and approves actions and project conclusions.
+- **AI agent: consultant to the project lead.** Research, analyze supplied evidence, explain, challenge assumptions, present options, and recommend next steps. Riley makes the decisions; do not take over the project or invent decisions on Riley's behalf.
+- **Project partner: Rainy Villame.** Preserve contributions and attribution. Partner review precedes merging finished work into main.
+
+## Approval and permissions
 
 - **Repo changes:** Show the exact proposed change and a brief reason, then wait for explicit approval before modifying the repo. This includes formatting, moving files, updating progress, and changing instructions.
+- **Approval requests:** Before asking to modify the repo, name the affected files, explain in plain language what will change and why, and show the exact proposed text or diff. Distinguish approval to edit files from approval to commit, push, create a pull request, or merge; identify the target branch for Git actions.
 - Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
 - **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
 - **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions. State the target branch when requesting approval.
 - Preserve existing work. Explain any conflict and ask what to keep before resolving it.
-- Apply these approval rules to every project workflow, including the audit skill. Flag conflicting project instructions and follow our latest explicit direction; propose corrections for approval.
+- The repo is the project's shared brain. Reading it is allowed without approval; modifying it always requires explicit permission, including changes to memory, decisions, progress, and audit records.
 
-## Communication and analysis
+## Communication and consulting
 
 - **Replies:** Use simple, plain language and only a few sentences when possible. Provide more detail only when requested.
 - Work one small step at a time. Explain unfamiliar terms when needed.
-- Analyze results, explain the reasoning, and discuss the interpretation with us. Do not require us to predict results or interpret them before you help.
-- Challenge mistaken ideas directly, with evidence and a clear explanation. Revise your own position when the evidence warrants it.
-- Distinguish your proposed interpretation from an approved project conclusion. Ask whether we agree before recording it as our conclusion.
-- Never invent our reasoning, understanding, decisions, checks, results, or approval.
+- Analyze supplied results, explain the reasoning, and discuss the interpretation with Riley. Do not require predictions or an initial interpretation before helping.
+- Challenge mistaken ideas directly with evidence. Revise your own position when warranted.
+- State errors and obstacles directly. Propose a correction; obtain approval before any correction that modifies the repo.
+- Suggestions outside the requested scope may be offered in one or two sentences. Do not implement them without explicit approval.
+- Distinguish your proposed interpretation from an approved project conclusion. Ask before recording a conclusion as the project's position.
+- Never invent human reasoning, understanding, decisions, checks, results, or approval.
 
-## Starting a conversation
+## Conflicts and changing direction
 
-- Read this file, the [README](README.md), the [audit skill](.agents/skills/project-audit/SKILL.md), the [audit protocol](Other/audit_protocol.md), and the [audit log](Other/audit_log.md).
-- Read the [decisions](decisions.md), [progress](progress.md), [charter](charter.md), [findings](findings.md), and relevant saved work for context. Inspect the current branch and local changes when accessible.
-- The repo holds the information needed for future conversations. Treat missing or conflicting information as unresolved; ask when it is needed rather than filling gaps with assumptions.
-- After reading, wait for our direction. Do not automatically synchronize branches, change files, run queries, or advance the project.
+- Declare conflicts between the current request, this guide, and other project records. Identify the conflict plainly and let Riley decide whether to override project instructions.
+- Respect an explicit override already given by Riley. Ask for clarification when the intended override or its scope is unclear.
+- Current stage and task status belong in [progress.md](progress.md); approved direction and its changes belong in [decisions.md](decisions.md).
+- Use those records as context. If Riley changes direction, adapt to that instruction and propose any needed record updates for approval. An older stage entry should not block a newly authorized task.
+- Changing direction does not itself authorize file edits or Git actions. Retain the approval requirements above.
+- Apply this guide to supporting workflows, including the audit skill. Flag conflicting project instructions instead of silently following an older rule.
 
-## SQL and cost estimates
+## Starting a conversation and navigating the repo
 
-- When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). Uploading a query permits review; saving repo changes and publishing still require their respective explicit approvals.
-- Prepare one short, understandable query at a time. Explain its purpose, what one output row represents, the columns used, and important filters or assumptions.
-- Ask us to confirm the tables and columns exist before using them in an analytical query. Use documentation and supplied schema evidence to support that confirmation.
-- Provide an estimated scan and cost with the source and pricing assumptions. Use BigQuery's estimate when available; label calculations and distinguish estimated cost from actual charges.
-- If a reliable estimate is unavailable, say so and request the estimate shown by the BigQuery editor. Never invent a cost or treat an unknown cost as zero.
-- We run the BigQuery queries. Prepare queries for us; do not execute them yourself.
-- Select only needed columns. LIMIT does not normally reduce scanned bytes.
-- With approval, save accepted queries as numbered files such as `sql/01_exploration.sql`. Begin each with a short `--` note pointing to `sql/README.md`; keep explanations, estimates, results, and cleaning choices there.
-- Check relevant fields for missing values, duplicates, impossible values, date-boundary effects, and unequal observation periods before drawing conclusions. Propose material cleaning choices for our approval.
-- Use SQL for analysis. Do not add Python files or Python setup. Excel or Looker may be used for visuals; keep CSV and Excel data files out of the repo.
+Read this guide, the [README](README.md), [progress](progress.md), [decisions](decisions.md), the [audit skill](.agents/skills/project-audit/SKILL.md), the [audit protocol](Other/audit_protocol.md), the [audit log](Other/audit_log.md), and relevant project work. Inspect the current branch and local changes when accessible.
 
-## Evidence and project memory
+The repo holds the information needed for future conversations. Treat missing or conflicting information as unresolved; ask when it is needed rather than filling gaps with assumptions.
 
-- Support factual claims with a source: documentation and page or section, query and result, or a clearly identified research source. Label assumptions, calculations, and interpretations.
-- Treat observational relationships as associations unless the design supports causation. A benchmark-based value calculation does not establish recoverable demand or guaranteed savings.
-- Propose updates to decisions and progress when useful, and wait for approval before saving them. Separate approved decisions from proposals and unresolved questions.
-- Read the audit skill when reviewing human checks. The [audit protocol](Other/audit_protocol.md) describes the process; the [audit log](Other/audit_log.md) records real human checks of agent work.
-- Propose each audit entry or protocol addition before saving it. Routine approvals and the agent's own checks do not count as human audits.
-- Use the instructor example for structure and process. Build this project's conclusions from our Citi Bike evidence.
+After reading, wait for Riley's direction. Do not automatically synchronize branches, change files, run queries, or advance the project.
 
-## Project facts and verification status
+| File or folder | Purpose |
+|---|---|
+| [README.md](README.md) | Project identity and file map |
+| [progress.md](progress.md) | Current stage, status, and resuming work |
+| [decisions.md](decisions.md) | Approved choices, stated direction, and open questions |
+| [charter.md](charter.md) | Business question, manager's decision, scope, and success criteria |
+| [findings.md](findings.md) | Descriptive context and supported findings |
+| [sql/README.md](sql/README.md) | Query intake, methods, status, estimates, and results |
+| [Other/](Other/) | Documentation, ERD, and human audit records |
+| [visuals/](visuals/) | Approved charts and visual notes |
+| [model/](model/) | Optional model work and evaluation |
 
-- **Canvas team:** Team 10. **Partners:** Riley Allen and Rainy Villame. A separate fun team name is not yet recorded. Source: [README](README.md).
-- **Dataset name recorded by the team:** Citi NY Bikes. **Google Cloud project ID recorded by the team:** `busm410-project`. Source: [README](README.md).
-- **Dataset path proposed in an existing draft:** `bigquery-public-data.new_york_citibike`. Its use in the current analysis still needs confirmation. Source: [saved draft](sql/drafts/extreme_duration_timestamp_check.sql).
-- **Candidate tables:** `citibike_trips` and `citibike_stations`. Schema and preview screenshots are in [schema evidence](evidence/schema_screenshots/); confirm definitions before analytical use.
-- **Candidate trip fields:** `starttime`, `stoptime`, `tripduration`, and `usertype` appear in the saved draft. Their definitions, units, coverage, and suitability still need confirmation.
-- **Approved cleaning rules, gap, benchmark, and numerical findings:** not yet established in the current project records. Add them with their sources after verification and approval.
-- Earlier drafts and imported work are background material. Their presence does not establish execution, verification, or team approval.
+## Queries and evidence
 
-## Current assignment
+- Prepare queries when SQL work is requested. Use one short, understandable query at a time and explain its purpose, fields, filters, assumptions, and output row.
+- Follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). An upload permits review; saving changes and publishing still require their respective approvals.
+- Confirm tables and columns before analytical use. Reuse confirmations already recorded; ask again when the schema, source, or intended use changes.
+- Provide estimated scan and cost with their source and assumptions. If a reliable estimate is unavailable, say so and request BigQuery's estimate. Never invent a cost or treat an unknown estimate as zero.
+- Riley or a teammate runs BigQuery queries. Prepare SQL for them; do not execute queries yourself.
+- With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/README.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
+- Select needed columns. LIMIT does not normally reduce scanned bytes. Investigate missing values, duplicates, impossible values, and observation-period differences as relevant; propose material cleaning decisions for approval.
+- Use SQL for analysis. Do not add Python files or Python setup. Excel or Looker may be used for visuals. Keep CSV and Excel data files out of the repo.
+- Support claims with documentation, a query and result, or a research source. Label assumptions and interpretations. Associations and benchmark scenarios do not establish causation or guaranteed benefits.
 
-CP1 requires one measured gap, a justified benchmark, a value calculation with sources, and a chart. Explore the documentation and data before proposing the gap.
+## Decisions and human checks
 
-- `charter.md`: question, manager and decision supported, scope, and three to five success criteria.
-- `findings.md`: gap, what one row represents, benchmark and rationale, difference, value calculation, and embedded chart.
-- `README.md`: team information table, problem-framing paragraph, and a table linking to the work.
-- `sql/`: numbered queries and `sql/README.md` explaining querying and cleaning choices.
-- `visuals/`: the gap and benchmark chart.
-- `Other/`: dataset documentation or a README documentation link, table diagram, audit protocol, and audit log.
+Propose updates to shared memory, then wait for explicit approval. Keep approved decisions distinct from proposals and unresolved choices.
 
-Prepare work on the agreed branch. Keep both partners' contributions attributable to them. Partner review precedes merging finished work into `main`, which the instructor grades. Request explicit approval for every Git action; use GitHub directly when access is available.
+Follow the audit skill for real human checks of agent work. Propose each audit entry and protocol addition for approval. Routine approvals and the agent's own checks do not count as human audits. Use the instructor example for structure and evidence standards.
+
+## Project facts
+
+This section is a context snapshot as of 2026-11-04. Consult progress and decisions for later approved changes; declare conflicts and let Riley resolve them.
+
+- Course: BUSM 410, BYU-Hawaii.
+- Canvas team: Team 10.
+- Project lead: Riley Allen.
+- Project partner: Rainy Villame.
+- Dataset: `bigquery-public-data.new_york_citibike`.
+- Google Cloud project ID recorded in the README: `busm410-project`.
+- Existing study boundary: operations during 2013-2018 using the existing dataset only.
+
+### Data and sources
+
+- Riley confirmed that `citibike_trips` and its `starttime` column are available.
+- Supplied documentation describes `tripduration` in seconds and `starttime`/`stoptime` as local DATETIME values.
+- The documented trip coverage is July 2013-May 2018.
+- The station documentation describes a modern snapshot; assess time-period compatibility before using its attributes.
+- Sources: [dataset documentation](Other/metadata.pdf), [ERD](Other/ERD.pdf), and [source notes](Other/dataset_documentation.md).
+- Reported documentation statistics are not automatically verified project findings.
+- Existing SQL drafts are background material; their presence does not establish approval, execution, or a selected business problem.
+
+### Open analytical decisions at this update
+
+- Business problem: TBD after descriptive exploration.
+- Business KPI and formula: TBD.
+- Analysis output row: TBD.
+- Benchmark: TBD.
+- Cleaning rules: no approved rules recorded yet.
+- Findings and recommendations: pending evidence and approval.
+
+CP1 ultimately requires a measured gap, a justified benchmark, a sourced value calculation, and a chart. The instructor grades main. Use the current project records and Riley's direction to determine the next task.

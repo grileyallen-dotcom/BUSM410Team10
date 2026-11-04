@@ -1,17 +1,15 @@
 # Model Notes
 
-Modeling is optional. First select and analyze one KPI and a clear business problem. Use a model only if it answers a useful question and can inform an action.
+Modeling is optional and has not been selected. Consult [progress](../progress.md) and [decisions](../decisions.md) for the current direction. The agent may recommend a model later if it answers a useful question and supports the chosen decision.
 
 ## Model question
-_To be defined with the team after KPI selection._
 
-## Candidate method
-- Regression: consider when predicting a defined numeric or binary outcome is useful.
-- Clustering: consider when grouping similar rides or time periods could support a specific decision.
-- Compare against a simple baseline where appropriate.
+TBD after descriptive exploration and project-lead approval of a business problem. No model target, method, or grouping is predetermined.
 
-## Data and evaluation
-Record the approved target or grouping question, input fields, time range, training and evaluation approach, comparison baseline, and metrics here. Confirm every field exists and is appropriate before use.
+## Method, data, and evaluation
+
+When modeling is requested, propose its purpose, source fields, period, method, evaluation approach, and comparison baseline. Confirm the fields and assumptions, and obtain approval before saving changes. Use SQL for analysis.
 
 ## Results and decision
-Link saved SQL and record the result, limitations, and what decision it supports. Do not treat predictive performance or a cluster pattern as proof of cause.
+
+Link approved work and supplied results. Explain limitations and how the evidence informs the project lead's decision. Predictive performance and group patterns do not establish causation.

@@ -1,16 +1,16 @@
 # Audit Protocol
 
-This is our process for directing and checking the agent. Actual human checks are recorded in [audit_log.md](audit_log.md).
+This is our process for directing and checking the agent. Riley Allen is the project lead; the agent is a consultant. Actual human checks are recorded in [audit_log.md](audit_log.md).
 
 ## How we work
 
-1. **We direct the work.** The agent reads the repo, waits for direction, and helps with one small step at a time.
-2. **The agent proposes an action.** It explains the purpose and shows the exact proposed change. We explicitly approve repo modifications before they happen.
+1. **The project lead directs the work.** The agent reads the repo, waits for Riley's direction, and helps with one small step at a time. Use [progress](../progress.md) for the current stage and Riley's latest direction for the task. A setup discussion does not authorize starting analysis.
+2. **The agent proposes an action.** It explains the purpose and shows the exact proposed change. The project lead explicitly approves repo modifications before they happen.
 3. **We check the evidence.** For factual claims, review the linked documentation, table definition, query result, or research source. Separate documented facts, calculations, assumptions, and the agent's interpretation.
-4. **The agent prepares a short query.** It explains the output row, fields, filters, and estimated scan and cost. If the estimate is unavailable, it asks us for BigQuery's estimate. We confirm the required tables and columns, review the query, and run it ourselves.
-5. **The agent explains the results.** It analyzes the supplied results and discusses the reasoning with us. It challenges unsupported interpretations directly and asks before treating an interpretation as an approved conclusion.
+4. **The agent prepares a short query.** It explains the output row, fields, filters, and estimated scan and cost. If the estimate is unavailable, it requests BigQuery's estimate. The project lead confirms the required tables and columns using available evidence, and Riley or a teammate reviews and runs the query when directed.
+5. **The consultant explains the results.** The agent analyzes supplied results and discusses the reasoning with the project lead. It challenges unsupported interpretations directly and asks before treating an interpretation as an approved conclusion.
 6. **We perform meaningful checks.** Depending on the claim, verify a definition, independently calculate a result, check totals and denominators, question a filter or join, or compare the interpretation with its source. Describe what was actually checked and any remaining uncertainty.
-7. **The agent proposes the record.** For a substantial human check, it shows the proposed audit entry and category. It saves the entry only after approval. It separately proposes any new checking habit worth adding to this protocol.
+7. **The agent proposes the record.** For a substantial human check, it shows the proposed audit entry and category. It saves the entry only after the project lead approves the proposed entry and summary-count update. It separately proposes any new checking habit worth adding to this protocol.
 
 ## Checks to consider for CP1
 
