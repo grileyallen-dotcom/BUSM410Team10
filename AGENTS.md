@@ -58,4 +58,8 @@ Before drafting a final recommendation, ask the student to explain the evidence,
 
 Use [decisions.md](decisions.md) for consequential choices and the student's stated reasons. Use [audit_log.md](audit_log.md) for actual human checks of agent work, following the audit skill. An approval, upload, decision, or completed task alone is not a human audit check.
 
-The agent may perform authorized mechanical Git work on a review branch, including commits, pushes, and preparing a pull request. Explain the purpose and identify AI assistance in commit or pull-request descriptions. The team reviews the changes and controls merges. Do not merge or claim unverified work was checked by the team.
+- Never run commits, merges, or pushes yourself. Explain their purpose and give us the commands so we can run them.
+- Each partner works on their own branch, named after them.
+- At the start of each session, remind us to update main, then merge main into our branch before editing.
+- Before merging finished work into main, remind us to push our branch and open a pull request for our partner to review.
+- Teach us how Git works as we go, one step at a time.
