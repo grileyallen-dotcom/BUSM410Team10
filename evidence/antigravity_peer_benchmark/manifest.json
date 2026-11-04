@@ -1,0 +1,19 @@
+{
+  "received_date": "2026-11-03",
+  "original_filename": "september_2017_station_turnover(1).csv",
+  "bytes": 18589,
+  "sha256": "a992856c877bd49a9ab064f8bb052256ec76e381e15467368a3150f75516fef4",
+  "git_blob_sha1": "1572d3936ad4d8fbc0d7f0027335b0be0f0288e6",
+  "identical_to_repository_path": "evidence/antigravity_stage_1/september_2017_station_turnover.csv",
+  "row_count": 541,
+  "columns": [
+    "start_station_name",
+    "avg_daily_turnover",
+    "avg_daily_starts",
+    "dock_capacity"
+  ],
+  "enriched_fields_present": false,
+  "provenance": "User supplied an Antigravity narrative and this attachment. The narrative reports enriched features not present in the attachment.",
+  "checks": "Agent used SQL on the supplied rounded CSV to count capacity tiers, compute exact medians, and inspect named examples. No BigQuery rerun or human audit approval.",
+  "derived_output": "evidence/antigravity_peer_benchmark/capacity_peer_check.csv"
+}
