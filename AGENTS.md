@@ -15,6 +15,7 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 - Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
 - **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
 - **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions. State the target branch when requesting approval.
+- **Allowed publishing branch:** Agent commits and pushes must target `riley-setup` only. Never commit, push, merge, or otherwise apply changes to `main` or another branch. Verify the branch before publishing. If a request conflicts with this rule, declare the conflict and request an explicit override; a general approval to publish or merge does not override it.
 - Preserve existing work. Explain any conflict and ask what to keep before resolving it.
 - The repo is the project's shared brain. Reading it is allowed without approval; modifying it always requires explicit permission, including changes to memory, decisions, progress, and audit records.
 
