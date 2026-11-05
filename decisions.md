@@ -28,6 +28,20 @@ The following direction was stated by Riley in conversation on 2026-11-04.
 
 On 2026-11-04, Riley confirmed that `bigquery-public-data.new_york_citibike.citibike_trips` and its `starttime` column are available. This records the user's confirmation, not an independently executed query or a human audit entry.
 
+## Approved cleaning rules
+
+### C1. Exclude blank rows (approved 2026-11-05)
+
+| Field | Entry |
+|---|---|
+| Decision-maker | Riley Allen, project lead |
+| Rule | Analyses of `citibike_trips` use only rows where `starttime IS NOT NULL` |
+| Effect | Excludes 5,828,994 of 58,937,715 rows (9.9%), leaving 53,108,721 trips |
+| Evidence | [Query 01](sql/01_monthly_trips_and_missing_starts.sql) counted the rows. [Query 02](sql/02_blank_rows_field_check.sql) found `stoptime`, `tripduration`, `start_station_id`, `end_station_id`, and `bikeid` all null. [Query 03](sql/03_blank_rows_usertype_check.sql) found `usertype` is an empty string in every one |
+| Reasoning | Agent recommendation: these rows have no time, duration, station, or bike, so they cannot represent trips. Riley approved the rule; Riley's own reasoning was not separately recorded |
+| Alternatives | Keep the rows (rejected: they add no trip information); check the remaining fields first (not done; see limits) |
+| Limits | Station names, coordinates, `birth_year`, `gender`, and `customer_plan` were not checked for these rows. This was checked by the agent only; there has been no human audit |
+
 ## Future decisions
 
 For each consequential decision, propose the exact entry for approval. Record the actual decision-maker, decision, reasoning when supplied, evidence, alternatives where relevant, and unresolved limits. Do not invent reasoning or verification. If direction changes, identify the superseded decision and the new direction.
