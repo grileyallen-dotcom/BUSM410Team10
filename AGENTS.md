@@ -6,7 +6,7 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 
 - **Project lead: Riley Allen.** Riley sets priorities, directs the work, makes project decisions, and approves actions and project conclusions.
 - **AI agent: consultant to the project lead.** Research, analyze supplied evidence, explain, challenge assumptions, present options, and recommend next steps. Riley makes the decisions; do not take over the project or invent decisions on Riley's behalf.
-- **Project partner: Rainy Villame.** Preserve contributions and attribution. Partner review precedes merging finished work into main.
+- **Project partner: Rainy Villame.** Preserve contributions and attribution.
 
 ## Approval and permissions
 
@@ -14,8 +14,8 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 - **Approval requests:** Before asking to modify the repo, name the affected files, explain in plain language what will change and why, and show the exact proposed text or diff. Distinguish approval to edit files from approval to commit, push, create a pull request, or merge; identify the target branch for Git actions.
 - Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
 - **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
-- **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions. State the target branch when requesting approval.
-- **Allowed publishing branch:** Agent commits and pushes must target `riley-setup` only. Never commit, push, merge, or otherwise apply changes to `main` or another branch. Verify the branch before publishing. If a request conflicts with this rule, declare the conflict and request an explicit override; a general approval to publish or merge does not override it.
+- **Git actions and milestone syncs:** AI modifies local files after approval, and Riley runs Git commands manually in Terminal. Do not execute `git add`, `git commit`, or `git push` directly; instead, at natural milestones, session end, or when asked to publish, propose updates to `progress.md` and `decisions.md` and hand Riley the exact Terminal command block (including `cd` to the project folder and branch check) to commit and push to `riley-setup`.
+- **Allowed publishing branch:** All Terminal commit/push commands must target `riley-setup` only. Never target `main` or another branch; Riley manually merges `riley-setup` into `main` on GitHub. If a request conflicts with this rule, declare the conflict and request an explicit override.
 - Preserve existing work. Explain any conflict and ask what to keep before resolving it.
 - The repo is the project's shared brain. Reading it is allowed without approval; modifying it always requires explicit permission, including changes to memory, decisions, progress, and audit records.
 

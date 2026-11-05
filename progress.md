@@ -16,7 +16,7 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Not started |
 | 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Not started |
 | 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Not started |
-| 6. Review, audit, and merge | Human checks, partner review, and merge to `main` | Audit entries recorded, Rainy has reviewed, and Riley approves the merge | [Other/audit_log.md](Other/audit_log.md) | Not started |
+| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | Not started |
 
 **Next step:** Riley chooses whether to continue Stage 1 exploration or begin Stage 2 cleaning decisions.
 
@@ -43,4 +43,4 @@ Business problem, manager's decision, business KPI and formula, analysis output 
 
 Read the repo, then wait for the project lead's direction. Propose one small next action relevant to that direction. Updates to files and Git publishing retain their respective approval requirements.
 
-The instructor grades main. Partner review and explicit merge approval are required before completed branch work is merged.
+The instructor grades main. At milestones or session end, update `progress.md` and `decisions.md` (with approval), supply Terminal commands for Riley to commit and push to `riley-setup`, and Riley manually merges `riley-setup` into `main` on GitHub.

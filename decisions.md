@@ -16,7 +16,7 @@ The following direction was stated by Riley in conversation on 2026-11-04.
 | Existing data boundary | Citi Bike operations during 2013-2018 using the existing dataset only. |
 | Read access | Reading files, repo inspection, and external research require no approval. |
 | Repo changes | Show the exact proposed change and reason, then obtain explicit approval. |
-| Git actions | Commits, pushes, pull requests, and merges require separate explicit approval. |
+| Git actions and multi-AI sync (updated 2026-11-05) | Local repo is the central shared brain across AI models; AI modifies local files after full diff approval. At milestones or session end, update `progress.md` and `decisions.md` (with approval) and hand Riley the exact Terminal commands to commit and push to `riley-setup` (AI does not run Git commits/pushes directly). Supersedes the prior partner-review merge gate: Riley manually merges `riley-setup` to `main` on GitHub without requiring Rainy's review. |
 | Query execution | The agent prepares SQL when requested; Riley or a teammate runs it. |
 | Communication | Short, simple replies; detail on request; direct, evidence-based disagreement. |
 | Conflicting instructions | Declare the conflict. Riley may override project instructions; respect an override already given and clarify only when its meaning or scope is unclear. |
