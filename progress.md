@@ -2,9 +2,23 @@
 
 ## Current stage
 
-Descriptive analytics in progress. Foundational queries 01–12 have been executed in BigQuery and documented. Key data baselines established include blank row resolution, modern stations snapshot limits, user composition, duration benchmarks by user type, weekday/weekend demand dynamics, top route/round-trip loop patterns, rider demographics, hourly rush-hour patterns, and station traffic concentration. The specific business problem and business KPI remain open.
+**Stage 1 — Descriptive exploration (in progress).** Queries 01–12 have been run and documented in [findings.md](findings.md) and [sql/README.md](sql/README.md). The business problem and KPI remain open.
 
-Next analytical steps involve deeper descriptive comparisons (such as durations by user type or station activity) prior to selecting a business problem.
+## Project stages
+
+Riley decides when a stage is complete and when to move on. Stages can overlap or be revisited. The "done when" tests are working guides, not approved rules.
+
+| Stage | Goal | Done when | Main files | Status |
+|---|---|---|---|---|
+| 0. Setup | Organize the repo, roles, and workflow | Roles, approvals, and file map are recorded | [AGENTS.md](AGENTS.md), [README.md](README.md) | Done |
+| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | **In progress** (queries 01–12) |
+| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Started. Proposed: drop blank rows (`starttime IS NULL`). Open: >24h trips, birth years, coverage gaps |
+| 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Not started |
+| 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Not started |
+| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Not started |
+| 6. Review, audit, and merge | Human checks, partner review, and merge to `main` | Audit entries recorded, Rainy has reviewed, and Riley approves the merge | [Other/audit_log.md](Other/audit_log.md) | Not started |
+
+**Next step:** Riley chooses whether to continue Stage 1 exploration or begin Stage 2 cleaning decisions.
 
 ## Repo organization
 
