@@ -5,12 +5,12 @@ This log records actual human checks of agent work. Routine approvals and the ag
 The entries below were reconstructed from accessible project conversations on 2026-11-04. Table dates refer to when each check occurred; each entry describes the human's observed action and its evidence limits.
 
 | Category | What it records | Entries |
-|---|---|---|
+|---|---|---:|
 | [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 1 |
 | [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 1 |
 | [Separated fact from opinion](#separated-fact-from-opinion) | A human checked whether a statement was documented or inferred. | 0 |
-| 3 |
-| 2 |
+| [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 3 |
+| [Improved the agent's instructions](#improved-the-agents-instructions) | A human check led to better agent instructions. | 2 |
 
 ## Caught an error
 
