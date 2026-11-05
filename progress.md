@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Descriptive analytics in progress. Foundational queries 01–06 have been executed in BigQuery and documented. Key data parameters established include resolution of blank rows, verification of the modern stations snapshot, annual rider composition (Subscriber vs. Customer), and trip duration benchmarks. The specific business problem and business KPI remain open.
+Descriptive analytics in progress. Foundational queries 01–09 have been executed in BigQuery and documented. Key data baselines established include blank row resolution, modern stations snapshot limits, user composition, duration benchmarks by user type, weekday/weekend demand dynamics, and top route/round-trip loop patterns. The specific business problem and business KPI remain open.
 
 Next analytical steps involve deeper descriptive comparisons (such as durations by user type or station activity) prior to selecting a business problem.
 

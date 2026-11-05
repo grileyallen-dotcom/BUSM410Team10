@@ -6,7 +6,7 @@ This file explains how the project queries the data, reviews cleaning choices, a
 
 Consult [progress](../progress.md) for the current stage and [decisions](../decisions.md) for project-lead direction. The agent acts as consultant to Riley Allen. A setup discussion does not authorize starting analysis; an older stage record does not block a new explicit request for SQL work.
 
-No approved, executed numbered analysis queries are recorded in the repo yet. Six numbered exploratory queries have been approved, executed in BigQuery by project lead Riley Allen, and documented below. The future business problem, business KPI, and benchmark remain open.
+No approved, executed numbered analysis queries are recorded in the repo yet. Nine numbered exploratory queries have been approved, executed in BigQuery by project lead Riley Allen, and documented below. The future business problem, business KPI, and benchmark remain open.
 
 See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other/ERD.pdf), and [documentation notes](../Other/dataset_documentation.md) for the supplied schema information and its limits.
 
@@ -20,6 +20,9 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 | [04_stations_snapshot_profile.sql](04_stations_snapshot_profile.sql) | Profile citibike_stations table uniqueness, timestamps, and capacity | Approved; executed 2026-11-05 | < 1 MB (< $0.0001) | 2,518 unique stations; latest reported 2026-11-04 (modern snapshot); avg capacity 29.7 docks |
 | [05_usertype_annual_composition.sql](05_usertype_annual_composition.sql) | Annual breakdown of valid trips by usertype | Approved; executed 2026-11-05 | ~1.2 GB (< $0.01) | 53,108,721 total valid trips; 87%–90% Subscriber, 10%–13% Customer across all years |
 | [06_duration_benchmarks.sql](06_duration_benchmarks.sql) | Summary quantiles, duration averages, and outlier checks for tripduration | Approved; executed 2026-11-05 | ~943 MB (< $0.01) | Median 10.5m, IQR 6.4–17.7m, p99 62.3m, min 60s, 11,513 trips > 24h, max ~226 days |
+| [07_duration_by_usertype.sql](07_duration_by_usertype.sql) | Duration percentiles, averages, and >24h outlier breakdown by usertype | Approved; executed 2026-11-05 | ~1.65 GB (< $0.01) | Subscribers median 9.7m (p99 43.8m); Customers median 20.9m (p99 183.9m); Customers generate 51.1% of >24h trips |
+| [08_day_of_week_usertype.sql](08_day_of_week_usertype.sql) | Trip volume across days of the week by usertype | Approved; executed 2026-11-05 | ~1.2 GB (< $0.01) | Subscribers peak mid-week; Customer share jumps from 7.3% mid-week to 22.4% on weekends (45.8% of Customer trips on weekends) |
+| [09_top_routes_roundtrips.sql](09_top_routes_roundtrips.sql) | Top 10 station pairs, duration comparisons, and round-trip loop check | Approved; executed 2026-11-05 | ~3.7 GB (< $0.03) | 6 of top 10 routes are round trips; Central Park South loops average 47–54m, while Midtown point-to-point routes average 5–7m |
 | [drafts/extreme_duration_timestamp_check.sql](drafts/extreme_duration_timestamp_check.sql) | Compare recorded and timestamp-derived durations for Customer trips over 24 hours in May 2017 and May 2018 | Existing draft; no query approval or execution result recorded | Not recorded; obtain a BigQuery estimate before running | Not recorded |
 
 This draft does not establish the project's selected gap, cleaning policy, or accepted analysis.
