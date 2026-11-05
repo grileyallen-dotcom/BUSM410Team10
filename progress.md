@@ -2,9 +2,9 @@
 
 ## Current stage
 
-Repository organization and workflow preparation. Riley Allen is the project lead; the agent is the consultant. The business problem and business KPI remain open.
+Descriptive analytics in progress. Foundational queries 01–06 have been executed in BigQuery and documented. Key data parameters established include resolution of blank rows, verification of the modern stations snapshot, annual rider composition (Subscriber vs. Customer), and trip duration benchmarks. The specific business problem and business KPI remain open.
 
-The next analytical stage is descriptive analytics to understand the data and setting. Begin that work when the project lead directs it. This is current context; Riley can change direction without being blocked by an older stage entry. Propose corresponding record updates for approval.
+Next analytical steps involve deeper descriptive comparisons (such as durations by user type or station activity) prior to selecting a business problem.
 
 ## Repo organization
 

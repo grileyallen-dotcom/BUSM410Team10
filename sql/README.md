@@ -6,7 +6,7 @@ This file explains how the project queries the data, reviews cleaning choices, a
 
 Consult [progress](../progress.md) for the current stage and [decisions](../decisions.md) for project-lead direction. The agent acts as consultant to Riley Allen. A setup discussion does not authorize starting analysis; an older stage record does not block a new explicit request for SQL work.
 
-No approved, executed numbered analysis queries are recorded in the repo yet. The future business problem, business KPI, benchmark, output row, and cleaning decisions are still open. The supplied dataset images report profiling results, but their underlying profiling SQL and outputs were not supplied.
+No approved, executed numbered analysis queries are recorded in the repo yet. Six numbered exploratory queries have been approved, executed in BigQuery by project lead Riley Allen, and documented below. The future business problem, business KPI, and benchmark remain open.
 
 See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other/ERD.pdf), and [documentation notes](../Other/dataset_documentation.md) for the supplied schema information and its limits.
 
@@ -14,6 +14,12 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 
 | File | Purpose and scope | Approval and execution status | Estimated scan and cost | Result |
 |---|---|---|---|---|
+| [01_monthly_trips_and_missing_starts.sql](01_monthly_trips_and_missing_starts.sql) | Monthly trip volume and missing starttime check across 2013–2018 | Approved; executed 2026-11-05 | ~471.5 MB (< $0.01) | Identified 52.1M monthly trip counts, 5.8M missing starts, and seasonal patterns |
+| [02_blank_rows_field_check.sql](02_blank_rows_field_check.sql) | Check non-null counts of operational fields for missing starttimes | Approved; executed 2026-11-05 | ~3.5 GB (~$0.02) | 0 non-null values for stoptime, duration, stations, bikeid; usertype has 5,828,994 non-null values |
+| [03_blank_rows_usertype_check.sql](03_blank_rows_usertype_check.sql) | Inspect distinct usertype values and string lengths for missing starttimes | Approved; executed 2026-11-05 | ~1.2 GB (< $0.01) | All 5,828,994 rows contain an empty string (length 0), confirming completely blank records |
+| [04_stations_snapshot_profile.sql](04_stations_snapshot_profile.sql) | Profile citibike_stations table uniqueness, timestamps, and capacity | Approved; executed 2026-11-05 | < 1 MB (< $0.0001) | 2,518 unique stations; latest reported 2026-11-04 (modern snapshot); avg capacity 29.7 docks |
+| [05_usertype_annual_composition.sql](05_usertype_annual_composition.sql) | Annual breakdown of valid trips by usertype | Approved; executed 2026-11-05 | ~1.2 GB (< $0.01) | 53,108,721 total valid trips; 87%–90% Subscriber, 10%–13% Customer across all years |
+| [06_duration_benchmarks.sql](06_duration_benchmarks.sql) | Summary quantiles, duration averages, and outlier checks for tripduration | Approved; executed 2026-11-05 | ~943 MB (< $0.01) | Median 10.5m, IQR 6.4–17.7m, p99 62.3m, min 60s, 11,513 trips > 24h, max ~226 days |
 | [drafts/extreme_duration_timestamp_check.sql](drafts/extreme_duration_timestamp_check.sql) | Compare recorded and timestamp-derived durations for Customer trips over 24 hours in May 2017 and May 2018 | Existing draft; no query approval or execution result recorded | Not recorded; obtain a BigQuery estimate before running | Not recorded |
 
 This draft does not establish the project's selected gap, cleaning policy, or accepted analysis.
