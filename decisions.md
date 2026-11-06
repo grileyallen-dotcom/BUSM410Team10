@@ -14,7 +14,7 @@ The following direction was stated by Riley in conversation on 2026-11-04 and 20
 | Business problem and business KPI (selected 2026-11-05) | Casual Customers keep bikes out for more than 24 hours far more often than Subscribers. KPI: trips over 24 hours (`tripduration > 86400`) per 10,000 valid trips, plus bike-days tied up. Benchmark: the Subscriber rate in the same period. |
 | Analysis period (selected 2026-11-05) | June 2017–May 2018: the latest 12 straight months with complete coverage. |
 | Analysis output row and valuation | `usertype` × month (Query 14) and full-period `usertype` summary (Query 16), with a station breakdown to follow. Valuation approved 2026-11-05 as Option C range (see V1 below); recommendations remain open. |
-| CP1 chart (updated 2026-11-05) | Chart specifications recorded in [visuals/notes.md](visuals/notes.md) for external creation in Excel, Sheets, or Looker Studio; save PNG in `visuals/` without committing `.csv`/`.xlsx` files. |
+| CP1 chart and visual tools (updated 2026-11-05) | Excel, Sheets, Looker Studio, or Tableau are approved for visuals (supersedes Excel/Looker-only wording). Chart specifications are in [visuals/notes.md](visuals/notes.md); save PNG in `visuals/` without committing `.csv`, `.xlsx`, or Tableau data/extract files. |
 | Existing data boundary | Citi Bike operations during 2013-2018 using the existing dataset only. |
 | Read access | Reading files, repo inspection, and external research require no approval. |
 | Repo changes | Show the exact proposed change and reason, then obtain explicit approval. |

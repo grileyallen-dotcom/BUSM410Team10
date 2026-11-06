@@ -68,7 +68,7 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 - Riley or a teammate runs BigQuery queries. Prepare SQL for them; do not execute queries yourself.
 - With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/README.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
 - Select needed columns. LIMIT does not normally reduce scanned bytes. Investigate missing values, duplicates, impossible values, and observation-period differences as relevant; propose material cleaning decisions for approval.
-- Use SQL for analysis. Do not add Python files or Python setup. Excel or Looker may be used for visuals. Keep CSV and Excel data files out of the repo.
+- Use SQL for analysis. Do not add Python files or Python setup. Excel, Looker, or Tableau may be used for visuals. Keep CSV, Excel, and Tableau data/extract files out of the repo.
 - Support claims with documentation, a query and result, or a research source. Label assumptions and interpretations. Associations and benchmark scenarios do not establish causation or guaranteed benefits.
 
 ## Decisions and human checks

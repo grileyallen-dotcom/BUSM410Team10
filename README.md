@@ -44,6 +44,6 @@ The screenshot below shows the project IAM setup with our partner and instructor
 
 ## Assignment approach
 
-Describe the dataset and its setting first. After reviewing that evidence, the project lead will select the future business problem and approve its question, KPI, benchmark, and scope. Analyze in SQL when requested; Excel or Looker may be used for visuals. Later, complete CP1's measured gap, sourced value calculation, and chart. Keep conclusions tied to evidence and explain limitations.
+Describe the dataset and its setting first. After reviewing that evidence, the project lead will select the future business problem and approve its question, KPI, benchmark, and scope. Analyze in SQL when requested; Excel, Looker, or Tableau may be used for visuals. Later, complete CP1's measured gap, sourced value calculation, and chart. Keep conclusions tied to evidence and explain limitations.
 
 

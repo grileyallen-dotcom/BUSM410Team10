@@ -94,5 +94,5 @@ Keep the query results, [findings](../findings.md), [charter](../charter.md), ch
 
 ## Sheets, visuals, and data files
 
-If Google Sheets is used, add the sheet link and formulas here. Add chart calculation and source references when a chart is created. Keep CSV and Excel data files out of the repo.
+If Google Sheets or Tableau is used, add the workbook/view link and calculations here or in [visuals/notes.md](../visuals/notes.md). Add chart calculation and source references when a chart is created. Keep CSV, Excel, and Tableau data/extract files out of the repo.
 

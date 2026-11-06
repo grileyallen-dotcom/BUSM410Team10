@@ -1,6 +1,6 @@
 # Visuals
 
-Use this folder for approved descriptive charts and, later, charts addressing the selected business problem. Excel or Looker may be used for visuals.
+Use this folder for approved descriptive charts and, later, charts addressing the selected business problem. Excel, Looker, or Tableau may be used for visuals.
 
 For each chart, record:
 - Purpose: descriptive context or the future selected problem
@@ -14,7 +14,7 @@ The final CP1 findings must display a chart of the selected gap and benchmark. N
 
 ## CP1 chart specification (pending creation)
 
-Use Excel, Google Sheets, or Looker Studio (do **not** use Python; do **not** commit `.csv` or `.xlsx` files to the repo). Save the finished chart image as `visuals/cp1_over_24h_gap_vs_benchmark.png` and embed it under `## Chart` in [findings.md](../findings.md).
+Use Excel, Google Sheets, Looker Studio, or Tableau (do **not** use Python; do **not** commit `.csv`, `.xlsx`, or Tableau data/extract files to the repo). Save the finished chart image as `visuals/cp1_over_24h_gap_vs_benchmark.png` and embed it under `## Chart` in [findings.md](../findings.md).
 
 ### Option 1 (Recommended): 12-month trend vs. benchmark
 - **Source query:** [sql/14_monthly_over_24h_by_usertype.sql](../sql/14_monthly_over_24h_by_usertype.sql), filtered to `trip_month` from `2017-06` through `2018-05` (24 rows: 12 months × 2 `usertype` groups; `16,951,030` valid trips).
@@ -35,5 +35,5 @@ Use Excel, Google Sheets, or Looker Studio (do **not** use Python; do **not** co
 
 ### After creating the chart
 1. Save the exported PNG to `visuals/cp1_over_24h_gap_vs_benchmark.png` (keep raw `.csv`/`.xlsx` files outside the repo).
-2. Record the final chart metadata (and any Looker Studio / Google Sheets link) in this file.
+2. Record the final chart metadata (and any Tableau, Looker Studio, or Google Sheets link) in this file.
 3. Embed `![Customer vs. Subscriber >24h rate, June 2017–May 2018](visuals/cp1_over_24h_gap_vs_benchmark.png)` under `## Chart` in [findings.md](../findings.md) and log a human check verifying chart values against Query 14/16 in [Other/audit_log.md](../Other/audit_log.md).
