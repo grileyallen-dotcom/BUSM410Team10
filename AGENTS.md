@@ -79,7 +79,7 @@ Follow the audit skill for real human checks of agent work. Propose each audit e
 
 ## Project facts
 
-This section is a context snapshot as of 2026-11-04. Consult progress and decisions for later approved changes; declare conflicts and let Riley resolve them.
+This section is a context snapshot as of 2026-11-05. Consult [progress.md](progress.md) and [decisions.md](decisions.md) for current stage and any later approved changes; declare conflicts and let Riley resolve them.
 
 - Course: BUSM 410, BYU-Hawaii.
 - Canvas team: Team 10.
@@ -99,13 +99,13 @@ This section is a context snapshot as of 2026-11-04. Consult progress and decisi
 - Reported documentation statistics are not automatically verified project findings.
 - Existing SQL drafts are background material; their presence does not establish approval, execution, or a selected business problem.
 
-### Open analytical decisions at this update
+### Analytical snapshot at this update
 
-- Business problem: TBD after descriptive exploration.
-- Business KPI and formula: TBD.
-- Analysis output row: TBD.
-- Benchmark: TBD.
-- Cleaning rules: no approved rules recorded yet.
-- Findings and recommendations: pending evidence and approval.
+- Business problem (approved 2026-11-05): Casual `Customer` riders keep Citi Bikes out >24 hours far more often than `Subscriber` riders ([charter.md](charter.md)).
+- Business KPI and period: Trips >24h (`tripduration > 86400`) per 10,000 valid trips plus >24h bike-days, June 2017–May 2018 (`15.98` vs. `1.05`; `20,736.7` excess bike-days).
+- Analysis output row: `usertype` × month ([Query 14](sql/14_monthly_over_24h_by_usertype.sql)) and period `usertype` summary ([Query 16](sql/16_period_gap_summary.sql)).
+- Benchmark: Same-period `Subscriber` rate (`1.05` per 10,000 valid trips).
+- Approved rules ([decisions.md](decisions.md)): C1 (`starttime IS NOT NULL`), C2 (`tripduration > 86400`, June 2017–May 2018), and V1 (Option C ceiling range: `~$55.6K–$335.2K/yr` from May 2018 Monthly Operating Report).
+- Still open: CP1 chart ([visuals/notes.md](visuals/notes.md)), station-level breakdown, and final recommendations.
 
 CP1 ultimately requires a measured gap, a justified benchmark, a sourced value calculation, and a chart. The instructor grades main. Use the current project records and Riley's direction to determine the next task.

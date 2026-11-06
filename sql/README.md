@@ -6,7 +6,7 @@ This file explains how the project queries the data, reviews cleaning choices, a
 
 Consult [progress](../progress.md) for the current stage and [decisions](../decisions.md) for project-lead direction. The agent acts as consultant to Riley Allen. A setup discussion does not authorize starting analysis; an older stage record does not block a new explicit request for SQL work.
 
-Twelve numbered exploratory queries were run in BigQuery by project lead Riley Allen, with results supplied on 2026-11-05. Riley approved saving them, and they are documented below. An agent self-check against the supplied results was completed on 2026-11-05; it is not a human audit. The future business problem, business KPI, and benchmark remain open.
+Sixteen numbered queries (01–12 exploratory; 13–16 for the selected Customer >24h lockup gap) were run in BigQuery by project lead Riley Allen, with results supplied on 2026-11-05 and saved with approval below. See [decisions.md](../decisions.md) for the approved problem, KPI, benchmark, cleaning rules (C1–C2), and valuation rule (V1).
 
 See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other/ERD.pdf), and [documentation notes](../Other/dataset_documentation.md) for the supplied schema information and its limits.
 
@@ -29,9 +29,10 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 | [13_over_24h_timestamp_duplicate_check.sql](13_over_24h_timestamp_duplicate_check.sql) | Check that `tripduration` matches clock times and look for duplicates among trips over 24 hours, by usertype | Run by Riley; results supplied 2026-11-05; saved with approval | ~2.6 GB (< $0.02) | 11,513 trips over 24 hours; 0 missing stop times, 0 negative durations, 0 duplicates; all 307 differences over 60 s are under 1 hour (daylight saving time). Supports rule C2 |
 | [14_monthly_over_24h_by_usertype.sql](14_monthly_over_24h_by_usertype.sql) | Monthly trips over 24 hours per 10,000 trips and bike-days, by usertype | Run by Riley; results supplied 2026-11-05; saved with approval | ~1.65 GB (< $0.02) | 106 rows. Mar–Aug 2014 and Jan–Feb 2015 show 0 trips over 24 hours (likely missing from the source). Jun 2017–May 2018: Customer 15.98 vs. Subscriber 1.05 per 10,000 trips |
 | [15_trips_per_active_bike_day.sql](15_trips_per_active_bike_day.sql) | Average trips per bike per day for bikes ridden that day, Jun 2017–May 2018 (input to the value calculation) | Run by Riley; results supplied 2026-11-05; saved with approval | ~0.9 GB (< $0.01) | 16,951,030 trips (matches Query 14) / 2,695,579 active bike-days = 6.29. Counts only bikes ridden that day, so it runs higher than a fleet-wide average |
+| [16_period_gap_summary.sql](16_period_gap_summary.sql) | Exact Jun 2017–May 2018 trips, >24h trips, >24h rate per 10,000 trips, and >24h bike-days by usertype | Run by Riley; results supplied 2026-11-05; saved with approval | ~1.65 GB (< $0.02) | Customer: 1,804,498 trips (10.65%), 2,883 >24h (15.98/10k), 21,733.4 bike-days. Subscriber: 15,146,532 trips (89.35%), 1,591 >24h (1.05/10k), 8,366.3 bike-days |
 | [drafts/extreme_duration_timestamp_check.sql](drafts/extreme_duration_timestamp_check.sql) | Compare recorded and timestamp-derived durations for Customer trips over 24 hours in May 2017 and May 2018 | Existing draft; no query approval or execution result recorded | Not recorded; obtain a BigQuery estimate before running | Not recorded |
 
-Scan and cost figures for queries 01–12 are agent estimates: referenced columns × assumed bytes per row × the documented 58.9M rows, priced at \$6.25 per TB on demand. BigQuery's own estimates and actual bytes billed were not recorded.
+Scan and cost figures for queries 01–16 are agent estimates: referenced columns × assumed bytes per row × the documented 58.9M rows, priced at \$6.25 per TB on demand. BigQuery's own estimates and actual bytes billed were not recorded.
 
 This draft does not establish the project's selected gap, cleaning policy, or accepted analysis.
 
