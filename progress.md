@@ -2,7 +2,7 @@
 
 ## Current stage
 
-**Stage 1 — Descriptive exploration (in progress).** Queries 01–12 have been run and documented in [findings.md](findings.md) and [sql/README.md](sql/README.md). The business problem and KPI remain open.
+**Stage 5 — Value and chart (in progress).** Gap, benchmark, and Option C valuation (`~$55.6K–$335.2K/yr` ceiling) are verified and written in [findings.md](findings.md) using Queries 13–16 and human checks `#8`–`#9` ([Other/audit_log.md](Other/audit_log.md)). Detailed chart specifications are in [visuals/notes.md](visuals/notes.md). CP1 is due 2026-11-06.
 
 ## Project stages
 
@@ -11,14 +11,14 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | Stage | Goal | Done when | Main files | Status |
 |---|---|---|---|---|
 | 0. Setup | Organize the repo, roles, and workflow | Roles, approvals, and file map are recorded | [AGENTS.md](AGENTS.md), [README.md](README.md) | Done |
-| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | **In progress** (queries 01–12) |
-| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Started. Approved: C1 exclude blank rows. Open: >24h trips, birth years, coverage gaps |
-| 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Not started |
-| 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Not started |
-| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Not started |
-| 6. Review, audit, and merge | Human checks, partner review, and merge to `main` | Audit entries recorded, Rainy has reviewed, and Riley approves the merge | [Other/audit_log.md](Other/audit_log.md) | Not started |
+| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | Done (queries 01–12) |
+| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Approved: C1 exclude blank rows; C2 trips over 24 hours via `tripduration`, June 2017–May 2018 only. Birth years not needed for this problem |
+| 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Done 2026-11-05 |
+| 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Done 2026-11-05. Customer 15.98 vs. Subscriber 1.05 >24h trips per 10,000 trips (+14.93 / 15.2×; 20,736.7 excess bike-days) verified in BigQuery via Query 16 (audit #9) and written in findings.md |
+| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | In progress. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling/yr; rule V1, audit #8) approved and written in findings.md; chart specs recorded in visuals/notes.md, PNG pending |
+| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | In progress. Human checks #8 and #9 logged; chart check and manual merge to `main` pending |
 
-**Next step:** Riley chooses whether to continue Stage 1 exploration or begin Stage 2 cleaning decisions.
+**Next step:** Build `visuals/cp1_over_24h_gap_vs_benchmark.png` per [visuals/notes.md](visuals/notes.md), embed it in [findings.md](findings.md), log a chart verification check, push `riley-setup`, and merge `riley-setup` to `main` on GitHub.
 
 ## Repo organization
 
@@ -37,10 +37,10 @@ The repo includes supplied documentation PDFs, schema screenshots, an ERD, and a
 
 ## Open choices
 
-Business problem, manager's decision, business KPI and formula, analysis output row, benchmark, valuation inputs, and recommendation scope are TBD. Earlier problem-specific ideas are not the current direction.
+The problem, KPI, benchmark, period, and Option C valuation are now approved (see [decisions.md](decisions.md)). Still open: building and embedding the CP1 chart, plus (after CP1) the station breakdown and final recommendation scope.
 
 ## Resuming work
 
 Read the repo, then wait for the project lead's direction. Propose one small next action relevant to that direction. Updates to files and Git publishing retain their respective approval requirements.
 
-The instructor grades main. Partner review and explicit merge approval are required before completed branch work is merged.
+The instructor grades main. At milestones or session end, update `progress.md` and `decisions.md` (with approval), supply Terminal commands for Riley to commit and push to `riley-setup`, and Riley manually merges `riley-setup` into `main` on GitHub.

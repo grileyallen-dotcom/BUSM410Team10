@@ -1,6 +1,6 @@
 # Findings
 
-*Working structure. The future business problem has not been selected. Descriptive results from queries 01–12 are recorded below; no gap analysis has been done yet.*
+*Updated 2026-11-05 with descriptive results (queries 01–12) and CP1 gap, benchmark, and valuation findings (queries 13–16). CP1 chart pending.*
 
 Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/README.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
 
@@ -54,39 +54,48 @@ The following descriptive baselines were established through queries executed on
 
 ## The gap
 
-**TBD after descriptive exploration and project-lead approval.**
-
-| Required element | Status |
+| Element | Approved definition and result |
 |---|---|
-| Selected business problem and management decision | TBD |
-| Business KPI, formula, and units | TBD |
-| Analysis output row, population, and period | TBD |
-| Observed performance and measured size of the gap | Pending approved results |
-| Supporting query and result reference | Pending |
-
-Once the problem is selected, explain what is happening, where and when, how large the gap is, and what one output row represents.
+| Business problem and decision | Casual `Customer` riders keep Citi Bikes out over 24 hours far more often than `Subscriber` riders, tying up fleet capacity. Supports an operations manager deciding whether to target pre-24h return reminders or station messaging at casual riders ([charter.md](charter.md)). |
+| Business KPI and formula | **Trips over 24 hours per 10,000 valid trips:** `COUNTIF(tripduration > 86400) * 10000.0 / COUNT(*)`, paired with **bike-days tied up:** `SUM(IF(tripduration > 86400, tripduration, 0)) / 86400.0`. |
+| Source row, output row, and period | Source row: 1 valid trip (`starttime IS NOT NULL`, rule C1) in June 2017–May 2018 (`16,951,030` trips; rule C2). Output row: `usertype × month` (24 rows in [14_monthly_over_24h_by_usertype.sql](sql/14_monthly_over_24h_by_usertype.sql)) and `usertype` period total (2 rows in [16_period_gap_summary.sql](sql/16_period_gap_summary.sql)). |
+| Observed Customer performance | **`15.98` >24h trips per 10,000 valid trips** (`2,883` of `1,804,498` Customer trips), tying up **`21,733.4` bike-days** (`7.54` days per >24h trip). Customers are `10.65%` of valid trips but `64.4%` of >24h trips and `72.2%` of >24h bike-days. |
+| Supporting checks | [13_over_24h_timestamp_duplicate_check.sql](sql/13_over_24h_timestamp_duplicate_check.sql) confirmed 0 missing stop times, 0 negative durations, and 0 duplicates among >24h rows; June 2017–May 2018 avoids the Oct 2016–Mar 2017 coverage gap and the 2014–2015 zero->24h months. |
 
 ## The benchmark
 
-**TBD.** After the problem is selected, identify an appropriate earlier period, peer group, or sourced external reference. The project lead will approve the definition, calculation, comparison population, and rationale.
-
-Report the benchmark value and the difference in clear units, supported by a query, calculation, or source. Account for unequal observation periods and other relevant comparability limits.
+- **Benchmark group and rationale:** Annual `Subscriber` trips during the exact same 12-month window (June 2017–May 2018: `15,146,532` valid trips, `89.35%` of volume; [16_period_gap_summary.sql](sql/16_period_gap_summary.sql)). Subscribers ride the same docks under the same weather and 24-hour lost-bike policy, controlling for seasonality and network changes.
+- **Benchmark level:** **`1.05` >24h trips per 10,000 valid trips** (`1,591` >24h trips), tying up **`8,366.3` bike-days** (`5.52` bike-days per 10,000 trips; `5.26` days per >24h trip).
+- **Measured gap vs. benchmark:**
+  - **Rate gap:** `15.98 − 1.05 = +14.93` >24h trips per 10,000 valid trips (**`15.2×`** the Subscriber rate), or **`2,693` excess >24h trips/year** above the ~`190` expected if Customers matched the Subscriber rate.
+  - **Capacity gap:** At the Subscriber bike-day rate (`8,366.3 / 15,146,532` bike-days/trip), `1,804,498` Customer trips would tie up **`996.7` bike-days** instead of `21,733.4` — an excess of **`20,736.7` bike-days/year** (~`56.8` bikes unavailable on an average day).
+- **Comparability limits:** Subscribers are repeat local riders with 45-minute included windows and stored member accounts, whereas Customers buy short-term passes (30-minute window, heavy weekend/leisure mix). The Subscriber rate is an operational benchmark, not proof that casual riders can reach identical compliance.
 
 ## Value
 
-**TBD.** Choose a valuation approach suited to the future business problem. Show the math, units, period, assumptions, and source for every price or cost.
+Using approved valuation rule V1 ([decisions.md](decisions.md#approved-valuation-rule)), we value the annual capacity tied up by excess Customer >24h lockups (June 2017–May 2018) as an **upper-bound ceiling range of ~$55.6K to ~$335.2K per year**:
 
-Keep the scale of the measured gap distinct from a claim about achievable improvement or an intervention's expected benefit. If required inputs are unavailable, identify the unresolved requirement.
+1. **Excess bike-days tied up:** `21,733.4` actual Customer >24h bike-days − `996.7` Subscriber-benchmark bike-days = **`20,736.7` excess bike-days/year** ([16_period_gap_summary.sql](sql/16_period_gap_summary.sql)).
+2. **Potential ride capacity:** Active bikes averaged **`6.29` trips per active bike-day** (`16,951,030` valid trips ÷ `2,695,579` active bike-days; [15_trips_per_active_bike_day.sql](sql/15_trips_per_active_bike_day.sql)), giving `20,736.7 × 6.29 = 130,434` potential rides/year.
+3. **Sourced per-trip fee proxies:** From Motivate's **May 2018 Citi Bike Monthly Operating Report** to NYC DOT (https://citibikenyc.com/system-data/operating-reports; human-verified in [audit #8](Other/audit_log.md)):
+   - **Direct casual-pass ceiling (lower bound):** Only `10.65%` of period trips are casual `Customer` rides (`89.35%` are flat-fee Annual Subscribers), and May 2018 Casual Membership fees averaged **`$4.00` per casual trip** (`$967,811.98 ÷ 242,035` casual trips, before overages): `130,434 × 10.65% × $4.00 = $55,565` (**~$55.6K/year**).
+   - **System-wide ride-fee ceiling (upper bound):** Valuing all `130,434` rides at May 2018 system-wide Membership & User Fees of **`$2.57` per trip** (`$4,681,279.07 ÷ 1,824,476` total trips): `130,434 × $2.57 = $335,215` (**~$335.2K/year**).
+
+**Assumptions and unresolved evidence limits:**
+- **Capacity ceilings, not net savings:** `6.29` trips/bike-day counts only bikes ridden at least once that day (above full-fleet turnover), and a tied-up bike causes a lost trip only when docks actually run empty.
+- **Single-month revenue proxy:** Dollar per-trip averages come from May 2018; pass mix varies across seasons (and Citi Bike's `$3` Single Ride launched only in April 2018).
+- **Unobserved overage and recovery cash flows:** BigQuery trip logs do not record billing. Citi Bike charged overtime fees and up to `$1,200` for bikes unreturned past 24 hours (total casual overages across all durations were `$522,543.04` in May 2018), so net financial loss depends on internal fee-collection and bike-replacement records unavailable in the public dataset.
 
 ## Chart
 
-**Pending descriptive results and, later, the selected problem.** Add approved descriptive charts when useful for context. The final gap-versus-benchmark chart belongs in `visuals/` and must be embedded here after it exists.
+**Pending CP1 chart creation.** Full instructions on what to graph, axes, labels, and source queries are recorded in [visuals/notes.md](visuals/notes.md#cp1-chart-specification-pending-creation). Once built, save `visuals/cp1_over_24h_gap_vs_benchmark.png` and embed it here.
 
 Every chart must use consistent definitions, units, populations, and periods, with traceable source queries or calculations.
 
 ## Interpretation, recommendations, and limits
 
-Recommendations will follow the evidence and the project lead's chosen decision. No recommendation, output format, causal explanation, or intervention effect is predetermined.
+- **Proposed interpretation (not a causal proof):** Casual riders exceed 24 hours at `15.2×` the Subscriber rate likely because short-term pass users are less familiar with dock-locking confirmation and 30-minute/24-hour return rules — an operational hypothesis that trip timestamps alone cannot prove.
+- **Management decision framing (recommendations still open):** The `~$55.6K–$335.2K/year` ceiling supports testing low-cost interventions (such as automated pre-24h app/SMS return alerts for casual passes or dock-check prompts at top lockup stations) rather than high-cost hardware changes, while checking internal overage recovery first. Specific station targeting remains open pending a station-level breakdown.
 
 Respect the approved 2013-2018 scope and explain source applicability. The [supplied documentation](Other/metadata.pdf), [ERD](Other/ERD.pdf), and [source notes](Other/dataset_documentation.md) provide context; their reported profile results are not automatically verified project findings.
 

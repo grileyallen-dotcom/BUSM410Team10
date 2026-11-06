@@ -6,7 +6,7 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 
 - **Project lead: Riley Allen.** Riley sets priorities, directs the work, makes project decisions, and approves actions and project conclusions.
 - **AI agent: consultant to the project lead.** Research, analyze supplied evidence, explain, challenge assumptions, present options, and recommend next steps. Riley makes the decisions; do not take over the project or invent decisions on Riley's behalf.
-- **Project partner: Rainy Villame.** Preserve contributions and attribution. Partner review precedes merging finished work into main.
+- **Project partner: Rainy Villame.** Preserve contributions and attribution.
 
 ## Approval and permissions
 
@@ -14,8 +14,8 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 - **Approval requests:** Before asking to modify the repo, name the affected files, explain in plain language what will change and why, and show the exact proposed text or diff. Distinguish approval to edit files from approval to commit, push, create a pull request, or merge; identify the target branch for Git actions.
 - Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
 - **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
-- **Git actions:** Commits, pushes, creating pull requests, and merges require explicit approval. Approval to edit files does not authorize these actions. State the target branch when requesting approval.
-- **Allowed publishing branch:** Agent commits and pushes must target `riley-setup` only. Never commit, push, merge, or otherwise apply changes to `main` or another branch. Verify the branch before publishing. If a request conflicts with this rule, declare the conflict and request an explicit override; a general approval to publish or merge does not override it.
+- **Git actions and milestone syncs:** AI modifies local files after approval, and Riley runs Git commands manually in Terminal. Do not execute `git add`, `git commit`, or `git push` directly; instead, at natural milestones, session end, or when asked to publish, propose updates to `progress.md` and `decisions.md` and hand Riley the exact Terminal command block (including `cd` to the project folder and branch check) to commit and push to `riley-setup`.
+- **Allowed publishing branch:** All Terminal commit/push commands must target `riley-setup` only. Never target `main` or another branch; Riley manually merges `riley-setup` into `main` on GitHub. If a request conflicts with this rule, declare the conflict and request an explicit override.
 - Preserve existing work. Explain any conflict and ask what to keep before resolving it.
 - The repo is the project's shared brain. Reading it is allowed without approval; modifying it always requires explicit permission, including changes to memory, decisions, progress, and audit records.
 
@@ -79,7 +79,7 @@ Follow the audit skill for real human checks of agent work. Propose each audit e
 
 ## Project facts
 
-This section is a context snapshot as of 2026-11-04. Consult progress and decisions for later approved changes; declare conflicts and let Riley resolve them.
+This section is a context snapshot as of 2026-11-05. Consult [progress.md](progress.md) and [decisions.md](decisions.md) for current stage and any later approved changes; declare conflicts and let Riley resolve them.
 
 - Course: BUSM 410, BYU-Hawaii.
 - Canvas team: Team 10.
@@ -99,13 +99,13 @@ This section is a context snapshot as of 2026-11-04. Consult progress and decisi
 - Reported documentation statistics are not automatically verified project findings.
 - Existing SQL drafts are background material; their presence does not establish approval, execution, or a selected business problem.
 
-### Open analytical decisions at this update
+### Analytical snapshot at this update
 
-- Business problem: TBD after descriptive exploration.
-- Business KPI and formula: TBD.
-- Analysis output row: TBD.
-- Benchmark: TBD.
-- Cleaning rules: no approved rules recorded yet.
-- Findings and recommendations: pending evidence and approval.
+- Business problem (approved 2026-11-05): Casual `Customer` riders keep Citi Bikes out >24 hours far more often than `Subscriber` riders ([charter.md](charter.md)).
+- Business KPI and period: Trips >24h (`tripduration > 86400`) per 10,000 valid trips plus >24h bike-days, June 2017–May 2018 (`15.98` vs. `1.05`; `20,736.7` excess bike-days).
+- Analysis output row: `usertype` × month ([Query 14](sql/14_monthly_over_24h_by_usertype.sql)) and period `usertype` summary ([Query 16](sql/16_period_gap_summary.sql)).
+- Benchmark: Same-period `Subscriber` rate (`1.05` per 10,000 valid trips).
+- Approved rules ([decisions.md](decisions.md)): C1 (`starttime IS NOT NULL`), C2 (`tripduration > 86400`, June 2017–May 2018), and V1 (Option C ceiling range: `~$55.6K–$335.2K/yr` from May 2018 Monthly Operating Report).
+- Still open: CP1 chart ([visuals/notes.md](visuals/notes.md)), station-level breakdown, and final recommendations.
 
 CP1 ultimately requires a measured gap, a justified benchmark, a sourced value calculation, and a chart. The instructor grades main. Use the current project records and Riley's direction to determine the next task.
