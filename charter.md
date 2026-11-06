@@ -1,14 +1,14 @@
 # Project Charter
 
-*Working framework. The future business problem has not been selected.*
+*Business problem selected 2026-11-05.*
 
 ## The question
 
-TBD. The project lead will select one business question after descriptive analytics have established the setting and relevant patterns. The repo does not currently prescribe a business problem, KPI, benchmark, or analysis output row.
+How much more often do casual Customers keep a Citi Bike out for more than 24 hours than annual Subscribers, and how many bike-days does that take out of service? Measured from June 2017 to May 2018 as trips over 24 hours per 10,000 trips, with the Subscriber rate as the benchmark.
 
 ## The decision this supports
 
-TBD. After selecting the problem, identify the manager, the decision to be made, and the alternatives the evidence can help assess. Riley Allen is the project lead; the agent acts as a consultant.
+A Citi Bike operations manager decides whether to target return measures at casual riders, such as reminders before 24 hours or station messaging where Customer long trips start, or to keep current practice. Riley Allen is the project lead; the agent acts as a consultant.
 
 ## Scope
 

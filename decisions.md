@@ -11,8 +11,9 @@ The following direction was stated by Riley in conversation on 2026-11-04.
 | Roles | Riley leads and makes project decisions. The agent researches, explains, challenges, and recommends as a consultant. Rainy Villame remains the project partner. |
 | Current activity | Organize the repo and establish how work is handled. A setup discussion does not authorize starting analysis. Current stage belongs in progress.md and may change when Riley directs it. |
 | Analytical sequence | Descriptive analytics first, then selection of a business problem informed by the evidence. |
-| Business problem and business KPI | Not selected. Earlier problem-specific ideas have been reopened and are not active instructions. |
-| Analysis output row, benchmark, valuation, and recommendations | Open; select after descriptive exploration and project-lead approval. |
+| Business problem and business KPI (selected 2026-11-05) | Casual Customers keep bikes out for more than 24 hours far more often than Subscribers. KPI: trips over 24 hours (`tripduration > 86400`) per 10,000 valid trips, plus bike-days tied up. Benchmark: the Subscriber rate in the same period. |
+| Analysis period (selected 2026-11-05) | June 2017–May 2018: the latest 12 straight months with complete coverage. |
+| Analysis output row | `usertype` × month (Query 14), with a station breakdown to follow. Valuation and recommendations remain open. |
 | Existing data boundary | Citi Bike operations during 2013-2018 using the existing dataset only. |
 | Read access | Reading files, repo inspection, and external research require no approval. |
 | Repo changes | Show the exact proposed change and reason, then obtain explicit approval. |
@@ -41,6 +42,17 @@ On 2026-11-04, Riley confirmed that `bigquery-public-data.new_york_citibike.citi
 | Reasoning | Agent recommendation: these rows have no time, duration, station, or bike, so they cannot represent trips. Riley approved the rule; Riley's own reasoning was not separately recorded |
 | Alternatives | Keep the rows (rejected: they add no trip information); check the remaining fields first (not done; see limits) |
 | Limits | Station names, coordinates, `birth_year`, `gender`, and `customer_plan` were not checked for these rows. This was checked by the agent only; there has been no human audit |
+
+### C2. Measure long trips with `tripduration` over the latest 12 straight months (approved 2026-11-05)
+
+| Field | Entry |
+|---|---|
+| Decision-maker | Riley Allen, project lead |
+| Rule | A trip is "over 24 hours" when `tripduration > 86400`. Gap measures use June 2017–May 2018 only |
+| Evidence | [Query 13](sql/13_over_24h_timestamp_duplicate_check.sql): among 11,513 trips over 24 hours, there are 0 missing stop times, 0 negative durations, and 0 duplicate bike/start/stop rows. All 307 differences over 60 seconds between `tripduration` and the clock times are under 1 hour, consistent with daylight saving time. [Query 14](sql/14_monthly_over_24h_by_usertype.sql): March–August 2014 and January–February 2015 report 0 trips over 24 hours for both rider types, which suggests long trips are missing from the source in those months |
+| Reasoning | Agent recommendation: the chosen period is recent, has no missing months, and avoids the zero months. Riley chose Option A; Riley's own reasoning was not separately recorded |
+| Alternatives | All 2013–2018 trips (9.50 vs. 1.20 per 10,000 trips; understates the recent gap); all months except the zero months (not calculated) |
+| Limits | The cause of the zero months is unconfirmed. The period totals were added up by hand from Query 14 by the agent and have not been checked by a person |
 
 ## Future decisions
 

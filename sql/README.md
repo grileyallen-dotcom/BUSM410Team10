@@ -26,6 +26,9 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 | [10_demographics_gender_birthyear.sql](10_demographics_gender_birthyear.sql) | Gender categories, birth_year population rates, and plausibility check | Run by Riley; results supplied 2026-11-05; saved with approval | ~1.65 GB (< $0.01) | male 67.1%, female 21.4%, unknown 11.5%; 91% of unknown group has null birth_year; implausible (<1900) birth years flagged; 11,873 trips list 2001–2002 |
 | [11_hourly_rush_hour_patterns.sql](11_hourly_rush_hour_patterns.sql) | Hourly trip volume by usertype to identify rush-hour and leisure patterns | Run by Riley; results supplied 2026-11-05; saved with approval | ~1.2 GB (< $0.01) | Subscriber peaks at 8 AM (4.0M) and 5 PM (4.7M); Customers peak 2–4 PM; lowest volume in the 3 AM and 4 AM hours |
 | [12_station_traffic_concentration.sql](12_station_traffic_concentration.sql) | Top 20 stations by combined departure and arrival volume | Run by Riley; results supplied 2026-11-05; saved with approval | ~3.0 GB (< $0.02) | Busiest station (E 17 St & Broadway) has 0.8% of departures; top 20 stations together have 12.6%; departures and arrivals differ by up to ~10% |
+| [13_over_24h_timestamp_duplicate_check.sql](13_over_24h_timestamp_duplicate_check.sql) | Check that `tripduration` matches clock times and look for duplicates among trips over 24 hours, by usertype | Run by Riley; results supplied 2026-11-05; saved with approval | ~2.6 GB (< $0.02) | 11,513 trips over 24 hours; 0 missing stop times, 0 negative durations, 0 duplicates; all 307 differences over 60 s are under 1 hour (daylight saving time). Supports rule C2 |
+| [14_monthly_over_24h_by_usertype.sql](14_monthly_over_24h_by_usertype.sql) | Monthly trips over 24 hours per 10,000 trips and bike-days, by usertype | Run by Riley; results supplied 2026-11-05; saved with approval | ~1.65 GB (< $0.02) | 106 rows. Mar–Aug 2014 and Jan–Feb 2015 show 0 trips over 24 hours (likely missing from the source). Jun 2017–May 2018: Customer 15.98 vs. Subscriber 1.05 per 10,000 trips |
+| [15_trips_per_active_bike_day.sql](15_trips_per_active_bike_day.sql) | Average trips per bike per day for bikes ridden that day, Jun 2017–May 2018 (input to the value calculation) | Run by Riley; results supplied 2026-11-05; saved with approval | ~0.9 GB (< $0.01) | 16,951,030 trips (matches Query 14) / 2,695,579 active bike-days = 6.29. Counts only bikes ridden that day, so it runs higher than a fleet-wide average |
 | [drafts/extreme_duration_timestamp_check.sql](drafts/extreme_duration_timestamp_check.sql) | Compare recorded and timestamp-derived durations for Customer trips over 24 hours in May 2017 and May 2018 | Existing draft; no query approval or execution result recorded | Not recorded; obtain a BigQuery estimate before running | Not recorded |
 
 Scan and cost figures for queries 01–12 are agent estimates: referenced columns × assumed bytes per row × the documented 58.9M rows, priced at \$6.25 per TB on demand. BigQuery's own estimates and actual bytes billed were not recorded.
@@ -75,6 +78,8 @@ The following items come from the supplied documentation or the assignment. No f
 | Time coverage | Account for partial first and last years, incomplete periods, and stations that opened or closed. Current station capacity and status do not establish historical conditions. |
 
 After checks are run, record the query, evidence, proposed rule, effect on the analysis, and approved decision here.
+
+**Approved rules:** C1 (exclude rows with no `starttime`) and C2 (trips over 24 hours use `tripduration > 86400`; gap measures cover June 2017–May 2018). Full entries are in [decisions.md](../decisions.md#approved-cleaning-rules).
 
 ## What to record for each accepted step
 

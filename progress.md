@@ -2,7 +2,7 @@
 
 ## Current stage
 
-**Stage 1 — Descriptive exploration (in progress).** Queries 01–12 have been run and documented in [findings.md](findings.md) and [sql/README.md](sql/README.md). The business problem and KPI remain open.
+**Stage 4 — Gap and benchmark (in progress).** Riley selected the business problem on 2026-11-05: Customer trips over 24 hours vs. the Subscriber benchmark, June 2017–May 2018 (see [charter.md](charter.md) and [decisions.md](decisions.md)). Queries 13–15 have been run. CP1 is due 2026-11-06.
 
 ## Project stages
 
@@ -11,14 +11,14 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | Stage | Goal | Done when | Main files | Status |
 |---|---|---|---|---|
 | 0. Setup | Organize the repo, roles, and workflow | Roles, approvals, and file map are recorded | [AGENTS.md](AGENTS.md), [README.md](README.md) | Done |
-| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | **In progress** (queries 01–12) |
-| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Started. Approved: C1 exclude blank rows. Open: >24h trips, birth years, coverage gaps |
-| 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Not started |
-| 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Not started |
-| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Not started |
+| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | Done (queries 01–12) |
+| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Approved: C1 exclude blank rows; C2 trips over 24 hours via `tripduration`, June 2017–May 2018 only. Birth years not needed for this problem |
+| 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Done 2026-11-05 |
+| 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | In progress. Customer 15.98 vs. Subscriber 1.05 trips over 24 hours per 10,000 trips (Query 14). Period totals were added up by hand and still need a human check; findings.md not yet updated |
+| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | In progress. Proposed lost-ride value of about $391K per year (a ceiling): 20,736.7 bike-days × 6.29 trips per bike-day (Query 15) × $3. Valuation method and $3 source not yet approved or checked; chart on hold |
 | 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | Not started |
 
-**Next step:** Riley chooses whether to continue Stage 1 exploration or begin Stage 2 cleaning decisions.
+**Next step:** Write the gap, benchmark, and value sections in findings.md; verify the $3 price source; build the chart; update the gap and cleaning-rule facts in AGENTS.md; log a human check.
 
 ## Repo organization
 
@@ -37,7 +37,7 @@ The repo includes supplied documentation PDFs, schema screenshots, an ERD, and a
 
 ## Open choices
 
-Business problem, manager's decision, business KPI and formula, analysis output row, benchmark, valuation inputs, and recommendation scope are TBD. Earlier problem-specific ideas are not the current direction.
+The problem, KPI, benchmark, and period are now chosen (see decisions.md). Still open: the valuation method and inputs, the chart, the station breakdown, and the recommendation scope.
 
 ## Resuming work
 
