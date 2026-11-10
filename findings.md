@@ -1,12 +1,12 @@
 # Findings
 
-*Updated 2026-11-05 with descriptive results (queries 01–12) and CP1 gap, benchmark, and valuation findings (queries 13–16). CP1 chart pending.*
+*Updated 2026-11-09. Descriptive findings and CP1 gap, benchmark, and valuation use Queries 01–16. The primary comparison and supplementary monthly charts are embedded below; Riley’s chart check is recorded in audit entry #10.*
 
-Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/README.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
+Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/notes.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
 
 ## Descriptive context
 
-The following descriptive baselines were established through queries executed on 2026-11-05 (see [sql/README.md](sql/README.md) for query details and verification):
+The following descriptive baselines were established through queries executed on 2026-11-05 (see [sql/notes.md](sql/notes.md) for query details and verification):
 
 1. **Total Population and Valid Trips:**
    * The `citibike_trips` table contains 58,937,715 total rows.
@@ -107,4 +107,4 @@ Respect the approved 2013-2018 scope and explain source applicability. The [supp
 
 ## Updating this file
 
-When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). The agent explains supplied evidence, discusses interpretations, and proposes exact changes for the project lead's approval. Git publishing requires separate approval.
+When queries are uploaded, follow the [uploaded-query SOP](sql/notes.md#uploaded-query-sop). The agent explains supplied evidence, discusses interpretations, and proposes exact changes for the project lead's approval. Git publishing requires separate approval.

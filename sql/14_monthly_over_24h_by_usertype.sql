@@ -1,4 +1,4 @@
--- Step 14: Monthly >24h lockup rate and bike-days tied up by usertype. See sql/README.md for notes.
+-- Step 14: Monthly >24h lockup rate and bike-days tied up by usertype. See sql/notes.md for notes.
 SELECT
   FORMAT_DATETIME('%Y-%m', starttime) AS trip_month,
   usertype,

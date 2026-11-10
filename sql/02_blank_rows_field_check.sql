@@ -1,4 +1,4 @@
--- Step 2: Check operational field population for rows missing starttime. See sql/README.md for notes.
+-- Step 2: Check operational field population for rows missing starttime. See sql/notes.md for notes.
 SELECT
   COUNT(*) AS total_missing_starttime_rows,
   COUNT(stoptime) AS non_null_stoptime,

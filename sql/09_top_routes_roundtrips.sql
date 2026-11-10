@@ -1,4 +1,4 @@
--- Step 9: Identify top 10 station pairs, route durations, and round-trip loop prevalence. See sql/README.md for notes.
+-- Step 9: Identify top 10 station pairs, route durations, and round-trip loop prevalence. See sql/notes.md for notes.
 SELECT
   start_station_name,
   end_station_name,

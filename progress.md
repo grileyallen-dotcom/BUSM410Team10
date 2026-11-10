@@ -11,8 +11,8 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | Stage | Goal | Done when | Main files | Status |
 |---|---|---|---|---|
 | 0. Setup | Organize the repo, roles, and workflow | Roles, approvals, and file map are recorded | [AGENTS.md](AGENTS.md), [README.md](README.md) | Done |
-| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/README.md](sql/README.md) | Done (queries 01–12) |
-| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Approved: C1 exclude blank rows; C2 trips over 24 hours via `tripduration`, June 2017–May 2018 only. Birth years not needed for this problem |
+| 1. Descriptive exploration | Understand tables, coverage, data quality, and patterns | Riley judges the setting is understood well enough to choose a problem | [findings.md](findings.md), [sql/notes.md](sql/notes.md) | Done (queries 01–12) |
+| 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/notes.md](sql/notes.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Approved: C1 exclude blank rows; C2 trips over 24 hours via `tripduration`, June 2017–May 2018 only. Birth years not needed for this problem |
 | 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Done 2026-11-05 |
 | 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Done 2026-11-05. Customer 15.98 vs. Subscriber 1.05 >24h trips per 10,000 trips (+14.93 / 15.2×; 20,736.7 excess bike-days) verified in BigQuery via Query 16 (audit #9) and written in findings.md |
 | 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Done 2026-11-09. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling/yr; rule V1, audit #8) is recorded; primary comparison and supplementary monthly trend PNGs are saved and embedded in findings.md |
@@ -29,7 +29,7 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | [decisions.md](decisions.md) | Stated direction and open choices |
 | [charter.md](charter.md) | Framework for the future question, decision, scope, and success criteria |
 | [findings.md](findings.md) | Descriptive context and later supported findings |
-| [sql/README.md](sql/README.md) | Query intake, review, documentation, execution status, and results |
+| [sql/notes.md](sql/notes.md) | Query intake, review, documentation, execution status, and results |
 | [Source notes](Other/dataset_documentation.md) | Supplied dataset descriptions and verification limits |
 | [Audit protocol](Other/audit_protocol.md) and [audit log](Other/audit_log.md) | Checking process and real human checks |
 

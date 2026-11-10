@@ -54,7 +54,7 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 | [decisions.md](decisions.md) | Approved choices, stated direction, and open questions |
 | [charter.md](charter.md) | Business question, manager's decision, scope, and success criteria |
 | [findings.md](findings.md) | Descriptive context and supported findings |
-| [sql/README.md](sql/README.md) | Query intake, methods, status, estimates, and results |
+| [sql/notes.md](sql/notes.md) | Query intake, methods, status, estimates, and results |
 | [Other/](Other/) | Documentation, ERD, and human audit records |
 | [visuals/](visuals/) | Approved charts and visual notes |
 | [model/](model/) | Optional model work and evaluation |
@@ -62,11 +62,11 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 ## Queries and evidence
 
 - Prepare queries when SQL work is requested. Use one short, understandable query at a time and explain its purpose, fields, filters, assumptions, and output row.
-- Follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). An upload permits review; saving changes and publishing still require their respective approvals.
+- Follow the [uploaded-query SOP](sql/notes.md#uploaded-query-sop). An upload permits review; saving changes and publishing still require their respective approvals.
 - Confirm tables and columns before analytical use. Reuse confirmations already recorded; ask again when the schema, source, or intended use changes.
 - Provide estimated scan and cost with their source and assumptions. If a reliable estimate is unavailable, say so and request BigQuery's estimate. Never invent a cost or treat an unknown estimate as zero.
 - Riley or a teammate runs BigQuery queries. Prepare SQL for them; do not execute queries yourself.
-- With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/README.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
+- With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/notes.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
 - Select needed columns. LIMIT does not normally reduce scanned bytes. Investigate missing values, duplicates, impossible values, and observation-period differences as relevant; propose material cleaning decisions for approval.
 - Use SQL for analysis. Do not add Python files or Python setup. Excel, Looker, or Tableau may be used for visuals. Keep CSV, Excel, and Tableau data/extract files out of the repo.
 - Support claims with documentation, a query and result, or a research source. Label assumptions and interpretations. Associations and benchmark scenarios do not establish causation or guaranteed benefits.
@@ -79,7 +79,7 @@ Follow the audit skill for real human checks of agent work. Propose each audit e
 
 ## Project facts
 
-This section is a context snapshot as of 2026-11-05. Consult [progress.md](progress.md) and [decisions.md](decisions.md) for current stage and any later approved changes; declare conflicts and let Riley resolve them.
+This section is a context snapshot as of 2026-11-09. Consult [progress.md](progress.md) and [decisions.md](decisions.md) for current stage and any later approved changes; declare conflicts and let Riley resolve them.
 
 - Course: BUSM 410, BYU-Hawaii.
 - Canvas team: Team 10.
@@ -106,6 +106,6 @@ This section is a context snapshot as of 2026-11-05. Consult [progress.md](progr
 - Analysis output row: `usertype` × month ([Query 14](sql/14_monthly_over_24h_by_usertype.sql)) and period `usertype` summary ([Query 16](sql/16_period_gap_summary.sql)).
 - Benchmark: Same-period `Subscriber` rate (`1.05` per 10,000 valid trips).
 - Approved rules ([decisions.md](decisions.md)): C1 (`starttime IS NOT NULL`), C2 (`tripduration > 86400`, June 2017–May 2018), and V1 (Option C ceiling range: `~$55.6K–$335.2K/yr` from May 2018 Monthly Operating Report).
-- Still open: CP1 chart ([visuals/notes.md](visuals/notes.md)), station-level breakdown, and final recommendations.
+- CP1 charts: The primary period comparison and supplementary monthly trend are saved in [visuals/](visuals/) and embedded in [findings.md](findings.md); Riley verified their values (audit #10). Still open: station-level breakdown and final recommendations, which are post-CP1 work.
 
 CP1 ultimately requires a measured gap, a justified benchmark, a sourced value calculation, and a chart. The instructor grades main. Use the current project records and Riley's direction to determine the next task.

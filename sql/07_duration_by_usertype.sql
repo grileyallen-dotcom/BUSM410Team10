@@ -1,4 +1,4 @@
--- Step 7: Compare trip duration percentiles, averages, and >24h outliers by usertype. See sql/README.md for notes.
+-- Step 7: Compare trip duration percentiles, averages, and >24h outliers by usertype. See sql/notes.md for notes.
 SELECT
   usertype,
   COUNT(*) AS total_trips,
