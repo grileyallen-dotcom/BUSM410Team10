@@ -5,7 +5,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 ## CP0: Team, Dataset, and Setup
 
 - **Due:** Tuesday, October 20, 2026, 11:59 pm HST
-- **Status:** Not recorded
+- **Status:** Completed
 - **Goal:** Set up the team, dataset, BigQuery project, and shared project repo.
 
 ### Requirements

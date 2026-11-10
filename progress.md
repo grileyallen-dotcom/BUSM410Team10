@@ -2,7 +2,7 @@
 
 ## Current stage
 
-**Stage 6 — Review, audit, and merge (in progress).** Stage 5 is complete: the gap, benchmark, and Option C valuation (`~$55.6K–$335.2K/yr` ceiling) are recorded in [findings.md](findings.md). The primary comparison and supplementary monthly trend are saved in [visuals/](visuals/) and embedded in findings. Riley verified the chart values against Queries 14 and 16 (audit #10). CP1 submission/review status remains unrecorded in [checkpoints.md](checkpoints.md); the due date was 2026-11-06.
+**Stage 6 — Review, audit, and merge (in progress).** The CP1 deliverables are complete and marked Completed in [checkpoints.md](checkpoints.md): the gap, benchmark, Option C valuation (`~$55.6K–$335.2K/yr` ceiling), and both charts are recorded in [findings.md](findings.md). Riley verified the chart values against Queries 14 and 16 (audit #10). CP1 submission and instructor-review outcome have not yet been recorded; the due date was 2026-11-06.
 
 ## Project stages
 
@@ -16,7 +16,7 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Done 2026-11-05 |
 | 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Done 2026-11-05. Customer 15.98 vs. Subscriber 1.05 >24h trips per 10,000 trips (+14.93 / 15.2×; 20,736.7 excess bike-days) verified in BigQuery via Query 16 (audit #9) and written in findings.md |
 | 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Done 2026-11-09. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling/yr; rule V1, audit #8) is recorded; primary comparison and supplementary monthly trend PNGs are saved and embedded in findings.md |
-| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | In progress. Human checks #8–#10 are logged; commit `3d88305` is pushed to `riley-setup`; Riley’s manual merge to `main` on GitHub is pending |
+| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | In progress. Human checks #8–#10 are logged; latest commit `e615fcb` is pushed to `riley-setup`; Riley’s manual merge to `main` on GitHub is pending |
 
 **Next step:** Riley manually merges `riley-setup` into `main` on GitHub. Record the CP1 submission/review status in [checkpoints.md](checkpoints.md) when it is known.
 
