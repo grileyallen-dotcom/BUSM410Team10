@@ -2,7 +2,7 @@
 
 ## Current stage
 
-**Stage 5 — Value and chart (in progress).** Gap, benchmark, and Option C valuation (`~$55.6K–$335.2K/yr` ceiling) are verified and written in [findings.md](findings.md) using Queries 13–16 and human checks `#8`–`#9` ([Other/audit_log.md](Other/audit_log.md)). Detailed chart specifications are in [visuals/notes.md](visuals/notes.md). CP1 is due 2026-11-06.
+**Stage 6 — Review, audit, and merge (in progress).** Stage 5 is complete: the gap, benchmark, and Option C valuation (`~$55.6K–$335.2K/yr` ceiling) are recorded in [findings.md](findings.md). The primary comparison and supplementary monthly trend are saved in [visuals/](visuals/) and embedded in findings. Riley verified the chart values against Queries 14 and 16 (audit #10). CP1 submission/review status remains unrecorded in [checkpoints.md](checkpoints.md); the due date was 2026-11-06.
 
 ## Project stages
 
@@ -15,10 +15,10 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | 2. Data-quality and cleaning decisions | Turn data checks into approved cleaning rules | Each rule needed for the analysis is approved in [decisions.md](decisions.md) | [sql/README.md](sql/README.md#cleaning-choices-to-resolve), [decisions.md](decisions.md) | Approved: C1 exclude blank rows; C2 trips over 24 hours via `tripduration`, June 2017–May 2018 only. Birth years not needed for this problem |
 | 3. Problem selection | Choose the business question, manager's decision, KPI, formula, and output row | Riley approves them, and they are recorded in [charter.md](charter.md) and [decisions.md](decisions.md) | [charter.md](charter.md) | Done 2026-11-05 |
 | 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Done 2026-11-05. Customer 15.98 vs. Subscriber 1.05 >24h trips per 10,000 trips (+14.93 / 15.2×; 20,736.7 excess bike-days) verified in BigQuery via Query 16 (audit #9) and written in findings.md |
-| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | In progress. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling/yr; rule V1, audit #8) approved and written in findings.md; chart specs recorded in visuals/notes.md, PNG pending |
-| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | In progress. Human checks #8 and #9 logged; chart check and manual merge to `main` pending |
+| 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Done 2026-11-09. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling/yr; rule V1, audit #8) is recorded; primary comparison and supplementary monthly trend PNGs are saved and embedded in findings.md |
+| 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | In progress. Human checks #8–#10 are logged; commit `3d88305` is pushed to `riley-setup`; Riley’s manual merge to `main` on GitHub is pending |
 
-**Next step:** Build `visuals/cp1_over_24h_gap_vs_benchmark.png` per [visuals/notes.md](visuals/notes.md), embed it in [findings.md](findings.md), log a chart verification check, push `riley-setup`, and merge `riley-setup` to `main` on GitHub.
+**Next step:** Riley manually merges `riley-setup` into `main` on GitHub. Record the CP1 submission/review status in [checkpoints.md](checkpoints.md) when it is known.
 
 ## Repo organization
 
@@ -37,7 +37,7 @@ The repo includes supplied documentation PDFs, schema screenshots, an ERD, and a
 
 ## Open choices
 
-The problem, KPI, benchmark, period, and Option C valuation are now approved (see [decisions.md](decisions.md)). Still open: building and embedding the CP1 chart, plus (after CP1) the station breakdown and final recommendation scope.
+The problem, KPI, benchmark, period, Option C valuation, and CP1 charts are complete (see [decisions.md](decisions.md) and [findings.md](findings.md)). The chart check is logged as audit #10, and `riley-setup` is pushed. Still open: manual merge to `main` and recording CP1 submission/review status when known. After CP1, the station breakdown and final recommendation scope remain open.
 
 ## Resuming work
 
