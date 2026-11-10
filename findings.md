@@ -2,11 +2,11 @@
 
 *Updated 2026-11-09. Descriptive findings and CP1 gap, benchmark, and valuation use Queries 01–16. The primary comparison and supplementary monthly charts are embedded below; Riley’s chart check is recorded in audit entry #10.*
 
-Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/notes.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
+Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/README.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
 
 ## Descriptive context
 
-The following descriptive baselines were established through queries executed on 2026-11-05 (see [sql/notes.md](sql/notes.md) for query details and verification):
+The following descriptive baselines were established through queries executed on 2026-11-05 (see [sql/README.md](sql/README.md) for query details and verification):
 
 1. **Total Population and Valid Trips:**
    * The `citibike_trips` table contains 58,937,715 total rows.
@@ -58,7 +58,7 @@ The following descriptive baselines were established through queries executed on
 |---|---|
 | Business problem and decision | Casual `Customer` riders keep Citi Bikes out over 24 hours far more often than `Subscriber` riders, tying up fleet capacity. Supports an operations manager deciding whether to target pre-24h return reminders or station messaging at casual riders ([charter.md](charter.md)). |
 | Business KPI and formula | **Trips over 24 hours per 10,000 valid trips:** `COUNTIF(tripduration > 86400) * 10000.0 / COUNT(*)`, paired with **bike-days tied up:** `SUM(IF(tripduration > 86400, tripduration, 0)) / 86400.0`. |
-| Source row, output row, and period | Source row: 1 valid trip (`starttime IS NOT NULL`, rule C1) in June 2017–May 2018 (`16,951,030` trips; rule C2). Output row: `usertype × month` (24 rows in [14_monthly_over_24h_by_usertype.sql](sql/14_monthly_over_24h_by_usertype.sql)) and `usertype` period total (2 rows in [16_period_gap_summary.sql](sql/16_period_gap_summary.sql)). |
+| Source row, output row, and period | Source row: 1 valid trip (`starttime IS NOT NULL`, rule C1) in June 2017–May 2018 (`16,951,030` trips; rule C2). Output row: `usertype × month` in Query 14 (106 rows overall, including 24 rows in June 2017–May 2018) and `usertype` period total (2 rows in Query 16). |
 | Observed Customer performance | **`15.98` >24h trips per 10,000 valid trips** (`2,883` of `1,804,498` Customer trips), tying up **`21,733.4` bike-days** (`7.54` days per >24h trip). Customers are `10.65%` of valid trips but `64.4%` of >24h trips and `72.2%` of >24h bike-days. |
 | Supporting checks | [13_over_24h_timestamp_duplicate_check.sql](sql/13_over_24h_timestamp_duplicate_check.sql) confirmed 0 missing stop times, 0 negative durations, and 0 duplicates among >24h rows; June 2017–May 2018 avoids the Oct 2016–Mar 2017 coverage gap and the 2014–2015 zero->24h months. |
 
@@ -107,4 +107,4 @@ Respect the approved 2013-2018 scope and explain source applicability. The [supp
 
 ## Updating this file
 
-When queries are uploaded, follow the [uploaded-query SOP](sql/notes.md#uploaded-query-sop). The agent explains supplied evidence, discusses interpretations, and proposes exact changes for the project lead's approval. Git publishing requires separate approval.
+When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). The agent explains supplied evidence, discusses interpretations, and proposes exact changes for the project lead's approval. Git publishing requires separate approval.

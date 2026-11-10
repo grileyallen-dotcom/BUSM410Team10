@@ -1,4 +1,4 @@
--- Step 11: Analyze hourly trip volume by usertype to identify rush-hour and leisure patterns. See sql/notes.md for notes.
+-- Step 11: Analyze hourly trip volume by usertype to identify rush-hour and leisure patterns. See sql/README.md for notes.
 SELECT
   EXTRACT(HOUR FROM starttime) AS hour_of_day,
   COUNTIF(usertype = 'Subscriber') AS subscriber_trips,

@@ -1,4 +1,4 @@
--- Step 16: Exact Jun 2017–May 2018 gap summary by usertype. See sql/notes.md for notes.
+-- Step 16: Exact Jun 2017–May 2018 gap summary by usertype. See sql/README.md for notes.
 SELECT
   usertype,
   COUNT(*) AS valid_trips,

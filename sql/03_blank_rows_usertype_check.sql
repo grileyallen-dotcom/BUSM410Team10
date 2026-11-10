@@ -1,4 +1,4 @@
--- Step 3: Inspect usertype values and string lengths for missing starttimes. See sql/notes.md for notes.
+-- Step 3: Inspect usertype values and string lengths for missing starttimes. See sql/README.md for notes.
 SELECT
   usertype,
   LENGTH(usertype) AS string_length,

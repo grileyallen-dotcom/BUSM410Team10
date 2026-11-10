@@ -1,4 +1,4 @@
--- Step 15: Average trips per active bike per day, Jun 2017–May 2018. See sql/notes.md for notes.
+-- Step 15: Average trips per active bike per day, Jun 2017–May 2018. See sql/README.md for notes.
 SELECT
   COUNT(*) AS valid_trips,
   COUNT(DISTINCT CONCAT(CAST(bikeid AS STRING), '|', CAST(DATE(starttime) AS STRING))) AS active_bike_days,

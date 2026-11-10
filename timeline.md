@@ -39,7 +39,7 @@ Riley supplied results for Queries 02–04:
 
 ## November 5, 2026 — Descriptive exploration establishes user, route, and traffic baselines
 
-Riley executed Queries 05–12 in BigQuery and provided the results, which were documented in `sql/notes.md` and synthesized in `findings.md`:
+Riley executed Queries 05–12 in BigQuery and provided the results, which were documented in `sql/README.md` and synthesized in `findings.md`:
 - **User mix and duration (Queries 05–07):** Annual subscriber share increased from ~78% in 2013 to ~87% by 2018. Subscribers take shorter, utility-focused trips (median ~10–12 minutes), while short-term customers take longer trips (median ~20–25 minutes).
 - **Day of week and routes (Queries 08–09):** Subscriber trips peak during weekdays; customer trips peak on weekends. Top customer routes concentrate around park loops (Central Park) and waterfronts with high same-station return rates, whereas subscriber routes reflect point-to-point transit.
 - **Demographics, commute hours, and station traffic (Queries 10–12):** Subscribers account for virtually all demographic reporting. Weekday trip volume spikes sharply during commute rush hours (8–9 AM and 5–6 PM). Station departures are heavily concentrated among major transit hubs like Pershing Square North and 8th Ave & W 31st St.

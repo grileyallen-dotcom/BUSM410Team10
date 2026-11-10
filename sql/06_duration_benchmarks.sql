@@ -1,4 +1,4 @@
--- Step 6: Descriptive benchmarks and outlier checks for tripduration. See sql/notes.md for notes.
+-- Step 6: Descriptive benchmarks and outlier checks for tripduration. See sql/README.md for notes.
 SELECT
   COUNT(*) AS total_valid_trips,
   MIN(tripduration) AS min_duration_sec,

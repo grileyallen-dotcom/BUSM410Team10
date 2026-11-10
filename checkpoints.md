@@ -11,7 +11,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 ### Requirements
 
 - `README.md` lists both partners, the fun team name, Canvas team number, dataset, and Google Cloud project ID.
-- The public repo contains the required files and folders, with placeholders, including `AGENTS.md`, `charter.md`, `sql/notes.md`, `model/notes.md`, `visuals/notes.md`, `Other/audit_protocol.md`, `Other/audit_log.md`, and `.agents/skills/project-audit/SKILL.md`.
+- The public repo contains the required files and folders, with placeholders, including `AGENTS.md`, `charter.md`, `sql/README.md`, `model/notes.md`, `visuals/notes.md`, `Other/audit_protocol.md`, `Other/audit_log.md`, and `.agents/skills/project-audit/SKILL.md`.
 - `AGENTS.md` and the project audit skill are started from the assignment templates.
 - The repo includes a screenshot showing the partner and instructor were added to the BigQuery project.
 
@@ -26,7 +26,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 - `README.md` adds problem framing and a linked guide to the project files.
 - `charter.md` states the question, decision, scope, and success criteria.
 - `findings.md` explains the gap, what one row represents, benchmark, difference, value calculation with a source, and chart.
-- Numbered SQL files include short `--` notes; `sql/notes.md` explains the query process and cleaning choices, and its numbers match `findings.md`.
+- Numbered SQL files include short `--` notes; `sql/README.md` explains the query process and cleaning choices, and its numbers match `findings.md`.
 - `visuals/` contains the gap chart, embedded in `findings.md`.
 - `Other/` contains dataset documentation or a README link, plus a table diagram.
 - `AGENTS.md` includes project facts, key tables and columns, cleaning rules, and the gap and benchmark with numbers and sources.

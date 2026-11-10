@@ -1,4 +1,4 @@
--- Step 4: Profile station count, identifier uniqueness, snapshot timestamps, and capacity. See sql/notes.md for notes.
+-- Step 4: Profile station count, identifier uniqueness, snapshot timestamps, and capacity. See sql/README.md for notes.
 SELECT
   COUNT(*) AS total_stations,
   COUNT(DISTINCT station_id) AS distinct_station_ids,

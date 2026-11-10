@@ -54,7 +54,7 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 | [decisions.md](decisions.md) | Approved choices, stated direction, and open questions |
 | [charter.md](charter.md) | Business question, manager's decision, scope, and success criteria |
 | [findings.md](findings.md) | Descriptive context and supported findings |
-| [sql/notes.md](sql/notes.md) | Query intake, methods, status, estimates, and results |
+| [sql/README.md](sql/README.md) | Query intake, methods, status, estimates, and results |
 | [Other/](Other/) | Documentation, ERD, and human audit records |
 | [visuals/](visuals/) | Approved charts and visual notes |
 | [model/](model/) | Optional model work and evaluation |
@@ -62,11 +62,11 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 ## Queries and evidence
 
 - Prepare queries when SQL work is requested. Use one short, understandable query at a time and explain its purpose, fields, filters, assumptions, and output row.
-- Follow the [uploaded-query SOP](sql/notes.md#uploaded-query-sop). An upload permits review; saving changes and publishing still require their respective approvals.
+- Follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). An upload permits review; saving changes and publishing still require their respective approvals.
 - Confirm tables and columns before analytical use. Reuse confirmations already recorded; ask again when the schema, source, or intended use changes.
 - Provide estimated scan and cost with their source and assumptions. If a reliable estimate is unavailable, say so and request BigQuery's estimate. Never invent a cost or treat an unknown estimate as zero.
 - Riley or a teammate runs BigQuery queries. Prepare SQL for them; do not execute queries yourself.
-- With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/notes.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
+- With approval, save accepted queries as numbered files in `sql/`, with a short `--` header pointing to `sql/README.md`. Keep explanations, status, cleaning decisions, estimates, and supplied results in that guide.
 - Select needed columns. LIMIT does not normally reduce scanned bytes. Investigate missing values, duplicates, impossible values, and observation-period differences as relevant; propose material cleaning decisions for approval.
 - Use SQL for analysis. Do not add Python files or Python setup. Excel, Looker, or Tableau may be used for visuals. Keep CSV, Excel, and Tableau data/extract files out of the repo.
 - Support claims with documentation, a query and result, or a research source. Label assumptions and interpretations. Associations and benchmark scenarios do not establish causation or guaranteed benefits.

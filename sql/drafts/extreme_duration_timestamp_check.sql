@@ -1,4 +1,4 @@
--- DRAFT: prepared in chat; no execution result or team approval recorded.
+-- DRAFT: Compare recorded and timestamp-derived durations for Customer trips over 24 hours. See sql/README.md for status; not approved or run.
 -- Dataset: bigquery-public-data.new_york_citibike
 -- Table: citibike_trips
 -- Validate May 2017 and May 2018 Customer durations exceeding 24 hours.
