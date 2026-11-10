@@ -1,4 +1,4 @@
--- Step 1: Monthly trip volume and missing starttime check. See sql/README.md for notes.
+-- Step 1: Monthly trip volume and missing starttime check. See sql/notes.md for notes.
 SELECT
   COALESCE(FORMAT_DATETIME('%Y-%m', starttime), 'MISSING_STARTTIME') AS trip_month,
   COUNT(*) AS trip_count

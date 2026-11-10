@@ -14,8 +14,8 @@ A Citi Bike operations manager decides whether to target return measures at casu
 
 - **Dataset:** `bigquery-public-data.new_york_citibike`, using the existing dataset only.
 - **Existing period boundary:** operations during 2013-2018. Supplied documentation reports historical trip coverage from 2013-07-01 through 2018-05-31; confirm coverage and account for partial periods.
-- **First analytical stage:** descriptive analytics to understand table meanings, source-row definitions, date coverage, data quality, distributions, and relevant group or time patterns.
-- **Later selection:** the project lead will approve the business problem, KPI definition, output row, comparisons, benchmark, valuation approach, and recommendation scope after reviewing descriptive evidence.
+- **Descriptive analysis (completed):** The initial review documented table meanings, source-row definitions, date coverage, data quality, distributions, and relevant group and time patterns.
+- **Approved analysis (2026-11-05):** Compare casual Customer trips over 24 hours with annual Subscriber trips. The KPI is trips with `tripduration > 86400` per 10,000 valid trips, paired with over-24-hour bike-days. Use June 2017–May 2018 and the same-period Subscriber rate as the benchmark. The monthly output row is `usertype × month`; the period-summary row is `usertype`. See [decisions.md](decisions.md) and [findings.md](findings.md) for approved rules, results, and valuation.
 - **Evidence:** table selection and any joins must suit the approved question and time period. The supplied station snapshot comes from a different period than the historical trips; explain the applicability of every source.
 - **Current activity:** consult [progress](progress.md) and the project lead's latest direction. Updates to the stage, scope, or charter require the applicable approval; a recorded stage does not prevent Riley from directing a different task.
 
@@ -24,7 +24,7 @@ Source material is in the [dataset documentation](Other/metadata.pdf), [ERD](Oth
 ## What success looks like
 
 - Describe the dataset and setting clearly, with traceable evidence and data-quality limits.
-- Select one business question and define its measure and analysis row with the project lead's approval.
+- Use the approved question, output row, and KPI definition consistently in reproducible analysis.
 - Measure a gap against a justified benchmark and show the comparison in a chart.
 - Explain the gap's value with transparent math, units, assumptions, and a source for any price or cost; identify unresolved evidence requirements.
 - Support a management decision with reproducible SQL, proportionate conclusions, stated uncertainty, and records of real human checks.

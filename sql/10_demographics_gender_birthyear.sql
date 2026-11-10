@@ -1,4 +1,4 @@
--- Step 10: Check gender categories, birth_year population rates, and plausibility among valid trips. See sql/README.md for notes.
+-- Step 10: Check gender categories, birth_year population rates, and plausibility among valid trips. See sql/notes.md for notes.
 SELECT
   gender,
   COUNT(*) AS total_trips,

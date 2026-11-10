@@ -1,4 +1,4 @@
--- Step 8: Analyze trip distribution across days of the week by usertype. See sql/README.md for notes.
+-- Step 8: Analyze trip distribution across days of the week by usertype. See sql/notes.md for notes.
 SELECT
   CASE
     WHEN EXTRACT(DAYOFWEEK FROM starttime) = 1 THEN '1_Sunday'

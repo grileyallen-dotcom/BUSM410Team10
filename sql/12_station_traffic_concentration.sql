@@ -1,4 +1,4 @@
--- Step 12: Identify the top 20 stations by combined departure and arrival volume. See sql/README.md for notes.
+-- Step 12: Identify the top 20 stations by combined departure and arrival volume. See sql/notes.md for notes.
 SELECT
   station_name,
   SUM(departures) AS total_departures,

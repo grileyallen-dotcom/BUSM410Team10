@@ -42,7 +42,7 @@ Whenever the project lead uploads a query or directs review of a teammate's uplo
 
 1. **Read and explain it.** Briefly describe its purpose, whether it supports descriptive exploration or the future selected problem, its tables and fields, and what one output row represents. Identify the supplied filename and any reported author or execution status without inventing missing details.
 2. **Review the logic.** Check for unnecessary columns, important filters and joins, and assumptions about missing values, duplicates, impossible values, and incomplete observation periods. Flag missing data checks and propose a small follow-up query when needed. Static SQL review does not establish that the data passed those checks.
-3. **Propose its saved form.** Check existing filenames and suggest the next unused `sql/NN_short_name.sql`. Use one short query per numbered step and a one-line `--` header pointing to `sql/README.md`. If splitting or correcting the upload would help, show the proposed changes and preserve its intended meaning until changes are approved.
+3. **Propose its saved form.** Check existing filenames and suggest the next unused `sql/NN_short_name.sql`. Use one short query per numbered step and a one-line `--` header pointing to `sql/notes.md`. If splitting or correcting the upload would help, show the proposed changes and preserve its intended meaning until changes are approved.
 4. **Draft its notes.** Propose a query-register entry and the relevant explanation here: purpose, output row meaning, cleaning and join choices, approval and execution status, estimates and their sources, supplied results, and open questions. Keep proposed choices distinct from approved rules. If an estimate or result is missing, mark it unavailable and request what is needed.
 5. **Wait for file approval.** Show the exact proposed SQL and documentation changes with a brief reason. Uploading a query authorizes reading, review, and discussion; it does not itself authorize saving or changing repo files.
 6. **Follow the approval and execution workflow below.** The project lead or a teammate runs queries. The agent explains supplied results and discusses their interpretation. A reported run is labeled as reported unless supporting execution evidence is available. Propose any resulting changes to findings, charts, or the main README separately.
@@ -60,7 +60,7 @@ Whenever the project lead uploads a query or directs review of a teammate's uplo
 Accepted queries use one numbered file per step, such as `01_exploration.sql` and `02_cleaning_checks.sql`. Each file begins with a short comment pointing here, for example:
 
 ```sql
--- Step 1: Explore the selected comparison. See sql/README.md for notes.
+-- Step 1: Explore the selected comparison. See sql/notes.md for notes.
 ```
 
 Drafts remain in `drafts/` until their purpose and query have been accepted.
@@ -94,5 +94,5 @@ Keep the query results, [findings](../findings.md), [charter](../charter.md), ch
 
 ## Sheets, visuals, and data files
 
-If Google Sheets is used, add the sheet link and formulas here. Add chart calculation and source references when a chart is created. Keep CSV and Excel data files out of the repo.
+If Google Sheets or Tableau is used, add the workbook/view link and calculations here or in [visuals/notes.md](../visuals/notes.md). Add chart calculation and source references when a chart is created. Keep CSV, Excel, and Tableau data/extract files out of the repo.
 

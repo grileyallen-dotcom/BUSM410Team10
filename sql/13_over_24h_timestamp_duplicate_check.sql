@@ -1,4 +1,4 @@
--- Step 13: Check timestamp agreement and duplicate keys for >24h trips by usertype. See sql/README.md for notes.
+-- Step 13: Check timestamp agreement and duplicate keys for >24h trips by usertype. See sql/notes.md for notes.
 SELECT
   usertype,
   COUNT(*) AS valid_trips,

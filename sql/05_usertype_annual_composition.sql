@@ -1,4 +1,4 @@
--- Step 5: Annual breakdown of valid trips by usertype. See sql/README.md for notes.
+-- Step 5: Annual breakdown of valid trips by usertype. See sql/notes.md for notes.
 SELECT
   EXTRACT(YEAR FROM starttime) AS trip_year,
   usertype,

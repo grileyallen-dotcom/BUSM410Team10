@@ -5,7 +5,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 ## CP0: Team, Dataset, and Setup
 
 - **Due:** Tuesday, October 20, 2026, 11:59 pm HST
-- **Status:** Not recorded
+- **Status:** Completed
 - **Goal:** Set up the team, dataset, BigQuery project, and shared project repo.
 
 ### Requirements
@@ -18,7 +18,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 ## CP1: Gap Charter
 
 - **Due:** Friday, November 6, 2026, 11:59 pm HST
-- **Status:** Not recorded
+- **Status:** Completed
 - **Goal:** Measure one data-supported gap, compare it with a justified benchmark, and explain its value.
 
 ### Requirements
@@ -26,7 +26,7 @@ Use this file to track each checkpoint's due date, requirements, deliverables, a
 - `README.md` adds problem framing and a linked guide to the project files.
 - `charter.md` states the question, decision, scope, and success criteria.
 - `findings.md` explains the gap, what one row represents, benchmark, difference, value calculation with a source, and chart.
-- Numbered SQL files include short `--` notes; `sql/README.md` explains the query process and cleaning choices, and its numbers match `findings.md`.
+- Numbered SQL files include short `--` notes; `sql/notes.md` explains the query process and cleaning choices, and its numbers match `findings.md`.
 - `visuals/` contains the gap chart, embedded in `findings.md`.
 - `Other/` contains dataset documentation or a README link, plus a table diagram.
 - `AGENTS.md` includes project facts, key tables and columns, cleaning rules, and the gap and benchmark with numbers and sources.
