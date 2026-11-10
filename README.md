@@ -33,22 +33,6 @@ The screenshot below shows the project IAM setup with our partner and instructor
 | [findings.md](findings.md) | The measured gap, benchmark, valuation, charts, and limitations. |
 | [AGENTS.md](AGENTS.md) | Project facts, approved rules, and working guidance for the agent. |
 | [sql/README.md](sql/README.md) | Query register, methods, cleaning choices, results, and execution notes. |
-| [01_monthly_trips_and_missing_starts.sql](sql/01_monthly_trips_and_missing_starts.sql) | Monthly trip counts and missing start-time check. |
-| [02_blank_rows_field_check.sql](sql/02_blank_rows_field_check.sql) | Checks operational fields on rows missing a start time. |
-| [03_blank_rows_usertype_check.sql](sql/03_blank_rows_usertype_check.sql) | Checks user-type values on rows missing a start time. |
-| [04_stations_snapshot_profile.sql](sql/04_stations_snapshot_profile.sql) | Profiles station count, IDs, snapshot dates, and capacity. |
-| [05_usertype_annual_composition.sql](sql/05_usertype_annual_composition.sql) | Annual trip counts by rider type. |
-| [06_duration_benchmarks.sql](sql/06_duration_benchmarks.sql) | Trip-duration distribution and outlier checks. |
-| [07_duration_by_usertype.sql](sql/07_duration_by_usertype.sql) | Trip-duration comparisons by rider type. |
-| [08_day_of_week_usertype.sql](sql/08_day_of_week_usertype.sql) | Trip patterns by weekday and rider type. |
-| [09_top_routes_roundtrips.sql](sql/09_top_routes_roundtrips.sql) | Frequent routes, durations, and round trips. |
-| [10_demographics_gender_birthyear.sql](sql/10_demographics_gender_birthyear.sql) | Gender and birth-year data checks. |
-| [11_hourly_rush_hour_patterns.sql](sql/11_hourly_rush_hour_patterns.sql) | Hourly trip patterns by rider type. |
-| [12_station_traffic_concentration.sql](sql/12_station_traffic_concentration.sql) | Station activity and traffic concentration. |
-| [13_over_24h_timestamp_duplicate_check.sql](sql/13_over_24h_timestamp_duplicate_check.sql) | Timestamp and duplicate checks for trips over 24 hours. |
-| [14_monthly_over_24h_by_usertype.sql](sql/14_monthly_over_24h_by_usertype.sql) | Monthly over-24-hour trip rates and bike-days by rider type. |
-| [15_trips_per_active_bike_day.sql](sql/15_trips_per_active_bike_day.sql) | Trips per active bike-day used in the valuation. |
-| [16_period_gap_summary.sql](sql/16_period_gap_summary.sql) | Period totals and benchmark comparison by rider type. |
 | [Gap comparison chart](visuals/cp1_over_24h_gap_vs_benchmark.png) | Primary chart comparing Customer and Subscriber rates. |
 | [Monthly trend chart](visuals/cp1_monthly_over_24h_rates.png) | Monthly rates by rider type for the study period. |
 | [Dataset documentation](Other/metadata.pdf) | Supplied dataset and table descriptions. |
