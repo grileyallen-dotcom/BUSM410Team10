@@ -42,8 +42,10 @@ The screenshot below shows the project IAM setup with our partner and instructor
 - [model/](model/) — optional modeling notes and results
 - [visuals/](visuals/) — charts and visual notes
 
-## Assignment approach
+## Approved problem framing
 
-Describe the dataset and its setting first. After reviewing that evidence, the project lead will select the future business problem and approve its question, KPI, benchmark, and scope. Analyze in SQL when requested; Excel, Looker, or Tableau may be used for visuals. Later, complete CP1's measured gap, sourced value calculation, and chart. Keep conclusions tied to evidence and explain limitations.
+During June 2017–May 2018, trips over 24 hours occurred at a rate of 15.98 per 10,000 valid Customer trips, compared with 1.05 for Subscribers (15.2×). At the Subscriber benchmark rate, Customer trips correspond to 20,736.7 excess bike-days in the period. The approved value estimate is a ~$55.6K–$335.2K annual ride-fee capacity ceiling, not realized savings.
+
+This analysis supports an operations manager’s decision about targeted return reminders or station messaging. The [charter](charter.md) defines the approved question and scope, [findings](findings.md) presents the calculations and charts, and the [SQL guide](sql/README.md) documents methods and results.
 
 

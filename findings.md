@@ -88,7 +88,13 @@ Using approved valuation rule V1 ([decisions.md](decisions.md#approved-valuation
 
 ## Chart
 
-**Pending CP1 chart creation.** Full instructions on what to graph, axes, labels, and source queries are recorded in [visuals/notes.md](visuals/notes.md#cp1-chart-specification-pending-creation). Once built, save `visuals/cp1_over_24h_gap_vs_benchmark.png` and embed it here.
+**Primary CP1 chart:** Period-level Customer versus Subscriber benchmark comparison.
+
+![Customer vs. Subscriber >24h rate, June 2017–May 2018](visuals/cp1_over_24h_gap_vs_benchmark.png)
+
+**Supplementary monthly trend:** Monthly over-24-hour rates by rider type for the same period.
+
+![Monthly Customer vs. Subscriber over-24h rate, June 2017–May 2018](visuals/cp1_monthly_over_24h_rates.png)
 
 Every chart must use consistent definitions, units, populations, and periods, with traceable source queries or calculations.
 
