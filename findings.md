@@ -54,11 +54,13 @@ The following descriptive baselines were established through queries executed on
 
 ## The gap
 
+**Measured gap (June 2017–May 2018):** Customers had 15.98 trips over 24 hours per 10,000 valid trips, compared with 1.05 for Subscribers—a gap of 14.93 per 10,000, or 15.2×. In Query 16, each output row represents one rider type across the full period; each source row represents one valid trip.
+
 | Element | Approved definition and result |
 |---|---|
 | Business problem and decision | Casual `Customer` riders keep Citi Bikes out over 24 hours far more often than `Subscriber` riders, tying up fleet capacity. Supports an operations manager deciding whether to target pre-24h return reminders or station messaging at casual riders ([charter.md](charter.md)). |
 | Business KPI and formula | **Trips over 24 hours per 10,000 valid trips:** `COUNTIF(tripduration > 86400) * 10000.0 / COUNT(*)`, paired with **bike-days tied up:** `SUM(IF(tripduration > 86400, tripduration, 0)) / 86400.0`. |
-| Source row, output row, and period | Source row: 1 valid trip (`starttime IS NOT NULL`, rule C1) in June 2017–May 2018 (`16,951,030` trips; rule C2). Output row: `usertype × month` in Query 14 (106 rows overall, including 24 rows in June 2017–May 2018) and `usertype` period total (2 rows in Query 16). |
+| Source row, output row, and period | Source row: one valid trip (`starttime IS NOT NULL`, rule C1) in June 2017–May 2018 (rule C2). Query 16 output: one row per rider type for the full period (2 rows). Query 14 output: one row per rider type per month (106 rows overall; 24 for the selected period). |
 | Observed Customer performance | **`15.98` >24h trips per 10,000 valid trips** (`2,883` of `1,804,498` Customer trips), tying up **`21,733.4` bike-days** (`7.54` days per >24h trip). Customers are `10.65%` of valid trips but `64.4%` of >24h trips and `72.2%` of >24h bike-days. |
 | Supporting checks | [13_over_24h_timestamp_duplicate_check.sql](sql/13_over_24h_timestamp_duplicate_check.sql) confirmed 0 missing stop times, 0 negative durations, and 0 duplicates among >24h rows; June 2017–May 2018 avoids the Oct 2016–Mar 2017 coverage gap and the 2014–2015 zero->24h months. |
 
