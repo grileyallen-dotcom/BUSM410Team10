@@ -2,7 +2,7 @@
 
 ## Current stage
 
-**Stage 6 — Review, audit, and merge (complete).** CP0 and CP1 deliverables are marked Completed in [checkpoints.md](checkpoints.md), and the completed `riley-setup` work has been merged into `main` on GitHub. The CP1 submission and instructor-review outcome have not yet been recorded. The gap, benchmark, Option C valuation (`~$55.6K–$335.2K/yr` ceiling), and both charts are recorded in [findings.md](findings.md); Riley verified the chart values against Queries 14 and 16 (audit #10).
+**Stage 6 — Review, audit, and merge (complete).** CP0 and CP1 deliverables are marked Completed in [checkpoints.md](checkpoints.md), and the completed `riley-setup` work has been merged into `main` on GitHub. The CP1 submission and instructor-review outcome have not yet been recorded. The gap, benchmark, Option C valuation (`~$55.6K–$335.2K/yr` ceiling), and both charts are recorded in [findings.md](findings.md); Riley verified the chart values against Queries 14 and 16 (audit #10). Riley's correction of the agent's direct commits and push to `main` is recorded as audit #11.
 
 ## Project stages
 
