@@ -1,0 +1,284 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1024 700] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 8197 >>
+stream
+0.969 0.980 0.988 rg
+0 0 1024 700 re f
+0.071 0.188 0.290 rg
+BT /F2 23 Tf 1 0 0 1 46.0 649.0 Tm (Citi Bike data model) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 11 Tf 1 0 0 1 46.0 629.0 Tm (Source tables and proposed station crosswalk) Tj ET
+1.000 0.953 0.847 rg
+46 575 932 38 re f
+0.663 0.412 0.031 rg
+BT /F2 10 Tf 1 0 0 1 60.0 590.0 Tm (JOIN CAUTION) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 10 Tf 1 0 0 1 145.0 596.0 Tm (Trip station IDs are legacy integers; current station IDs are strings.) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 10 Tf 1 0 0 1 145.0 581.0 Tm (The crosswalk and all join paths below are proposed and have not been validated.) Tj ET
+0.608 0.686 0.745 RG
+1.4 w [] 0 d 304 475.0 m
+340 475.0 l
+340 453.0 l
+405 453.0 l
+S
+0.608 0.686 0.745 rg
+405 453.0 m 398 449.0 l 398 457.0 l h f
+1.000 1.000 1.000 rg
+299.0 442.0 82 16 re f
+0.376 0.455 0.529 rg
+BT /F2 7.5 Tf 1 0 0 1 320.5 447.5 Tm (CURRENT ID) Tj ET
+0.608 0.686 0.745 RG
+1.4 w [] 0 d 625 475.0 m
+664 475.0 l
+664 409.0 l
+720 409.0 l
+S
+0.608 0.686 0.745 rg
+720 409.0 m 713 405.0 l 713 413.0 l h f
+1.000 1.000 1.000 rg
+629.0 422.0 70 16 re f
+0.376 0.455 0.529 rg
+BT /F2 7.5 Tf 1 0 0 1 648.4 427.5 Tm (START ID) Tj ET
+0.608 0.686 0.745 RG
+1.4 w [] 0 d 625 475.0 m
+682 475.0 l
+682 321.0 l
+720 321.0 l
+S
+0.608 0.686 0.745 rg
+720 321.0 m 713 317.0 l 713 325.0 l h f
+1.000 1.000 1.000 rg
+651.0 378.0 62 16 re f
+0.376 0.455 0.529 rg
+BT /F2 7.5 Tf 1 0 0 1 670.3 383.5 Tm (END ID) Tj ET
+0.867 0.902 0.925 rg
+49 263 258 260 re f
+1.000 1.000 1.000 rg
+46 266 258 260 re f
+0.851 0.886 0.910 RG
+0.8 w 46 266 258 260 re S
+0.141 0.380 0.541 rg
+46 486 258 40 re f
+1.000 1.000 1.000 rg
+BT /F2 13 Tf 1 0 0 1 60.0 501.0 Tm (citibike_stations) Tj ET
+0.851 0.918 0.957 rg
+208 496 86 18 re f
+0.141 0.380 0.541 rg
+BT /F2 7.5 Tf 1 0 0 1 215.0 502.0 Tm (SOURCE TABLE) Tj ET
+0.918 0.953 0.973 rg
+47 464 256 22 re f
+0.125 0.196 0.267 rg
+BT /F2 9.1 Tf 1 0 0 1 59.0 471.9 Tm (station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 471.9 Tm (varchar) Tj ET
+0.973 0.980 0.988 rg
+47 442 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 449.9 Tm (name) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 449.9 Tm (varchar) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 427.9 Tm (short_name) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 427.9 Tm (varchar) Tj ET
+0.973 0.980 0.988 rg
+47 398 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 405.9 Tm (latitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 268.5 405.9 Tm (float) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 383.9 Tm (longitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 268.5 383.9 Tm (float) Tj ET
+0.973 0.980 0.988 rg
+47 354 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 361.9 Tm (region_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 277.5 361.9 Tm (int) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 339.9 Tm (capacity) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 277.5 339.9 Tm (int) Tj ET
+0.973 0.980 0.988 rg
+47 310 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 317.9 Tm (is_installed) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 317.9 Tm (boolean) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 295.9 Tm (is_renting) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 295.9 Tm (boolean) Tj ET
+0.973 0.980 0.988 rg
+47 266 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 59.0 273.9 Tm (is_returning) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 259.5 273.9 Tm (boolean) Tj ET
+0.851 0.886 0.910 RG
+0.8 w 46 526 m 304 526 l 304 266 l 46 266 l h S
+0.867 0.902 0.925 rg
+408 395 220 128 re f
+1.000 1.000 1.000 rg
+405 398 220 128 re f
+0.851 0.886 0.910 RG
+0.8 w 405 398 220 128 re S
+0.549 0.353 0.071 rg
+405 486 220 40 re f
+1.000 1.000 1.000 rg
+BT /F2 13 Tf 1 0 0 1 419.0 501.0 Tm (station_xref) Tj ET
+0.973 0.906 0.780 rg
+539 496 76 18 re f
+0.663 0.412 0.031 rg
+BT /F2 7.5 Tf 1 0 0 1 546.0 502.0 Tm (PROPOSED) Tj ET
+1.000 0.953 0.847 rg
+406 464 218 22 re f
+0.125 0.196 0.267 rg
+BT /F2 9.1 Tf 1 0 0 1 418.0 471.9 Tm (legacy_station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 598.5 471.9 Tm (int) Tj ET
+1.000 0.953 0.847 rg
+406 442 218 22 re f
+0.125 0.196 0.267 rg
+BT /F2 9.1 Tf 1 0 0 1 418.0 449.9 Tm (current_station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 580.5 449.9 Tm (varchar) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 418.0 427.9 Tm (match_method) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 580.5 427.9 Tm (varchar) Tj ET
+0.973 0.980 0.988 rg
+406 398 218 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 418.0 405.9 Tm (distance_m) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 589.5 405.9 Tm (float) Tj ET
+0.851 0.886 0.910 RG
+0.8 w 405 526 m 625 526 l 625 398 l 405 398 l h S
+0.867 0.902 0.925 rg
+723 197 258 326 re f
+1.000 1.000 1.000 rg
+720 200 258 326 re f
+0.851 0.886 0.910 RG
+0.8 w 720 200 258 326 re S
+0.141 0.380 0.541 rg
+720 486 258 40 re f
+1.000 1.000 1.000 rg
+BT /F2 13 Tf 1 0 0 1 734.0 501.0 Tm (citibike_trips) Tj ET
+0.851 0.918 0.957 rg
+882 496 86 18 re f
+0.141 0.380 0.541 rg
+BT /F2 7.5 Tf 1 0 0 1 889.0 502.0 Tm (SOURCE TABLE) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 471.9 Tm (starttime) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 929.0 471.9 Tm (datetime) Tj ET
+0.973 0.980 0.988 rg
+721 442 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 449.9 Tm (stoptime) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 929.0 449.9 Tm (datetime) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 427.9 Tm (tripduration) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 951.5 427.9 Tm (int) Tj ET
+0.918 0.953 0.973 rg
+721 398 256 22 re f
+0.125 0.196 0.267 rg
+BT /F2 9.1 Tf 1 0 0 1 733.0 405.9 Tm (start_station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 951.5 405.9 Tm (int) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 383.9 Tm (start_station_name) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 933.5 383.9 Tm (varchar) Tj ET
+0.973 0.980 0.988 rg
+721 354 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 361.9 Tm (start_station_latitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 942.5 361.9 Tm (float) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 339.9 Tm (start_station_longitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 942.5 339.9 Tm (float) Tj ET
+0.918 0.953 0.973 rg
+721 310 256 22 re f
+0.125 0.196 0.267 rg
+BT /F2 9.1 Tf 1 0 0 1 733.0 317.9 Tm (end_station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 951.5 317.9 Tm (int) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 295.9 Tm (end_station_name) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 933.5 295.9 Tm (varchar) Tj ET
+0.973 0.980 0.988 rg
+721 266 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 273.9 Tm (end_station_latitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 942.5 273.9 Tm (float) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 251.9 Tm (end_station_longitude) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 942.5 251.9 Tm (float) Tj ET
+0.973 0.980 0.988 rg
+721 222 256 22 re f
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 229.9 Tm (bikeid) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 951.5 229.9 Tm (int) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9.1 Tf 1 0 0 1 733.0 207.9 Tm (usertype) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8.5 Tf 1 0 0 1 933.5 207.9 Tm (varchar) Tj ET
+0.851 0.886 0.910 RG
+0.8 w 720 526 m 978 526 l 978 200 l 720 200 l h S
+0.910 0.933 0.949 rg
+46 70 932 82 re f
+0.071 0.188 0.290 rg
+BT /F2 10 Tf 1 0 0 1 62.0 130.0 Tm (Relationship paths shown) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9 Tf 1 0 0 1 62.0 112.0 Tm (citibike_stations.station_id  ->  station_xref.current_station_id) Tj ET
+0.125 0.196 0.267 rg
+BT /F1 9 Tf 1 0 0 1 62.0 96.0 Tm (station_xref.legacy_station_id  ->  citibike_trips.start_station_id and end_station_id) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 8 Tf 1 0 0 1 62.0 79.0 Tm (station_xref is proposed, not a source table. Current station data is a modern snapshot and may not match the 2013-2018 trip network.) Tj ET
+0.376 0.455 0.529 rg
+BT /F1 7.5 Tf 1 0 0 1 623.0 41.0 Tm (Schema fields shown are the ERD-relevant subset; no primary keys are asserted.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000258 00000 n 
+0000000328 00000 n 
+0000000403 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+8651
+%%EOF
