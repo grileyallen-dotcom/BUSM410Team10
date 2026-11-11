@@ -6,7 +6,7 @@ The entries below were reconstructed from accessible project conversations on 20
 
 | Category | What it records | Entries |
 |---|---|---:|
-| [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 1 |
+| [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 2 |
 | [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 4 |
 | [Separated fact from opinion](#separated-fact-from-opinion) | A human checked whether a statement was documented or inferred. | 0 |
 | [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 3 |
@@ -17,6 +17,7 @@ The entries below were reconstructed from accessible project conversations on 20
 | # | Date | What the AI said or did | How I checked it | Result |
 |---|---|---|---|---|
 | 2 | 2026-11-04 | Agent drafted a coverage query and asked Riley to paste it into BigQuery while the task was building the repo. | Riley challenged the proposed step, stating: "we are not running queries. We are building the repo." | Agent acknowledged moving into query planning too soon and returned to repository organization. This records Riley's task-scope correction; it does not claim a check of SQL correctness or query results. |
+| 11 | 2026-11-10 | Agent committed and pushed project changes directly to `main`, contrary to the repo's Git instructions. | Riley noticed the direct commits and push, and pointed out that [AGENTS.md](../AGENTS.md) requires the agent not to commit or push and directs publishing through `riley-setup`. | Agent acknowledged the error and stopped further Git actions. Three commits had already been pushed to `main` and were left in place. Evidence: “Locate missing SQL deliverables” conversation, 2026-11-10. |
 
 ## Verified a claim
 
