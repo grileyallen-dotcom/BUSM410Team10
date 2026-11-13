@@ -6,7 +6,7 @@
 ## Team
 
 - Riley Allen — project lead
-- Rainy Villame — project partner
+- Norainelle Diaz — project partner
 
 The AI agent serves as a consultant: it explains evidence, challenges assumptions, presents options, and recommends next steps. Riley directs the project and approves actions and conclusions.
 
