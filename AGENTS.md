@@ -10,11 +10,15 @@ Read this first. This is the shared guide for how AI agents work with Riley Alle
 
 ## Approval and permissions
 
-- **Repo changes:** Show the exact proposed change and a brief reason, then wait for explicit approval before modifying the repo. This includes formatting, moving files, updating progress, and changing instructions.
+- **Repo changes:** Show the exact proposed change and a brief reason, then wait for explicit approval before modifying the repo, except for the standing authorization below. This includes formatting, moving files, updating progress, and changing instructions.
+- **Standing authorization for project tracking:** Riley authorizes the agent to update only [progress.md](progress.md) and [Other/audit_log.md](Other/audit_log.md) without separate approval, within these limits:
+  - Update `progress.md` during authorized work to record verifiable status changes, checkpoint status, material dated milestones, and next steps. Before returning the task, record any material progress or milestone from that work, even if the overall stage is unchanged; update current status and next steps when they change. Do not add filler entries when nothing material happened.
+  - Update `Other/audit_log.md` only for substantial human checks that actually occurred, following the project-audit skill and audit protocol. Preserve the required categories, numbering, summary counts, evidence, and limits.
+  - Do not infer decisions, submissions, reviews, checks, or outcomes. Changes to any other project files still require separate approval.
 - **Approval requests:** Before asking to modify the repo, name the affected files, explain in plain language what will change and why, and show the exact proposed text or diff. Distinguish approval to edit files from approval to commit, push, create a pull request, or merge; identify the target branch for Git actions.
 - Approval covers the changes presented. Propose additional changes separately. Questions, brainstorming, suggestions, and discussion do not authorize action.
 - **Reading and research:** Reading files, inspecting the repo, and researching external sources never require approval. You may analyze supplied results and suggest actions without changing files.
-- **Git actions and milestone syncs:** AI modifies local files after approval, and Riley runs Git commands manually in Terminal. Do not execute `git add`, `git commit`, or `git push` directly; instead, at natural milestones, session end, or when asked to publish, propose updates to `progress.md` and `decisions.md` and hand Riley the exact Terminal command block (including `cd` to the project folder and branch check) to commit and push to `riley-setup`.
+- **Git actions and milestone syncs:** Riley runs Git commands manually in Terminal. Do not execute `git add`, `git commit`, or `git push` directly. Update `progress.md` under the standing authorization above; propose updates to `decisions.md` for approval. When asked to publish, provide Riley the exact Terminal command block (including `cd` to the project folder and branch check) to commit and push to `riley-setup`.
 - **Allowed publishing branch:** All Terminal commit/push commands must target `riley-setup` only. Never target `main` or another branch; Riley manually merges `riley-setup` into `main` on GitHub. If a request conflicts with this rule, declare the conflict and request an explicit override.
 - Preserve existing work. Explain any conflict and ask what to keep before resolving it.
 - The repo is the project's shared brain. Reading it is allowed without approval; modifying it always requires explicit permission, including changes to memory, decisions, progress, and audit records.
@@ -75,7 +79,7 @@ After reading, wait for Riley's direction. Do not automatically synchronize bran
 
 Propose updates to shared memory, then wait for explicit approval. Keep approved decisions distinct from proposals and unresolved choices.
 
-Follow the audit skill for real human checks of agent work. Propose each audit entry and protocol addition for approval. Routine approvals and the agent's own checks do not count as human audits. Use the instructor example for structure and evidence standards.
+Follow the audit skill for real human checks of agent work. Record qualifying audit entries under the standing authorization above; propose protocol additions for approval. Routine approvals and the agent's own checks do not count as human audits. Use the instructor example for structure and evidence standards.
 
 ## Project facts
 
