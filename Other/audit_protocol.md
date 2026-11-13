@@ -5,12 +5,12 @@ This is our process for directing and checking the agent. Riley Allen is the pro
 ## How we work
 
 1. **The project lead directs the work.** The agent reads the repo, waits for Riley's direction, and helps with one small step at a time. Use [progress](../progress.md) for the current stage and Riley's latest direction for the task. A setup discussion does not authorize starting analysis.
-2. **The agent proposes an action.** It explains the purpose and shows the exact proposed change. The project lead explicitly approves repo modifications before they happen.
+2. **The agent proposes an action.** It explains the purpose and shows the exact proposed change. The project lead explicitly approves repo modifications before they happen, except for the scoped standing authorization in [AGENTS.md](../AGENTS.md).
 3. **We check the evidence.** For factual claims, review the linked documentation, table definition, query result, or research source. Separate documented facts, calculations, assumptions, and the agent's interpretation.
 4. **The agent prepares a short query.** It explains the output row, fields, filters, and estimated scan and cost. If the estimate is unavailable, it requests BigQuery's estimate. The project lead confirms the required tables and columns using available evidence, and Riley or a teammate reviews and runs the query when directed.
 5. **The consultant explains the results.** The agent analyzes supplied results and discusses the reasoning with the project lead. It challenges unsupported interpretations directly and asks before treating an interpretation as an approved conclusion.
 6. **We perform meaningful checks.** Depending on the claim, verify a definition, independently calculate a result, check totals and denominators, question a filter or join, or compare the interpretation with its source. Describe what was actually checked and any remaining uncertainty.
-7. **The agent proposes the record.** For a substantial human check, it shows the proposed audit entry and category. It saves the entry only after the project lead approves the proposed entry and summary-count update. It separately proposes any new checking habit worth adding to this protocol.
+7. **The agent records the check.** For a substantial human check, the agent records an accurate entry under the standing authorization in [AGENTS.md](../AGENTS.md), following the audit skill's category, evidence, numbering, and summary-count requirements. The agent reports the entry to Riley. It separately proposes any new checking habit worth adding to this protocol; protocol changes still require Riley's explicit approval.
 
 ## Checks to consider for CP1
 
@@ -25,9 +25,9 @@ These are planned checks, not claims that the checks have already happened.
 ## Approval boundaries
 
 - Reading files, inspecting the repo, external research, and discussing results do not require approval.
-- Every repo modification requires explicit approval of the proposed change.
+- Follow the scoped standing authorization in [AGENTS.md](../AGENTS.md) for eligible updates to `progress.md` and `audit_log.md`; every other repo modification requires explicit approval of the proposed change.
 - Commits, pushes, pull requests, and merges require explicit approval separate from file edits.
-- Each audit entry and protocol addition requires approval of its proposed wording.
+- Protocol additions require approval of their proposed wording. Audit entries may be recorded under the standing authorization when a qualifying human check actually occurred.
 
 ## What belongs in the log
 

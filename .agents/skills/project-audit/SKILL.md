@@ -21,7 +21,7 @@ When a substantial human check is worth logging, flag it without waiting to be a
 
 1. Read relevant earlier entries to avoid duplicates and identify the next unused number. Never reuse removed numbers.
 2. Choose one existing category: Caught an error, Verified a claim, Separated fact from opinion, Changed the analysis, or Improved the agent's instructions.
-3. Show the exact proposed entry, its category, the summary-count update, and a brief reason for logging it. Wait for the project lead's explicit approval before changing the log.
+3. Under the standing authorization in [AGENTS.md](../../../AGENTS.md), record the qualifying entry directly. In your response, report the entry, category, summary-count update, and brief reason. Do not log an item that does not meet the human-check criteria or infer any missing facts.
 4. Use these five columns: #, Date, What the AI said or did, How I checked it, Result. Start the AI description with "Agent" and the checking description with the actual person's name. Use the actual check date; describe the claim, method/evidence, and outcome briefly. Link sources or query results when available.
 5. Update the category's summary count and check that it matches the entries.
 
@@ -31,6 +31,6 @@ Preserve old entries. Add a dated resolution referring to an earlier entry when 
 
 ## Protocol changes and scope
 
-When a meaningful human check suggests a useful new practice, show the exact proposed protocol addition and a brief reason. Apply it only after the project lead's explicit approval. Avoid turning every interaction into a rule.
+When a meaningful human check suggests a useful new practice, show the exact proposed protocol addition and a brief reason. Apply it only after the project lead's explicit approval. The standing authorization covers eligible audit-log entries only; it does not authorize changes to this skill or the protocol. Avoid turning every interaction into a rule.
 
-Reading files, inspecting the repo, and external research do not require approval. Every repo modification requires explicit approval. Approval to update an audit record or protocol does not authorize a commit, push, pull request, or merge; request separate explicit approval for those Git actions. Prepare queries only when requested by the project lead; Riley or a teammate runs them, following AGENTS.md. Consult [progress.md](../../../progress.md) for the current stage and follow the project lead's latest direction.
+Reading files, inspecting the repo, and external research do not require approval. Follow the scoped standing authorization in AGENTS.md for eligible audit-log entries; every other repo modification requires explicit approval. Updating an audit record or protocol does not authorize a commit, push, pull request, or merge; request separate explicit approval for those Git actions. Prepare queries only when requested by the project lead; Riley or a teammate runs them, following AGENTS.md. Consult [progress.md](../../../progress.md) for the current stage and follow the project lead's latest direction.

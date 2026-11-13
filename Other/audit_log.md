@@ -6,7 +6,7 @@ The entries below were reconstructed from accessible project conversations on 20
 
 | Category | What it records | Entries |
 |---|---|---:|
-| [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 2 |
+| [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 3 |
 | [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 4 |
 | [Separated fact from opinion](#separated-fact-from-opinion) | A human checked whether a statement was documented or inferred. | 0 |
 | [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 3 |
@@ -18,6 +18,7 @@ The entries below were reconstructed from accessible project conversations on 20
 |---|---|---|---|---|
 | 2 | 2026-11-04 | Agent drafted a coverage query and asked Riley to paste it into BigQuery while the task was building the repo. | Riley challenged the proposed step, stating: "we are not running queries. We are building the repo." | Agent acknowledged moving into query planning too soon and returned to repository organization. This records Riley's task-scope correction; it does not claim a check of SQL correctness or query results. |
 | 11 | 2026-11-10 | Agent committed and pushed project changes directly to `main`, contrary to the repo's Git instructions. | Riley noticed the direct commits and push, and pointed out that [AGENTS.md](../AGENTS.md) requires the agent not to commit or push and directs publishing through `riley-setup`. | Agent acknowledged the error and stopped further Git actions. Three commits had already been pushed to `main` and were left in place. Evidence: “Locate missing SQL deliverables” conversation, 2026-11-10. |
+| 12 | 2026-11-12 | Agent compared the tracking files and described the timeline as partial, but had not yet consolidated the later milestones recorded elsewhere. | Riley pointed out that the timeline had no entries for November 6–12 and identified this as a tracking defect. | Agent confirmed the gap against the other project records. The consolidated [progress tracker](../progress.md) includes the documented November 9 CP1 completion and November 10 audit event. No activity is inferred for dates without supporting records; the CP1 submission and instructor-review outcome remain unrecorded. |
 
 ## Verified a claim
 
@@ -48,4 +49,4 @@ The entries below were reconstructed from accessible project conversations on 20
 | 3 | 2026-11-04 | Agent proposed AGENTS instructions that embedded a fixed current stage and direction. | Riley questioned the proposed instruction in conversation, warning that the current stage could become "a blockade later," and explained that AGENTS should be a lasting working guide. | Instructions were revised to keep changing stage in [progress.md](../progress.md), retain durable rules in [AGENTS.md](../AGENTS.md), and allow Riley to override outdated project instructions. The revision was published; future agent behavior has not been independently tested. |
 | 6 | 2026-11-03 | Agent asked Riley to supply project context that had already been provided in the repo or other project chats. | Riley directed the agent to check GitHub before asking unanswered questions, and later challenged the repeated upload request by pointing to context already supplied in other project sessions. | Agent retrieved repo context and earlier chats, acknowledged that it should have looked first, and narrowed its questions to unresolved choices. This records the context-retrieval correction, not human verification of every recovered fact. Sources: `Summarize project guidance`; `Create project stages graphic`. |
 
-Before adding an entry, propose its wording and category for approval. Use the actual date; start the AI description with "Agent" and identify the human by name in the checking column. Include evidence and unresolved limits. Use unique entry numbers and update the summary counts.
+Under the standing authorization in [AGENTS.md](../AGENTS.md), add entries only for substantial human checks that actually occurred. Use the actual date; start the AI description with "Agent" and identify the human by name in the checking column. Include evidence and unresolved limits. Use unique entry numbers and update the summary counts.
