@@ -7,7 +7,7 @@ The entries below were reconstructed from accessible project conversations on 20
 | Category | What it records | Entries |
 |---|---|---:|
 | [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 3 |
-| [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 6 |
+| [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 7 |
 | [Separated fact from opinion](#separated-fact-from-opinion) | A human checked whether a statement was documented or inferred. | 0 |
 | [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 3 |
 | [Improved the agent's instructions](#improved-the-agents-instructions) | A human check led to better agent instructions. | 2 |
@@ -30,6 +30,7 @@ The entries below were reconstructed from accessible project conversations on 20
 | 10 | 2026-11-09 | Agent supplied the Query 14 monthly rates and Query 16 period rates for the CP1 charts. | Riley reports manually comparing the chart values with the Query 14 result CSV and Query 16 output. | Confirmed. The chart values match the supplied query results. Evidence: Query 14 CSV supplied in this conversation; Query 16 output recorded in [sql/README.md](../sql/README.md). |
 | 13 | 2026-11-18 | Agent drafted Query 17, which splits Jun 2017–May 2018 trips over 24 hours by day of week and rider type, and reported that the daily counts added up to the Query 16 totals. | Norainelle Diaz ran [17_over_24h_by_day_of_week.sql](../sql/17_over_24h_by_day_of_week.sql) in BigQuery on 2026-11-10, then on 2026-11-18 added the seven daily counts for each rider type herself with a phone calculator. | Confirmed. Customer days sum to 2,883 and Subscriber days to 1,591, matching Query 16. AI help: Claude drafted Query 17 and first did the addition; Norainelle repeated it independently. |
 | 14 | 2026-11-18 | Agent wrote Query 19 to build the CP2 analysis table (`busm410-project.11234.trip_analysis`: one row per trip, Y = over_24h) and Query 20 to check it. | Norainelle Diaz ran both queries in BigQuery, read the Query 20 results, and used a phone calculator to confirm the row total (1,804,498 + 15,146,532) and the Y total (2,883 + 1,591) against Query 16. | Confirmed. 16,951,030 rows and 4,474 trips over 24h match Query 16; 0 blanks in Y, usertype, gender, station, or location; ages 0–97 with 1,187,509 missing (set to 0 and flagged); hours 0–23; 7 days; 12 months. AI help: Claude drafted Queries 19 and 20. Evidence: [20_check_analysis_table.sql](../sql/20_check_analysis_table.sql) (in pull request #22); BigQuery JSON results saved in Norainelle's Google Doc. |
+| 15 | 2026-11-19 | Agent drafted Part A3 Queries 21–23 (average Y by usertype, start hour, and gender on the analysis table) and reported that the gender counts add up to the table's 4,474 trips over 24 hours. | Norainelle Diaz ran all three queries in BigQuery and added the gender counts (967 + 2,228 + 1,279) herself with a phone calculator. | Confirmed. The three gender groups sum to 4,474, matching the analysis table and Query 16. Query 21's usertype counts (2,883 and 1,591) also match Query 16. AI help: Claude drafted Queries 21–23. Evidence: [23_a3_avg_y_by_gender.sql](../sql/23_a3_avg_y_by_gender.sql) (in pull request #22); results saved in Norainelle's Google Doc. |
 
 ## Separated fact from opinion
 
