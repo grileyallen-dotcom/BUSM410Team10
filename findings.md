@@ -108,3 +108,18 @@ Respect the approved 2013-2018 scope and explain source applicability. The [supp
 ## Updating this file
 
 When queries are uploaded, follow the [uploaded-query SOP](sql/README.md#uploaded-query-sop). The agent explains supplied evidence, discusses interpretations, and proposes exact changes for the project lead's approval. Git publishing requires separate approval.
+
+## CP2 Part A: Looking before modeling
+
+Analysis table: [Query 19](sql/19_create_analysis_table.sql) builds `busm410-project.11234.trip_analysis`, one row per trip (Jun 2017–May 2018, 16,951,030 rows), with Y = `over_24h` (1/0). [Query 20](sql/20_check_analysis_table.sql) checked it: row and Y counts match Query 16, no blanks, no impossible values.
+
+### Where and when (A2)
+
+- **By day of week ([Query 17](sql/17_over_24h_by_day_of_week.sql)):** Casual riders keep bikes over 24 hours most often midweek (Wednesday, 20.87 per 10,000 trips) and least on Sunday (11.68), so the gap with members is about 20× on weekdays but only 8–10× on weekends.
+- **By start station ([Query 18](sql/%20%20%2018_over_24h_by_start_station.sql)):** The stations with the most long trips are in central Brooklyn and mostly used by members, not tourist spots. The top station, Fulton St & Utica Ave, has 228.94 per 10,000 trips, against about 2.6 for the whole system.
+
+### Suspects (A3)
+
+- **Rider type ([Query 21](sql/21_a3_avg_y_by_usertype.sql)):** Casual riders kept bikes over 24 hours on 0.16% of trips, against 0.011% for members, about 15 times as often.
+- **Start hour ([Query 22](sql/22_a3_avg_y_by_start_hour.sql)):** Trips starting late at night (midnight–4 am) went over 24 hours at 5.5–9 per 10,000 trips, about ten times the morning-commute rate (under 1 per 10,000 from 5–9 am).
+- **Gender ([Query 23](sql/23_a3_avg_y_by_gender.sql)):** Riders with unknown gender went over 24 hours at 7.62 per 10,000 trips, about three to four times the rate for female (2.50) or male (1.95) riders. Unknown gender may be mostly casual riders, so this could overlap with rider type.
