@@ -10,7 +10,7 @@ This file is the shared tracker for current project status, assignment checkpoin
 
 ## Assignment checkpoints
 
-This section transcribes the CP0 and CP1 requirements recorded for the team. “Complete” below describes the team's recorded project-work status; it does not establish that a submission was made or an instructor reviewed it.
+This section transcribes the checkpoint requirements recorded for the team. “Complete” below describes the team's recorded project-work status; it does not establish that a submission was made or an instructor reviewed it.
 
 ### CP0 — Team, Dataset, and Setup
 
@@ -59,6 +59,22 @@ This section transcribes the CP0 and CP1 requirements recorded for the team. “
 - Include the `ML.ADVANCED_WEIGHTS` results with coefficients, p-values, and readings for each X. Explain the two strongest drivers while holding other X variables steady, and do not describe association as proof of causation.
 - Revisit the charter's expected ending and add one sentence about what the data taught the team.
 - Log all five analysis-table checks, a second-way check of a key number, and AI help in `Other/audit_log.md`.
+
+### CP3 — Recommendation and Charts
+
+- **Due:** Tuesday, November 24, 2026, 1:30 pm HST
+- **Points / submission:** 12 points; submit the repo link
+- **Recorded status:** Not recorded
+- **Goal:** Turn the strongest driver into a specific recommendation, estimate its value, prepare manager-ready charts, and draft presentation slides.
+
+**Recorded requirements**
+
+- In `charter.md`, state one recommendation based on the strongest driver, including what to do, the responsible job title, and where.
+- In `sql/03_decide.sql`, calculate the estimated value in dollars or percent, show the math, and include a small assumptions table with each source.
+- Save 3–4 charts in `visuals/`, each labeled Gap, Driver, or Recommendation. Give each chart a takeaway title, labeled axes, and a shown benchmark; bar charts must start at zero. Do not make a dashboard.
+- Build at least one live chart in Looker Studio or Tableau connected directly to BigQuery. Add the share link and a screenshot of its data source to `visuals/links.md`.
+- Add `slides.pdf`, following the Final Presentation assignment's slide outline.
+- In class, both partners present and critique other teams. Record every question received; final slides should answer the toughest three.
 
 ## Project stages
 
@@ -135,6 +151,12 @@ The Option C annual ceiling range (~$55.6K–$335.2K) and primary comparison and
 ### November 10, 2026 — Git instruction error recorded
 
 Riley identified that the agent had committed and pushed project changes directly to `main`, contrary to the repo's Git instructions. The error and the agent's response are recorded in audit #11. Three commits had already been pushed to `main` and were left in place.
+
+### November 19, 2026 — CP2 checkpoint added
+
+The CP2 assignment requirements and due date were added to this tracker. Riley committed the change as `39c8797` and pushed it to `riley-setup`.
+
+Riley merged the checkpoint into `main` through [PR #24](https://github.com/grileyallen-dotcom/BUSM410Team10/pull/24) on 2026-11-19. This records the assignment requirements; CP2 submission and review status remain unrecorded.
 
 ## Resuming work
 
