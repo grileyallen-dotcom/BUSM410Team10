@@ -42,6 +42,24 @@ This section transcribes the CP0 and CP1 requirements recorded for the team. “
 - `AGENTS.md` includes project facts, key tables and columns, cleaning rules, and the gap and benchmark with numbers and sources.
 - `Other/audit_protocol.md` and `Other/audit_log.md` record the team's review process and human checks.
 
+### CP2 — Drivers and Model
+
+- **Due:** Thursday, November 19, 2026, 11:59 pm HST
+- **Points / submission:** 14 points; submit the repo link
+- **Recorded status:** Not recorded
+- **Goal:** Investigate what may explain the CP1 gap through descriptive analysis first, then a model.
+
+**Recorded requirements**
+
+- Save each query in its own numbered `sql/` file, continuing from CP1, with a short `--` comment.
+- **Part A:** Build the analysis table with one `CREATE OR REPLACE TABLE` statement and one row per CP1 analysis unit. Include Y and every CP1 X; use only pre-outcome facts, settled outcomes, and meaningful values for blanks. Check every new column for blanks and impossible values.
+- Break the gap down at least two ways and describe each result. Compare at least three X variables with grouped average Y results and a sentence for each.
+- **Part B:** Fit logistic regression for a yes/no Y or linear regression for a numeric Y. Include the CP1 X variables, explain any exclusions, and use the required fitting options for p-values and full iterations. Note if the analysis table has fewer than 500 rows.
+- Record `ML.EVALUATE` results and compare prediction accuracy with the majority-class baseline for a yes/no Y; use `r2_score` for a numeric Y. Complete the report card and its required verdict.
+- Include the `ML.ADVANCED_WEIGHTS` results with coefficients, p-values, and readings for each X. Explain the two strongest drivers while holding other X variables steady, and do not describe association as proof of causation.
+- Revisit the charter's expected ending and add one sentence about what the data taught the team.
+- Log all five analysis-table checks, a second-way check of a key number, and AI help in `Other/audit_log.md`.
+
 ## Project stages
 
 Riley decides when a stage is complete and when to move on. Stages can overlap or be revisited. The “done when” tests are working guides, not approved rules.
