@@ -4,13 +4,13 @@ This file is the shared tracker for current project status, assignment checkpoin
 
 ## Current status
 
-**Stage 6 — Review, audit, and merge: complete.** CP0 and CP1 project work is recorded as complete, and Riley reports that the completed `riley-setup` work was merged into `main` on GitHub. The CP1 submission and instructor-review outcome remain unrecorded. See [findings.md](findings.md) for the gap, benchmark, valuation, charts, and limitations; Riley's chart check is in [audit #10](Other/audit_log.md#verified-a-claim). Riley's correction of the agent's direct commits and push to `main` is recorded in [audit #11](Other/audit_log.md#caught-an-error).
+**Stage 7 — Drivers and model (CP2): complete locally on `riley-setup`.** CP0 and CP1 project work is recorded as complete and merged to `main`. CP2 Part A (analysis table, 5 quality checks, 3 gap splits, and 6 grouped-`X` comparisons) and Part B (`LOGISTIC_REG` model, `ML.EVALUATE` report card, `ML.ADVANCED_WEIGHTS`, and updated charter ending) are complete locally on `riley-setup` ([model/model_card.md](model/model_card.md), [findings.md](findings.md), [charter.md](charter.md), [Other/audit_log.md](Other/audit_log.md)), pending commit, push to `riley-setup`, merge to `main`, and repo-link submission. The CP1 submission and instructor-review outcome remain unrecorded.
 
-**Next:** Record the CP1 submission and instructor-review outcome when known. The station breakdown and final recommendation scope remain open for Riley's direction.
+**Next:** Commit and push CP2 changes to `riley-setup`, merge `riley-setup` into `main` on GitHub, and submit the repo link for CP2 before 11:59 pm HST on 2026-11-19. Then move to CP3 (recommendation value math in `sql/03_decide.sql`, 3–4 labeled charts, live Looker Studio/Tableau chart, and `slides.pdf`).
 
 ## Assignment checkpoints
 
-This section transcribes the CP0 and CP1 requirements recorded for the team. “Complete” below describes the team's recorded project-work status; it does not establish that a submission was made or an instructor reviewed it.
+This section transcribes the checkpoint requirements recorded for the team. “Complete” below describes the team's recorded project-work status; it does not establish that a submission was made or an instructor reviewed it.
 
 ### CP0 — Team, Dataset, and Setup
 
@@ -46,7 +46,7 @@ This section transcribes the CP0 and CP1 requirements recorded for the team. “
 
 - **Due:** Thursday, November 19, 2026, 11:59 pm HST
 - **Points / submission:** 14 points; submit the repo link
-- **Recorded status:** Not recorded
+- **Recorded status:** Project work complete locally on `riley-setup` (pending commit, push, merge to `main`, and submission)
 - **Goal:** Investigate what may explain the CP1 gap through descriptive analysis first, then a model.
 
 **Recorded requirements**
@@ -59,6 +59,22 @@ This section transcribes the CP0 and CP1 requirements recorded for the team. “
 - Include the `ML.ADVANCED_WEIGHTS` results with coefficients, p-values, and readings for each X. Explain the two strongest drivers while holding other X variables steady, and do not describe association as proof of causation.
 - Revisit the charter's expected ending and add one sentence about what the data taught the team.
 - Log all five analysis-table checks, a second-way check of a key number, and AI help in `Other/audit_log.md`.
+
+### CP3 — Recommendation and Charts
+
+- **Due:** Tuesday, November 24, 2026, 1:30 pm HST
+- **Points / submission:** 12 points; submit the repo link
+- **Recorded status:** Not recorded
+- **Goal:** Turn the strongest driver into a specific recommendation, estimate its value, prepare manager-ready charts, and draft presentation slides.
+
+**Recorded requirements**
+
+- In `charter.md`, state one recommendation based on the strongest driver, including what to do, the responsible job title, and where.
+- In `sql/03_decide.sql`, calculate the estimated value in dollars or percent, show the math, and include a small assumptions table with each source.
+- Save 3–4 charts in `visuals/`, each labeled Gap, Driver, or Recommendation. Give each chart a takeaway title, labeled axes, and a shown benchmark; bar charts must start at zero. Do not make a dashboard.
+- Build at least one live chart in Looker Studio or Tableau connected directly to BigQuery. Add the share link and a screenshot of its data source to `visuals/links.md`.
+- Add `slides.pdf`, following the Final Presentation assignment's slide outline.
+- In class, both partners present and critique other teams. Record every question received; final slides should answer the toughest three.
 
 ## Project stages
 
@@ -73,6 +89,7 @@ Riley decides when a stage is complete and when to move on. Stages can overlap o
 | 4. Gap and benchmark | Measure the gap against a justified benchmark | Gap query run and benchmark approved | [findings.md](findings.md), `sql/` | Done 2026-11-05. Customer 15.98 vs. Subscriber 1.05 trips over 24 hours per 10,000 trips (+14.93 / 15.2×; 20,736.7 excess bike-days), verified via Query 16 (audit #9) |
 | 5. Value and chart (CP1) | Calculate the gap's value with sourced inputs and build the chart | Value math sourced; chart saved in `visuals/` and embedded in findings | [findings.md](findings.md), [visuals/](visuals/) | Done 2026-11-09. Option C valuation (~$55.6K casual-pass to ~$335.2K system-wide ride-fee ceiling per year; rule V1, audit #8) and both charts recorded |
 | 6. Review, audit, and merge | Human checks and merge to `main` | Audit entries recorded, and Riley manually merges `riley-setup` to `main` on GitHub | [Other/audit_log.md](Other/audit_log.md) | Done 2026-11-09; Riley reports merge complete. Audit #11 records the agent's later Git-instruction error. |
+| 7. Drivers and model (CP2) | Build analysis table, check data, explore drivers, fit logistic regression, and update expected ending | Part A checks/splits/suspects, Part B model card/weights, updated charter ending, and audit entries recorded | [model/model_card.md](model/model_card.md), [findings.md](findings.md), [charter.md](charter.md), [Other/audit_log.md](Other/audit_log.md) | Done 2026-11-19 locally on `riley-setup` (Queries 17–25, audits #13–#16); pending merge to `main` |
 
 ## Activity history
 
@@ -135,6 +152,16 @@ The Option C annual ceiling range (~$55.6K–$335.2K) and primary comparison and
 ### November 10, 2026 — Git instruction error recorded
 
 Riley identified that the agent had committed and pushed project changes directly to `main`, contrary to the repo's Git instructions. The error and the agent's response are recorded in audit #11. Three commits had already been pushed to `main` and were left in place.
+
+### November 19, 2026 — CP2 checkpoint added
+
+The CP2 assignment requirements and due date were added to this tracker. Riley committed the change as `39c8797` and pushed it to `riley-setup`.
+
+Riley merged the checkpoint into `main` through [PR #24](https://github.com/grileyallen-dotcom/BUSM410Team10/pull/24) on 2026-11-19. This records the assignment requirements; CP2 submission and review status remain unrecorded.
+
+### November 19, 2026 — CP2 drivers and logistic regression completed
+
+Riley created BigQuery dataset `busm410-project.citibike_cp2`, built the `16,951,030`-row analysis table (`cp2_trip_analysis`, [Query 19](sql/19_build_analysis_table.sql)), approved Queries 17–18 (with leading spaces removed from `18_over_24h_by_start_station.sql`), and ran Queries 20–25. All five analysis-table checks and Query 16 reconciliations passed ([audits #13–#15](Other/audit_log.md)). Part A splits showed Central/East Brooklyn accounts for `1.9%` of Customer trips yet `35.4%` of Customer >24h lockups (`296.15/10k`). Part B `LOGISTIC_REG` (`cp2_over_24h_logit`) scored `accuracy = 0.99970` vs. `0.99974` baseline (`roc_auc = 0.8109`) and identified `usertype = Customer` (`+3.0049`, `p < 0.0001`) and `start_area = Central_East_Brooklyn` (`+2.9642`, `p < 0.0001`) as the two strongest drivers, recorded in [model/model_card.md](model/model_card.md), [findings.md](findings.md), [charter.md](charter.md), [decisions.md](decisions.md), [sql/README.md](sql/README.md), and [audit #16](Other/audit_log.md). Pending Riley's commit/push to `riley-setup`, merge to `main`, and submission.
 
 ## Resuming work
 

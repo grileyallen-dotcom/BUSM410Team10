@@ -68,6 +68,19 @@ On 2026-11-04, Riley confirmed that `bigquery-public-data.new_york_citibike.citi
 | Alternatives | Option A ($3/ride single-ride ceiling of ~$391K/yr or $2.57/trip alone; overstates marginal ticket loss); Option B (~$55.6K/yr casual-pass ceiling alone; omits Subscriber capacity impact) |
 | Limits | Both figures are ceilings: 6.29 counts only active bikes ridden that day (above full-fleet turnover), tied-up bikes only block rides when docks are empty, dollar per-trip rates come from May 2018 only, and BigQuery lacks fee records to net out collected >24h overtime or $1,200 lost-bike charges ($522.5K in total May 2018 casual overages) |
 
+## Approved modeling rule
+
+### M1. CP2 analysis table and logistic regression design (approved 2026-11-19)
+
+| Field | Entry |
+|---|---|
+| Decision-maker | Riley Allen, project lead |
+| Rule | CP2 Part A and Part B use `busm410-project.citibike_cp2.cp2_trip_analysis` at 1 row per valid June 2017–May 2018 trip (`16,951,030` rows; binary `is_over_24h` 0/1) and BigQuery ML `LOGISTIC_REG` (`busm410-project.citibike_cp2.cp2_over_24h_logit`) with 6 pre-outcome `X` columns: `usertype`, `gender`, `day_type`, `time_of_day`, `season`, and `start_area`. Part A location/timing splits also use approved Queries 17 and 18 (`sql/18_over_24h_by_start_station.sql` with leading spaces removed) alongside Query 21 (`start_area × usertype`). |
+| Evidence | Settled-outcome check through May 31, 2018 ([audit #13](Other/audit_log.md)); `usertype × gender` overlap check ([audit #14](Other/audit_log.md)); [Query 19](sql/19_build_analysis_table.sql) and [Query 20](sql/20_analysis_table_checks.sql) ([audit #15](Other/audit_log.md)); Queries 21–25 ([audit #16](Other/audit_log.md)). |
+| Reasoning | Agent recommendation: 1-row-per-trip grain preserves the CP1 trip unit and provides well over 500 rows for BigQuery ML's held-out evaluation split; `gender` was added after Query 16-reconciled checks showed recorded-gender Customers have 4×–5.5× higher >24h rates than `unknown`-gender Customers; `start_area` boxes capture the Brooklyn concentration without ~800 station dummy variables; `birth_year`, post-outcome columns, and 2026 `citibike_stations` attributes were excluded. Riley approved the choices; Riley's own reasoning was not separately recorded. |
+| Alternatives | Exclude `gender` (rejected after `usertype × gender` check, [audit #14](Other/audit_log.md)); include ~800 raw `start_station_name` categories (risks complete separation and `NaN` p-values); aggregate to station/month `LINEAR_REG` (loses trip-level unit). |
+| Limits | Coordinate boxes in `start_area` approximate boroughs/neighborhoods and pool hot-spot stations with nearby normal ones; `start_area = Unknown` has only 190 rows (2 >24h, `p = 0.9985`); default 0.50 cutoff accuracy (`0.99970`) ties the `0.99974` null baseline due to `0.026%` prevalence, so the model supports inference (`roc_auc = 0.8109`) rather than trip-level binary prediction; statistical associations do not establish causation. |
+
 ## Future decisions
 
 For each consequential decision, propose the exact entry for approval. Record the actual decision-maker, decision, reasoning when supplied, evidence, alternatives where relevant, and unresolved limits. Do not invent reasoning or verification. If direction changes, identify the superseded decision and the new direction.

@@ -10,6 +10,12 @@ How much more often do casual Customers keep a Citi Bike out for more than 24 ho
 
 A Citi Bike operations manager decides whether to target return measures at casual riders, such as reminders before 24 hours or station messaging where Customer long trips start, or to keep current practice. Riley Allen is the project lead; the agent acts as a consultant.
 
+## Expected ending (updated for CP2)
+
+**Updated expected ending:** Rather than broad weekend or tourist-hub messaging across Manhattan, a Citi Bike operations manager should target low-cost pre-24-hour return reminders and dock-check prompts specifically at casual `Customer` trips starting in Central and East Brooklyn (especially weekday and afternoon starts), where the two strongest drivers overlap.
+
+**What the data taught us:** We expected >24-hour lockups to cluster around weekend tourists near Manhattan parks, but the data showed that Central/East Brooklyn accounts for only 1.9% of casual Customer trips yet 35.4% of Customer >24-hour lockups—and holding other factors steady, weekday trips and Customers with a recorded gender carry higher risk than weekend trips and `unknown`-gender Customers.
+
 ## Scope
 
 - **Dataset:** `bigquery-public-data.new_york_citibike`, using the existing dataset only.

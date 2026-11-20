@@ -1,0 +1,25 @@
+-- Step 20: Analysis-table quality checks (grain, count-your-Y baseline, blanks, impossible values, and Query 16 reconciliation). See sql/README.md for notes.
+SELECT
+  COUNT(*) AS total_rows,
+  COUNTIF(is_over_24h = 1) AS total_over_24h,
+  COUNTIF(is_over_24h = 0) AS total_under_or_eq_24h,
+  COUNTIF(usertype = 'Customer') AS customer_trips,
+  COUNTIF(usertype = 'Customer' AND is_over_24h = 1) AS customer_over_24h,
+  COUNTIF(usertype = 'Subscriber') AS subscriber_trips,
+  COUNTIF(usertype = 'Subscriber' AND is_over_24h = 1) AS subscriber_over_24h,
+  COUNTIF(is_over_24h IS NULL) AS null_y,
+  COUNTIF(usertype IS NULL OR TRIM(usertype) = '') AS blank_usertype,
+  COUNTIF(gender IS NULL OR TRIM(gender) = '') AS blank_gender,
+  COUNTIF(day_type IS NULL OR TRIM(day_type) = '') AS blank_day_type,
+  COUNTIF(time_of_day IS NULL OR TRIM(time_of_day) = '') AS blank_time_of_day,
+  COUNTIF(season IS NULL OR TRIM(season) = '') AS blank_season,
+  COUNTIF(start_area IS NULL OR TRIM(start_area) = '') AS blank_start_area,
+  COUNTIF(is_over_24h NOT IN (0, 1)) AS bad_y,
+  COUNTIF(usertype NOT IN ('Customer', 'Subscriber')) AS bad_usertype,
+  COUNTIF(gender NOT IN ('male', 'female', 'unknown')) AS bad_gender,
+  COUNTIF(day_type NOT IN ('Weekday', 'Weekend')) AS bad_day_type,
+  COUNTIF(time_of_day NOT IN ('Morning_06_11', 'Afternoon_12_17', 'Evening_18_21', 'Overnight_22_05')) AS bad_time_of_day,
+  COUNTIF(season NOT IN ('Summer', 'Fall', 'Winter', 'Spring')) AS bad_season,
+  COUNTIF(start_area = 'Unknown') AS unknown_area_rows,
+  COUNTIF(start_area = 'Other_NJ') AS other_nj_rows
+FROM `busm410-project.citibike_cp2.cp2_trip_analysis`;

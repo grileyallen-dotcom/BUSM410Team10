@@ -31,6 +31,8 @@ The screenshot below shows the project IAM setup with our partner and instructor
 |---|---|
 | [charter.md](charter.md) | The project question, management decision, scope, and success criteria. |
 | [findings.md](findings.md) | The measured gap, benchmark, valuation, charts, and limitations. |
+| [model/model_card.md](model/model_card.md) | CP2 logistic regression report card, verdict, coefficients, and strongest drivers. |
+| [model/notes.md](model/notes.md) | Model setup summary and link to the CP2 model card. |
 | [AGENTS.md](AGENTS.md) | Project facts, approved rules, and working guidance for the agent. |
 | [sql/README.md](sql/README.md) | Query register, methods, cleaning choices, results, and execution notes. |
 | [Gap comparison chart](visuals/cp1_over_24h_gap_vs_benchmark.png) | Primary chart comparing Customer and Subscriber rates. |
