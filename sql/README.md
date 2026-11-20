@@ -6,7 +6,7 @@ This file explains how the project queries the data, reviews cleaning choices, a
 
 Consult [progress](../progress.md) for the current stage and [decisions](../decisions.md) for project-lead direction. The agent acts as consultant to Riley Allen. A setup discussion does not authorize starting analysis; an older stage record does not block a new explicit request for SQL work.
 
-Sixteen numbered queries (01–12 exploratory; 13–16 for the selected Customer >24h lockup gap) were run in BigQuery by project lead Riley Allen, with results supplied on 2026-11-05 and saved with approval below. See [decisions.md](../decisions.md) for the approved problem, KPI, benchmark, cleaning rules (C1–C2), and valuation rule (V1).
+Twenty-five numbered queries (01–12 exploratory; 13–16 for the selected CP1 Customer >24h lockup gap; 17–25 for CP2 Part A driver checks and Part B BigQuery ML logistic regression) were run in BigQuery by project lead Riley Allen or partner Norainelle Diaz, with results supplied and saved with approval below. See [decisions.md](../decisions.md) for the approved problem, KPI, benchmark, cleaning rules (C1–C2), valuation rule (V1), and modeling rule (M1).
 
 See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other/ERD.pdf), and [documentation notes](../Other/dataset_documentation.md) for the supplied schema information and its limits.
 
@@ -39,7 +39,7 @@ See [dataset documentation](../Other/metadata.pdf), the [table diagram](../Other
 | [23_a3_avg_y_by_gender.sql](23_a3_avg_y_by_gender.sql) | Part A3: average Y by gender | Run by Norainelle Diaz 2026-11-19 on raine-work | 238.51 MB (BigQuery) | unknown 7.62, female 2.50, male 1.95 per 10k; unknown may overlap with casual riders. Sums to 4,474 |
 | [drafts/extreme_duration_timestamp_check.sql](drafts/extreme_duration_timestamp_check.sql) | Compare recorded and timestamp-derived durations for Customer trips over 24 hours in May 2017 and May 2018 | Existing draft; no query approval or execution result recorded | Not recorded; obtain a BigQuery estimate before running | Not recorded |
 
-Scan and cost figures for queries 01–16 are agent estimates: referenced columns × assumed bytes per row × the documented 58.9M rows, priced at \$6.25 per TB on demand. BigQuery's own estimates and actual bytes billed were not recorded.
+Scan and cost figures for queries 01–16 and 19–25 are agent estimates: referenced columns × assumed bytes per row (priced at \$6.25 per TB on demand for queries and BigQuery ML training rates for Query 23). BigQuery's own estimates and actual bytes billed were not recorded for those runs; Queries 17–18 show BigQuery's estimates.
 
 This draft does not establish the project's selected gap, cleaning policy, or accepted analysis.
 

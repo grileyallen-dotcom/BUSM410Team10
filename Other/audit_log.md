@@ -9,7 +9,7 @@ The entries below were reconstructed from accessible project conversations on 20
 | [Caught an error](#caught-an-error) | A human found an error in the agent's work. | 3 |
 | [Verified a claim](#verified-a-claim) | A human checked a claim against evidence. | 7 |
 | [Separated fact from opinion](#separated-fact-from-opinion) | A human checked whether a statement was documented or inferred. | 0 |
-| [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 3 |
+| [Changed the analysis](#changed-the-analysis) | A human check changed the analysis. | 4 |
 | [Improved the agent's instructions](#improved-the-agents-instructions) | A human check led to better agent instructions. | 2 |
 
 ## Caught an error
@@ -44,6 +44,7 @@ The entries below were reconstructed from accessible project conversations on 20
 | 4 | 2026-11-02 | Agent proposed an initial data-quality and coverage query. | Riley reported BigQuery's estimate: "It says it will process 1.98 GB of data. I want to process less." | Agent proposed 1% table sampling for exploration and a shorter-window alternative. The post-change scan estimate and execution of those alternatives were not verified in this review. Sources: `Identify market KPIs`. |
 | 5 | 2026-11-02 | Agent supplied a station-flow query covering departures and arrivals. | Riley reported that query 4 wanted to process 2.91 GB and requested a smaller query. | Agent proposed a replacement using one table reference and CROSS JOIN UNNEST to count both directions, and requested a new estimate. An actual reduction in processed bytes was not demonstrated in the accessible messages. Sources: `Identify market KPIs`. |
 | 7 | 2026-11-03 | Agent drafted an Antigravity prompt covering the full project and referring to project files. | Riley reviewed the prompt and restricted execution to Stage 1 with preparation for Stage 2; Riley also pointed out that Antigravity had no uploaded files and needed the essential context inline. | Agent delivered a revised prompt limited to Stage 1 and a Stage 2 launch plan, with self-contained context. The revision is visible; this review does not verify Antigravity's subsequent execution or completion claims. Sources: `Project Overview Update`. |
+| 14 | 2026-11-19 | Agent initially recommended excluding `gender` from the CP2 analysis table and model, suspecting `gender = 'unknown'` heavily overlapped with `usertype = 'Customer'`, and drafted a `usertype × gender` check query to verify. | Riley ran the June 2017–May 2018 `usertype × gender` check query in BigQuery and supplied the 6-row CSV output. | Changed the analysis to include `gender` in [19_build_analysis_table.sql](../sql/19_build_analysis_table.sql) and the CP2 model. Totals reconciled exactly to Query 16 (`1,804,498` Customer / `2,883` >24h; `15,146,532` Subscriber / `1,591` >24h; 0 missing values), and Customers with a recorded gender (`male` 47.40/10k; `female` 33.53/10k) had 4×–5.5× higher >24h rates than `Customer + unknown` (8.59/10k), generating 58.1% (`1,674/2,883`) of Customer >24h trips. Evidence: CSV supplied in chat on 2026-11-19; BigQuery scan estimate was not supplied. |
 
 ## Improved the agent's instructions
 

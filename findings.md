@@ -1,6 +1,6 @@
 # Findings
 
-*Updated 2026-11-09. Descriptive findings and CP1 gap, benchmark, and valuation use Queries 01–16. The primary comparison and supplementary monthly charts are embedded below; Riley’s chart check is recorded in audit entry #10.*
+*Updated 2026-11-19. Descriptive findings and CP1 gap, benchmark, and valuation use Queries 01–16; CP2 drivers and logistic regression use Queries 17–25 and [model/model_card.md](model/model_card.md). The CP1 charts are embedded below; Riley’s chart check is recorded in audit entry #10.*
 
 Use this file to explain what the evidence establishes. The [charter](charter.md) defines the evolving question and scope; the [SQL guide](sql/README.md) records how results were produced. Riley Allen leads the project, with the agent acting as a consultant.
 
@@ -100,10 +100,80 @@ Using approved valuation rule V1 ([decisions.md](decisions.md#approved-valuation
 
 Every chart must use consistent definitions, units, populations, and periods, with traceable source queries or calculations.
 
+## CP2 Drivers and Model (Part A & Part B)
+
+### Analysis table and five data checks
+
+CP2 analysis uses `busm410-project.citibike_cp2.cp2_trip_analysis` ([19_build_analysis_table.sql](sql/19_build_analysis_table.sql)), built with one row per valid CP1 trip during June 2017–May 2018 (`16,951,030` rows), binary outcome `is_over_24h` (`1` if `tripduration > 86400`, else `0`), and six pre-outcome `X` columns (`usertype`, `gender`, `day_type`, `time_of_day`, `season`, `start_area`). All five analysis-table checks passed and are logged in [Other/audit_log.md](Other/audit_log.md):
+
+- **1. Pre-outcome columns only & 2. Grain / second-way match:** `16,951,030` rows (`2,883` Customer / `1,804,498` trips; `1,591` Subscriber / `15,146,532` trips; `4,474` total >24h) reconcile exactly to CP1 Query 16, and no post-outcome fields (`stoptime`, `end_station_*`, `tripduration`) are included ([20_analysis_table_checks.sql](sql/20_analysis_table_checks.sql); [audit #15](Other/audit_log.md)).
+- **3. Settled outcomes:** Trips starting May 25–31, 2018 record >24h completions into June–August 2018 (up to `2018-08-12`; May 31 records 6 >24h trips ending up to `2018-06-13`), confirming outcomes are settled through May 31 ([audit #13](Other/audit_log.md)).
+- **4. No blanks & 5. No impossible values:** `0` nulls, `0` empty strings, and `0` invalid category codes across `Y` and all six `X`s (`190` trips with missing/out-of-NYC start coordinates are explicitly labeled `'Unknown'` and `3,525` west-of-Hudson starts `'Other_NJ'`; [20_analysis_table_checks.sql](sql/20_analysis_table_checks.sql); [audit #15](Other/audit_log.md)).
+
+### Part A — Where and when (gap breakdowns)
+
+1. **By day of week (`usertype × day_of_week`, [17_over_24h_by_day_of_week.sql](sql/17_over_24h_by_day_of_week.sql)):** Customer >24h rate peaks mid-week on Wednesday (`20.87` per 10,000 trips) and is lowest Sunday (`11.68/10k`), with the Customer-vs.-Subscriber ratio running ~`19–22×` Monday–Thursday versus ~`8–10×` on weekends (day totals `2,883` and `1,591` match Query 16).
+2. **By start station ([18_over_24h_by_start_station.sql](sql/18_over_24h_by_start_station.sql)):** All top 7 stations by >24h trip count (among stations with ≥1,000 trips) are in central Brooklyn—led by `Fulton St & Utica Ave` (`156` >24h trips, `228.94/10k`)—while major tourist hubs like `Grand Army Plaza` rank far lower (`3.42/10k`).
+3. **By geographic start area × `usertype` ([21_gap_by_start_area_and_usertype.sql](sql/21_gap_by_start_area_and_usertype.sql)):** Central/East Brooklyn accounts for only `1.9%` of casual Customer trips (`34,476`) yet generates `35.4%` of all Customer >24h lockups (`1,021`, `296.15/10k`)—`45.4×` Manhattan Customers (`6.53/10k`) and `34.5×` Central/East Brooklyn Subscribers (`8.58/10k`).
+
+| start_area | usertype | valid_trips | trips_over_24h | over_24h_per_10k | avg_y_pct |
+|---|---|---:|---:|---:|---:|
+| Central_East_Brooklyn | Customer | 34,476 | 1,021 | 296.15 | 2.9615% |
+| Central_East_Brooklyn | Subscriber | 318,098 | 273 | 8.58 | 0.0858% |
+| Manhattan | Customer | 1,459,819 | 953 | 6.53 | 0.0653% |
+| Manhattan | Subscriber | 12,283,247 | 850 | 0.69 | 0.0069% |
+| Other_NJ | Customer | 2,009 | 5 | 24.89 | 0.2489% |
+| Other_NJ | Subscriber | 1,516 | 0 | 0.00 | 0.0000% |
+| Queens | Customer | 26,304 | 59 | 22.43 | 0.2243% |
+| Queens | Subscriber | 235,244 | 43 | 1.83 | 0.0183% |
+| Unknown | Customer | 21 | 0 | 0.00 | 0.0000% |
+| Unknown | Subscriber | 169 | 2 | 118.34 | 1.1834% |
+| West_North_Brooklyn | Customer | 281,869 | 845 | 29.98 | 0.2998% |
+| West_North_Brooklyn | Subscriber | 2,308,258 | 423 | 1.83 | 0.0183% |
+
+### Part A — Suspects (grouped average `Y` across all 6 `X`s)
+
+Source: [22_part_a_suspects_avg_y.sql](sql/22_part_a_suspects_avg_y.sql) (each `X` block sums to `16,951,030` trips and `4,474` >24h trips).
+
+| x_variable | x_value | valid_trips | trips_over_24h | over_24h_per_10k | avg_y_pct |
+|---|---|---:|---:|---:|---:|
+| day_type | Weekend | 4,039,503 | 1,540 | 3.81 | 0.0381% |
+| day_type | Weekday | 12,911,527 | 2,934 | 2.27 | 0.0227% |
+| gender | unknown | 1,679,198 | 1,279 | 7.62 | 0.0762% |
+| gender | female | 3,870,491 | 967 | 2.50 | 0.0250% |
+| gender | male | 11,401,341 | 2,228 | 1.95 | 0.0195% |
+| season | Summer | 5,283,691 | 1,711 | 3.24 | 0.0324% |
+| season | Spring | 4,108,925 | 1,056 | 2.57 | 0.0257% |
+| season | Fall | 5,106,339 | 1,299 | 2.54 | 0.0254% |
+| season | Winter | 2,452,075 | 408 | 1.66 | 0.0166% |
+| start_area | Unknown | 190 | 2 | 105.26 | 1.0526% |
+| start_area | Central_East_Brooklyn | 352,574 | 1,294 | 36.70 | 0.3670% |
+| start_area | Other_NJ | 3,525 | 5 | 14.18 | 0.1418% |
+| start_area | West_North_Brooklyn | 2,590,127 | 1,268 | 4.90 | 0.0490% |
+| start_area | Queens | 261,548 | 102 | 3.90 | 0.0390% |
+| start_area | Manhattan | 13,743,066 | 1,803 | 1.31 | 0.0131% |
+| time_of_day | Overnight_22_05 | 1,075,452 | 469 | 4.36 | 0.0436% |
+| time_of_day | Afternoon_12_17 | 6,771,057 | 2,218 | 3.28 | 0.0328% |
+| time_of_day | Evening_18_21 | 3,955,846 | 1,222 | 3.09 | 0.0309% |
+| time_of_day | Morning_06_11 | 5,148,675 | 565 | 1.10 | 0.0110% |
+| usertype | Customer | 1,804,498 | 2,883 | 15.98 | 0.1598% |
+| usertype | Subscriber | 15,146,532 | 1,591 | 1.05 | 0.0105% |
+
+- **`usertype`:** Casual Customers keep bikes over 24 hours `0.1598%` of the time (`15.98/10k`) versus `0.0105%` (`1.05/10k`) for Subscribers.
+- **`start_area`:** Trips starting in Central/East Brooklyn exceed 24 hours `0.3670%` of the time (`36.70/10k`)—`28.0×` Manhattan's `0.0131%` (`1.31/10k`)—while West/North Brooklyn (`0.0490%`) and Queens (`0.0390%`) sit in between.
+- **`time_of_day`:** Viewed alone, overnight starts (`22:00–05:59`) have the highest >24h rate (`0.0436%` / `4.36/10k`) and morning starts (`06:00–11:59`) the lowest (`0.0110%` / `1.10/10k`), with afternoon (`0.0328%`) and evening (`0.0309%`) in between.
+- **`season`:** Summer trips exceed 24 hours nearly twice as often (`0.0324%` / `3.24/10k`) as Winter trips (`0.0166%` / `1.66/10k`), with Spring (`0.0257%`) and Fall (`0.0254%`) in the middle.
+- **`day_type`:** Viewed alone, Weekend trips exceed 24 hours more often (`0.0381%` / `3.81/10k`) than Weekday trips (`0.0227%` / `2.27/10k`), reflecting heavier weekend Customer share (this reverses when holding `usertype` and other `X`s steady in Part B).
+- **`gender`:** Viewed alone, `unknown`-gender trips show the highest >24h rate (`0.0762%` / `7.62/10k`) versus `female` (`0.0250%`) and `male` (`0.0195%`), because `unknown` overlaps heavily with `Customer` (this also reverses when holding `usertype` steady; within Customers, `male` is `47.40/10k` and `female` is `33.53/10k` vs. `unknown` `8.59/10k`, [audit #14](Other/audit_log.md)).
+
+### Part B — Logistic regression summary
+
+See [model/model_card.md](model/model_card.md) for the full report card, `ML.ADVANCED_WEIGHTS` table, and driver analysis ([23_train_logistic_model.sql](sql/23_train_logistic_model.sql)–[25_model_advanced_weights.sql](sql/25_model_advanced_weights.sql)). Held-out `accuracy` (`0.99970`) does not beat the `0.99974` null baseline because >24h trips are rare (`0.026%`), but `roc_auc = 0.8109` confirms strong risk ranking for inference. Holding all other `X`s steady, the two strongest drivers are **`usertype = Customer`** (`+3.0049`, `p < 0.0001`) and **`start_area = Central_East_Brooklyn`** (`+2.9642`, `p < 0.0001`), while `Weekend` (`-0.4098`), `gender = unknown` (`-1.5256`), and `Overnight_22_05` (`-0.1837`) flip negative. Statistical associations do not establish causation.
+
 ## Interpretation, recommendations, and limits
 
 - **Proposed interpretation (not a causal proof):** Casual riders exceed 24 hours at `15.2×` the Subscriber rate likely because short-term pass users are less familiar with dock-locking confirmation and 30-minute/24-hour return rules — an operational hypothesis that trip timestamps alone cannot prove.
-- **Management decision framing (recommendations still open):** The `~$55.6K–$335.2K/year` ceiling supports testing low-cost interventions (such as automated pre-24h app/SMS return alerts for casual passes or dock-check prompts at top lockup stations) rather than high-cost hardware changes, while checking internal overage recovery first. Specific station targeting remains open pending a station-level breakdown.
+- **Management decision framing (CP2 focus narrowed; CP3 math open):** The `~$55.6K–$335.2K/year` ceiling supports testing low-cost interventions (such as automated pre-24h app/SMS return alerts for casual passes or dock-check prompts) rather than high-cost hardware changes, while checking internal overage recovery first. CP2 narrowed priority targeting to casual `Customer` trips starting in Central and East Brooklyn (accounting for 35.4% of Customer >24h trips from 1.9% of Customer volume); the formal CP3 recommendation and intervention value estimate remain to be drafted.
 
 Respect the approved 2013-2018 scope and explain source applicability. The [supplied documentation](Other/metadata.pdf), [ERD](Other/ERD.pdf), and [source notes](Other/dataset_documentation.md) provide context; their reported profile results are not automatically verified project findings.
 
